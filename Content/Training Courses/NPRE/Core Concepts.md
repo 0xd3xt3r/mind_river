@@ -1,0 +1,18 @@
+
+- Can you explain network protocol to 5 year old
+	- A network protocol is like a set of rules that computers use to talk to each other over the internet. Imagine two friends, Jack and Jill, want to play a game together. They both have different colored blocks and want to build a tower together. They need to agree on how to build it, for example, who will go first, what colors to use, and in what order to stack the blocks. They need to make sure they understand each other and that's what network protocol does for computers. It helps computers understand each other and work together to share information and play games or use websites and apps. So, in short, a network protocol is like a set of rules that helps computers talk and play together over the internet.
+- Explain what is a network protocol using lego analogy
+	-  Let's say you have a lego set and you want to build a cool castle with your friend. In order to do that, you need to agree on some rules, such as:
+		-   Which lego pieces to use
+		-   How to put them together
+		-   What order to build in
+	- These rules are like a network protocol. They help you and your friend understand each other and work together to build the castle.
+	- Just like how lego blocks have different shapes and colors, computers have different types of data, like text, pictures, and videos. Network protocols help the computers understand what kind of data they are sending and receiving and how to process it.
+	- Also, imagine you want to play with your friend with your lego castle via video call or internet, you both need to make sure you are using the same video call app or website and you both should understand how to connect to it. That's what happens with network protocols, they make sure that all the computers are using the same rules or protocols to connect and communicate with each other over the internet.
+- Could you please elaborate more on this?
+	- Here are a few more details about how the lego analogy can help explain network protocols:
+	-   Just like how different lego sets have different pieces and instructions, different computer systems and devices use different types of network protocols to communicate. For example, some devices may use TCP/IP while others might use UDP. These protocols are like different languages that the computers use to talk to each other.
+	-   Just like how lego pieces have to be put together in a specific way to create a stable structure, data packets have to be assembled and sent in a specific way for the receiving computer to understand it. This is the job of network protocols.
+	-   Imagine you have lego pieces in multiple colors, each color representing a different type of data, for example, red for text, blue for images, green for videos. Network protocols ensure that the computers are using the same "colors" or data formats so that the data can be understood and processed correctly.
+	-   In the lego analogy, it's like you and your friend are building a castle together over video call, but you are using different types of lego bricks, so you need to agree on how to connect and communicate, the same thing happens with computers over the internet, they need to agree on how to connect and communicate, that's where network protocols come in.
+	- Overall, the lego analogy helps demonstrate how network protocols are a set of rules that allow different devices and systems to understand and communicate with each other over the internet. Just like how lego pieces must be put together in a specific way to create a stable structure, data packets must be assembled and sent in a specific way for the receiving computer to understand it, and network protocols make sure that happens.

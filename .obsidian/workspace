@@ -1,0 +1,137 @@
+{
+  "main": {
+    "id": "a013c9d539a2fdfe",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b8a3e1c62b8b3d6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Resources/Wiki/Qualcomm/Projects/2021-22/Linux Syscaller Fuzzing.md",
+            "mode": "preview",
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b30055923f85cf22",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb4bcb74f3c40559",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d517e70563dafea1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "05ed585ca806db05",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#pwn",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 263.50793838500977,
+    "collapsed": true
+  },
+  "right": {
+    "id": "f076932d49dc31eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e4d9f32e436048e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "705236bbbeff24a9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Resources/Wiki/Qualcomm/Projects/2021-22/Linux Syscaller Fuzzing.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "734cd676c99b336e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "bde86d2c41d4fc28",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Resources/Wiki/Qualcomm/Projects/2021-22/Linux Syscaller Fuzzing.md"
+              }
+            }
+          },
+          {
+            "id": "9475c5fb45403856",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Resources/Wiki/Qualcomm/Projects/2021-22/Linux Syscaller Fuzzing.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 328.9999084472656,
+    "collapsed": true
+  },
+  "active": "6b8a3e1c62b8b3d6",
+  "lastOpenFiles": [
+    "Inbox/Scratch Pad.md",
+    "Inbox/syzkaller.md",
+    "Resources/Wiki/Qualcomm/Projects/2021-22/Linux Syzkaller Project Update.md",
+    "Inbox/Untitled.md",
+    "Resources/Wiki/Qualcomm/Projects/2021-22/Linux Syscaller Fuzzing.md",
+    "Inbox/MTech - Information Security.md",
+    "Resources/Wiki/Qualcomm/Projects/2021-22/WIN 7 - Vulnerability Detection.md",
+    "Resources/Wiki/Qualcomm/Meeting Notes/Surendra Singh.md",
+    "Inbox/Vulnerability Demo on Automotive.md",
+    "Resources/Wiki/Qualcomm/Travel Detials.md"
+  ]
+}

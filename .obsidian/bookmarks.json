@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1718627551567,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1718627545446,
+          "path": "Qualcomm/Reports/QPSI Monthly Report.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1718626060681,
+          "path": "Qualcomm/Reports/Work Logs.md",
+          "title": "Weekly Report"
+        },
+        {
+          "type": "file",
+          "ctime": 1718706676594,
+          "path": "Qualcomm/Reports/Automotive HGSL Bugs.md",
+          "title": "Bug Dashboard"
+        }
+      ],
+      "title": "Office Reports"
+    },
+    {
+      "type": "group",
+      "ctime": 1718359945022,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1718359981397,
+          "path": "Wiki/Code Auditing/Windows Kernel Drivers Auditing.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1718360075581,
+          "path": "Qualcomm/Projects/Archived/Sub Project - Video Driver security assessment.md",
+          "title": "Windows Driver Fuzzing"
+        },
+        {
+          "type": "file",
+          "ctime": 1718361846708,
+          "path": "Qualcomm/Projects/Camera Driver Fuzzing.md",
+          "title": "Android Driver Fuzzing"
+        }
+      ],
+      "title": "Office Projects"
+    },
+    {
+      "type": "group",
+      "ctime": 1718359993302,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1718360218448,
+          "path": "Wiki/Software Internals/Syzkaller Internals.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1719036645932,
+          "path": "Areas/Personal Growth/Personal Monthly Report.md"
+        }
+      ],
+      "title": "Personal Projects"
+    }
+  ]
+}

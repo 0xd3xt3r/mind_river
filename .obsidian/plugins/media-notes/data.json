@@ -1,0 +1,120 @@
+{
+  "seekSeconds": 10,
+  "verticalPlayerHeight": 50,
+  "horizontalPlayerWidth": 50,
+  "defaultSplitMode": "Horizontal",
+  "pauseOnTimestampInsert": false,
+  "displayProgressBar": true,
+  "displayTimestamp": true,
+  "timestampOffsetSeconds": 5,
+  "backgroundColor": "#000000",
+  "progressBarColor": "#FF0000",
+  "timestampTemplate": "[{ts}]() - ",
+  "mediaData": {
+    "8Pfya5NI1tU": {
+      "mediaLink": "https://www.youtube.com/watch?v=8Pfya5NI1tU",
+      "lastUpdated": "2024-12-25T16:13:22.677Z",
+      "lastTimestampSeconds": 0
+    },
+    "2KVB81cAWQ0": {
+      "mediaLink": "https://www.youtube.com/watch?v=2KVB81cAWQ0",
+      "lastUpdated": "2024-12-31T05:34:39.357Z",
+      "lastTimestampSeconds": 585.201
+    },
+    "mIwoDjtnJSA": {
+      "mediaLink": "https://www.youtube.com/watch?v=mIwoDjtnJSA",
+      "lastUpdated": "2024-12-31T06:28:45.928Z",
+      "lastTimestampSeconds": 559.581
+    },
+    "gGtjj2fzZ54": {
+      "mediaLink": "https://www.youtube.com/watch?v=gGtjj2fzZ54",
+      "lastUpdated": "2024-12-31T06:46:41.364Z",
+      "lastTimestampSeconds": 383.401
+    },
+    "HjZBOMSk8vU": {
+      "mediaLink": "https://www.youtube.com/watch?v=HjZBOMSk8vU",
+      "lastUpdated": "2024-12-31T08:34:39.603Z",
+      "lastTimestampSeconds": 7.934813999999999
+    },
+    "IlcYMdHZeWA": {
+      "mediaLink": "https://www.youtube.com/watch?v=IlcYMdHZeWA",
+      "lastUpdated": "2024-12-31T08:54:37.080Z",
+      "lastTimestampSeconds": 334.961
+    },
+    "yHcmvLV3oxE": {
+      "mediaLink": "https://www.youtube.com/watch?v=yHcmvLV3oxE",
+      "lastUpdated": "2024-12-31T09:04:32.862Z",
+      "lastTimestampSeconds": 278.401
+    },
+    "sHOWQ85Gt0k": {
+      "mediaLink": "https://www.youtube.com/watch?v=sHOWQ85Gt0k",
+      "lastUpdated": "2024-12-31T09:37:42.486Z",
+      "lastTimestampSeconds": 62.04081336975098
+    },
+    "WN_1eutaxjo": {
+      "mediaLink": "https://www.youtube.com/watch?v=WN_1eutaxjo",
+      "lastUpdated": "2024-12-31T14:04:32.998Z",
+      "lastTimestampSeconds": 354.261
+    },
+    "bLjy-8YJlj8": {
+      "mediaLink": "https://www.youtube.com/watch?v=bLjy-8YJlj8",
+      "lastUpdated": "2024-12-31T14:16:06.334Z",
+      "lastTimestampSeconds": 272.601
+    },
+    "8YozumoXVAw": {
+      "mediaLink": "https://www.youtube.com/watch?v=8YozumoXVAw",
+      "lastUpdated": "2025-01-01T05:12:15.303Z",
+      "lastTimestampSeconds": 424
+    },
+    "XgWLbJXvopk": {
+      "mediaLink": "https://www.youtube.com/watch?v=XgWLbJXvopk",
+      "lastUpdated": "2025-01-02T06:20:18.311Z",
+      "lastTimestampSeconds": 0
+    },
+    "yt5sMzuCGG4": {
+      "mediaLink": "https://www.youtube.com/watch?v=yt5sMzuCGG4",
+      "lastUpdated": "2025-01-02T06:34:44.198Z",
+      "lastTimestampSeconds": 524.281
+    },
+    "PW7WSXFzeJg": {
+      "mediaLink": "https://www.youtube.com/watch?v=PW7WSXFzeJg",
+      "lastUpdated": "2025-01-03T06:17:57.622Z",
+      "lastTimestampSeconds": 1023.541
+    },
+    "J9iWyPIY6Lw": {
+      "mediaLink": "https://www.youtube.com/watch?v=J9iWyPIY6Lw",
+      "lastUpdated": "2025-01-03T07:11:18.275Z",
+      "lastTimestampSeconds": 1615.401
+    },
+    "51I9VpkOrNU": {
+      "mediaLink": "https://www.youtube.com/watch?v=51I9VpkOrNU",
+      "lastUpdated": "2025-01-03T10:24:37.381Z",
+      "lastTimestampSeconds": 1614.421
+    },
+    "4hyqzPfgX-g": {
+      "mediaLink": "https://www.youtube.com/watch?v=4hyqzPfgX-g",
+      "lastUpdated": "2025-01-11T05:36:55.480Z",
+      "lastTimestampSeconds": 855
+    },
+    "C62yKrpalEA": {
+      "mediaLink": "https://www.youtube.com/watch?v=C62yKrpalEA",
+      "lastUpdated": "2025-01-08T06:46:02.584Z",
+      "lastTimestampSeconds": 0
+    },
+    "A-vtsqhXcro": {
+      "mediaLink": "https://www.youtube.com/watch?v=A-vtsqhXcro",
+      "lastUpdated": "2025-01-29T11:54:12.623Z",
+      "lastTimestampSeconds": 3637.61101
+    },
+    "ISFLjtUYKx4": {
+      "mediaLink": "https://www.youtube.com/watch?v=ISFLjtUYKx4&ab_channel=gamozolabs",
+      "lastUpdated": "2025-03-16T05:49:43.140Z",
+      "lastTimestampSeconds": 0
+    },
+    "6topgTC3-5k": {
+      "mediaLink": "https://www.youtube.com/watch?v=6topgTC3-5k",
+      "lastUpdated": "2025-03-15T06:41:19.184Z",
+      "lastTimestampSeconds": 0
+    }
+  }
+}

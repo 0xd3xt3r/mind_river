@@ -1,0 +1,205 @@
+{
+  "export": {
+    "includeIcons": true,
+    "replaceVars": true,
+    "useDataEls": true,
+    "useIds": true
+  },
+  "folderMappings": [
+    {
+      "folder": "Journal/Daily",
+      "toolbar": "a02b2f53-dcfe-4361-abf6-0ffbcba61041"
+    }
+  ],
+  "icon": "circle-ellipsis",
+  "ribbonAction": "toolbar",
+  "scriptingEnabled": false,
+  "showEditInFabMenu": false,
+  "toolbarProp": "",
+  "toolbars": [
+    {
+      "uuid": "a02b2f53-dcfe-4361-abf6-0ffbcba61041",
+      "defaultStyles": [
+        "border",
+        "even",
+        "sticky"
+      ],
+      "items": [
+        {
+          "uuid": "9dd0a1a7-aa60-4baf-8c14-ca17fe9e9d31",
+          "label": "Yesterday",
+          "icon": "lucide-arrow-left",
+          "link": "Periodic Notes: Open previous daily note",
+          "linkAttr": {
+            "commandId": "periodic-notes:prev-daily-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9539b164-73d0-418d-b826-8ed3f2065eab",
+          "label": "Today",
+          "icon": "lucide-arrow-down",
+          "link": "Periodic Notes: Open daily note",
+          "linkAttr": {
+            "commandId": "periodic-notes:open-daily-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ca719474-57bd-4bad-8e1b-2e76ccc67883",
+          "label": "Tomorrow",
+          "icon": "lucide-arrow-right",
+          "link": "Periodic Notes: Open next daily note",
+          "linkAttr": {
+            "commandId": "periodic-notes:next-daily-note",
+            "hasVars": false,
+            "type": "command"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "uuid": "506563be-b198-4526-b858-335a9af91f7f",
+          "label": "",
+          "icon": "",
+          "link": "",
+          "linkAttr": {
+            "commandId": "",
+            "hasVars": false,
+            "type": "separator"
+          },
+          "tooltip": "",
+          "visibility": {
+            "desktop": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "mobile": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            },
+            "tablet": {
+              "allViews": {
+                "components": [
+                  "icon",
+                  "label"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "mobileStyles": [],
+      "name": "Daily Notes",
+      "position": {
+        "desktop": {
+          "allViews": {
+            "position": "top"
+          }
+        },
+        "mobile": {
+          "allViews": {
+            "position": "top"
+          }
+        },
+        "tablet": {
+          "allViews": {
+            "position": "top"
+          }
+        }
+      },
+      "updated": "2025-01-09T06:13:28.267Z"
+    }
+  ],
+  "version": 20240727.1,
+  "whatsnew_version": 1.15
+}

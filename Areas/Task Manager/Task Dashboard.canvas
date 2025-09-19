@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"e07ee63265007c4d","type":"text","text":"## Current Week\n\n```tasks\nnot done\nlimit 10\nsort by due\nhide tags\nscheduled in this week\nshort mode\n(tag include #qpsi) OR ( tag include #kw)\n","x":-2260,"y":-960,"width":680,"height":440,"color":"4"},
+		{"id":"ee40902d44ed7253","type":"text","text":"## Next Week\n\n```tasks\nnot done\nlimit 50\ndue by next week\nsort by due\nhide tags\nshort mode\n(tag include #qpsi) OR ( tag include #kw)\n","x":-1540,"y":-960,"width":660,"height":440,"color":"5"},
+		{"id":"f1e41cdf9eeb6f62","type":"text","text":"## Orphan task\n\n\n```tasks\nnot done\nlimit 50\n(no due date) AND (no scheduled date) AND (no start date)\nhide tags\nshort mode\n```\n\n","x":-2260,"y":-480,"width":680,"height":480,"color":"3"}
+	],
+	"edges":[]
+}
