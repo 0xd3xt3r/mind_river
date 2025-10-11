@@ -1,33 +1,32 @@
 ---
-aliases:
-  - Project NickName
+up: "[[Qualcomm Project MoC]]"
+aliases: QCLinux Kernel fuzzing
 tags:
-  - qpsi/project
-status: todo
+  - "#type/project"
+  - "#qpsi/project"
+status: on-hold
 created-date: 2025-06-10
 completed-date: 2025-06-10
 ---
 
+> **summary**:: The goal of this project is to fuzz the QCLinux kernel. We are trying to achieve this my porting Android harness to IoT kernel.
+
 ## Objective
 > What were you trying to achieve with this project.
 
-1. Amazon 
-> **summary**::
+The goal of this project is to fuzz the QCLinux kernel. We are trying to achieve this my porting Android harness to IoT kernel.
 
-## Meeting Minutes
+---
 
-- 
+## Thread Model/Attack Surface
+> How can we attack the System?
 
-## Action Item - 
-1. QLI
+1. Kernel driver - our leads believe we have to upstream our code as much as possible and we should propagate the fixes as much as possible.
+2. Network services - its developer board, there is not much for out end to target.
 
 ---
 ## Commands
 > Commands which you important or used very frequently while working on the project
-
-```bash
-# some of the important command in this project
-```
 
 ### Build Command
 
@@ -60,6 +59,8 @@ bitbake qcom-multimedia-image
 
 #### Config 
 
+Kernel configuration are based on this location
+
 ```bash
 # Kernel configuration
 mshelia@hyd-lablnxqpsi05:/local/mnt/workspace/qcom-dev/pakala_build/iot_code/iot_code$ vi layers/meta-qti-bsp/recipes-kernel/linux/linux-qcom-custom/selinux.cfg
@@ -78,6 +79,9 @@ mshelia@hyd-lablnxqpsi05:/local/mnt/workspace/qcom-dev/pakala_build/iot_code/iot
 ```
 
 #### KASAN Build
+
+The enable KASAN there were no exclusive support from tech team to enable it. So i tried to figure it out how to do it!
+
 ```bash
 # Qualcomm Linux config
 ./sources/kernel/kernel_platform/kernel/arch/arm64/configs/qcom_defconfig
@@ -91,8 +95,6 @@ CONFIG_CC_OPTIMIZE_FOR_SIZE=y
 ```
 ---
 
-
-
 ## Notes
 > Random interesting information, observation or anecdotes you observed while working on the projects.
 
@@ -105,45 +107,30 @@ CONFIG_CC_OPTIMIZE_FOR_SIZE=y
 		![[Pasted image 20250612152756.png]]
 
 ---
+
 ## Challenges & Opportunities
 > While working on a project you might encounter challenges which could potentially be solved to further the project.
-- 
+
+- The project started a way to port the Android harness to IoT target.
+- SElinux policy should be enforced strictly, right now we can one can simple disable is from command line by `setenforce 0`.
+- Since we can load a custom driver and we have shell access, it defeats the purpose of have a kernel integrity. 
+- Attack surface of the product is different from Android which has a huge user-space attack surface.
+- IoT camera IPs is mid-tier chipset for which we haven't written any grammar, since we only prioritize premium tier chipsets.
 
 ---
 ## Hardware
+
+Some hardware on which we tried to work
 
 1. QCS9100 - Lemans
 2. QCM6490 - Kodiak RB3-Gen2
 
 ## Product Docs
 > Some of the important internal documents which would you often need to refer very often.
-- https://confluence.qualcomm.com/confluence/display/IITQ/QCM6490.LA.3.2
-- [Public Docs](https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-254/flash_images.html#flash-software-using-qdl)
----
-## Build Instruction
-> Instruction to clone and build the project from source
 
-```bash
-# Cloning instruction
-
-# AU: 522  
-  
-python <Path for lint_tools>/src/sync_scripts/sync.py < workspace_path> -p AU_LINUX_EMBEDDED_LE.QCLINUX.1.0_TARGET_ALL.01.013.522 -t lkp --hotfixes 5997246/4 5930346/2 6010278/5 5865412/9 6036925/1 5965432/15 5926676/1 6033655/1 6034379/1 6030399/1 6022793/1 6025038/3 5956078/8 6003007/2 6037147/1 6037433/1 6037435/1 6035321/1 6026810/1 6026683/7 6035171/2 2>&1 | tee sync_logs  
-  
-#Base BSP:
-MACHINE=qcs9100-ride-sx DISTRO=qcom-wayland QCOM_SELECTED_BSP=base source setup-environment
-
-bitbake qcom-console-image
-
-# Custom BSP:  
-MACHINE=qcs9100-ride-sx DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-
-bitbake qcom-console-image
-
-# meta: \\crmhyd\nsid-hyd-05\QCS9100.LE.1.0-00230-ADV.INT.DBG-2
-
-# Building instruction
-```
+- [QCLinux Build list](https://confluence.qualcomm.com/confluence/display/IITQ/QCM6490.LA.3.2)
+- [Public Docs link](https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-254/flash_images.html#flash-software-using-qdl) for the product we were fuzzing
+- [k2cbuilds](http://go.qualcomm.com/k2cbuilds)
 
 ---
 ## CR Raised
@@ -155,10 +142,6 @@ bitbake qcom-console-image
 |---|---|---|---|---|
 | 1 | 01 | High | 2025-06-10| What happened?|
 
----
-
-## Thread Model/Attack Surface
-> How can we attack the System?
 
 ---
 ## Meeting Notes
@@ -174,7 +157,9 @@ bitbake qcom-console-image
 			2. Coordinate with Sai to arrange few devices of Kodiak and Lemans
  
 ---
+
 ## Event Logs
+
 > A brief timeline of the project
 
 1. 2025-06-10 - Start project discussion
@@ -183,10 +168,12 @@ bitbake qcom-console-image
 
 | PoC Name                   | Expertise    |
 | -------------------------- | ------------ |
-| Hanumantha Reddy Naradla   | Senior Staff | 
+| Hanumantha Reddy Naradla   | Senior Staff |
 | Nirmesh Kumar Singh (Temp) |              |
+| Kaushik Huzuri             | Build expert | 
 
 ---
+
 ## Related Research Papers or Articles
 > Any research paper or articles which address some the issues which we are facing
 - External Research

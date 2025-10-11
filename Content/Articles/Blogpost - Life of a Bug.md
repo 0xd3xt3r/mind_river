@@ -28,19 +28,36 @@ Well there are different techniques which are used to find the bugs like fuzzing
 
 1. Advantage 
 	1. this technique scales in terms of harnessing, once you have configured and written the rules for the scan the tool will keep monitoring those patterns. 
-2. The disadvantage of static analysis is 
+	2. You can write a query for the tool which is matching a variance of the existing know bug.
+2. The disadvantage of static analysis are as follows
 	1. you need to spend lot of computation on the scans. 
-	2. The scan are looking for pattern, so essentially you will only get what you are looking for, you cannot not expect example of variance. Then there is the problem of false positive. Another advantage 
+	2. The scan are looking for pattern, so essentially you will only get what you are looking for, you cannot not expect example of variance. Then there is the problem of false positive.
+	3. You have to add support for the build systems.
+	4. State explosion.
+	5. The number of reports are so high that no-one cares to sort them out. Also you have to filter out the false-positive.
+	6. In terms of cost you need to consider three components:
+		1. software licensing cost, 
+		2. People who are running the scans infrastructure, the dev-ops part of the thing.
+		3. People who are add support for the builds for a software components for the tool
+		4. The infrastructure cost of running the tool on the code. The computation cost.
+		5. The human analyst creating the scan queries or the patterns.
 
 ### Code Review
 
-Code review been the most manual of previous two technique but it is the most involved and it has yield one of the most impactful bugs.
+1. Code review been the most manual of previous two technique but it is the most involved and it has yield one of the most impactful bugs.
+2. This is the fundamental set to any security assessment activity and should be used to extract intelligence and feed it to the other two techniques.
+
+### Variant analysis
+
+1. [link](https://github.blog/security/vulnerability-research/multi-repository-variant-analysis-a-powerful-new-way-to-perform-security-research-across-github/)
+2. Variant analysis is an important technique for identifying new types of security vulnerabilities. The static analysis engines that powers code scanning, is a great tool for variant analysis because it allows you to model vulnerabilities as highly precise custom queries.
 
 ### Mitigation Features
 
 Another technique is enabling mitigation like ASLR, CFI, DEP, etc. This techniques help you have security even in case the bug is triggered.
 
 The best way to address the problem is detect the bug during the development phase, right when the code is written or modified. The ideal scenarios would be that any of the mentioned technique raises an alert in the developers code-editor and gives suggestions to the developer on what needs to be done to fix the issue. That's an Ideal scenario.
+
 
 ## How do bugs get propagated?
 
@@ -64,4 +81,33 @@ There are many reason for not fixing a bug, some of which are:
 
 Lets considers QPSI as a System who's purpose is to create secure products. The stock of the system is the security vulnerability( security bugs) in software products. Once we see the bugs rising and our goal is to minimise this stock my various activities like fuzzing, static analysis, code review, etc. The in-flow of the system is fault software patches which increases the stock of bug in our product. The bugs get propagated to various products along with other patches.
 
-Security bugs intel flows in our system is by means of external security reports. This serves as a very important feedback mechanism to our system, based on this feedback start security activity on particular module, with the goal on minimise the bugs in that component. 
+Security bugs intel flows in our system is by means of external security reports. This serves as a very important feedback mechanism to our system, based on this feedback start security activity on particular module, with the goal on minimize the bugs in that component.
+
+## Misc
+
+1. Patch verification - how do we know the fix provided by the developer address the issue
+	1. Validating Patch Effectiveness: When a patch is applied, it's meant to fix known issues. But how do you know it hasn’t introduced new ones?
+2. Patch propagation - once we know the bug, we have to fix the on all the product on which the software is running.
+3. Gap-analysis - once the vulnerability is know, there time it take to be shipped to the customer.
+
+## The Ideal world
+
+I often contemplate on the question, if we have a world where there were not software vulnerability, what would that be? What sort of tool and technique would that parallel universe would have which has complete taken over those vulnerability?
+
+The answer would have been there must be a program that could autonomy run for the target and figure out the issues and fix it for itself. But still what would be a defining characteristics of those program? It would have following features
+1. Spidey-sense like intelligence to find all the incoming point of attacks. (Threat Model)
+2. A very powerful taint analysis engine - this thing can help you to trace the data incoming from attack point to potential weak spots on the systems.
+3. The ability to create operational environment for the target which replicates the production environment. This simulated environment help you to validate the vulnerability and increase the confidence of the exploitability. Reproduceable bugs can be validated.
+4. The ability to create semantic understanding of the input to the attack surface and create a specification of the input which it will which can be given to the mutation engine to bombard attack surface. The more precise the specification is the better the mutation. 
+	1. The semantics of the system will also create specification which pin-points corner-cases of the system.
+	2. Understand the state-machine of the system.
+5. Observability of the systems - The ability to observe the system's behavior while it is processing the data or running. This ability will not only be used a feedback for specification but also the observer invalid behaviour and pin-point to that behaviour. This input can also help to improve the taint-analysis system.
+6. Expected and un-expected behavior of the system - the specification of the system behaviour can be help use to determine the unexpected behaviour or invalid behaviour. In the context of security, buffer overflow is unexpected behaviour.
+	1. Unit-test is one form of specification of the system.
+
+We try to achieve some of this characteristic in automated fashion in different techniques like.
+1. for static analysis - we have ability to reason base on semantics of the syntax what is the expected and un-expected behaviour.
+2. Using debugger, sanitizers or instrumentation engine we are trying to create better observability of the system.
+3. By fuzzing we trying to take input semantics and crafting semi-malformed input to poke the corner cases of the system and trigger the unexpected behaviour. But the change this technique faces is the execution environment.
+4. The code review is the step which is trying to create a semantic understand of the system in the analyst mind, 
+

@@ -272,8 +272,8 @@ summary: All the Historical Sync-up Notes
 	- [ ] Xiaoming
 	- [ ] Gaurang Parikh
 - [ ] Linux Kernel Exploitation workshop
-	- [ ] Lingtong Shen
-	- [ ] Jacopo Corbetta
+	- Lingtong Shen
+	- Jacopo Corbetta
 
 
 ### Notes and Decisions

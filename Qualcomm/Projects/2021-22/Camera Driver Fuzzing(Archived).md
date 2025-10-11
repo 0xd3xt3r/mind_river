@@ -4,9 +4,9 @@ tags:
   - "#type/sub-project"
 status: archived
 up: "[[Android Kernel Driver Fuzzing]]"
-related: 
+related:
 created-date: 2024-12-15
-summary:
+summary: Old camera driver fuzzing document
 ---
 
 > **Summary**:: 

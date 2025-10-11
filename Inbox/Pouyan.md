@@ -1,10 +1,13 @@
 ---
 up: "[[People MoC]]"
-full-name: Marcel Selhorst
-created-date: 2024-12-20
+full-name: Pouyan Sepehrdad
+created-date: 2025-10-08
+related:
+  - "[[Jacopo]]"
+  - "[[Abhinash]]"
 tags:
   - "#type/person"
-summary: Platform Security Lead
+summary: App Security Team Lead
 ---
 
 ## Meetings

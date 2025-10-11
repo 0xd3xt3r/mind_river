@@ -4,9 +4,8 @@ aliases:
   - WoS Fuzzing
 tags:
   - "#type/project"
-  - "#status/active"
   - "#qpsi/project"
-status: in-progress
+status: on-hold
 created-date: 2024-12-14
 summary: Fuzzing Windows Kernel Driver in WoS Laptops
 ---

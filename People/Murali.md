@@ -5,6 +5,9 @@ tags:
 summary: SD Principle Manager
 up: "[[People MoC]]"
 full-name: Murali Somanchy
+related:
+  - "[[Surendra]]"
+  - "[[Nagaraju]]"
 ---
 
 ## Meetings

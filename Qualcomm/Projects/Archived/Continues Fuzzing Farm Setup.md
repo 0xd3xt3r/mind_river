@@ -9,7 +9,8 @@ tags:
   - "#status/active"
 status: archived
 up: "[[Android Kernel Driver Fuzzing]]"
-related: 
+related:
+  - "[[Kernel Driver fuzzing farm]]"
 created-date: 2024-09-25
 summary: Setup a continues fuzzing farm with all the old devices
 ---
@@ -27,40 +28,6 @@ FROM !"Templates"
 WHERE icontains(up, this.file.link)
 AND icontains(tags, "type/meeting")
 SORT file.link DESC
-```
-
-## Tasks and Questions
-
-### ToDo
-
-```dataview
-TASK
-WHERE icontains(text, this.file.name)
-AND (icontains(tags, "#task") OR icontains(text, "#questions"))
-AND !completed
-GROUP BY file.name as filename
-SORT filename DESC
-```
-
-### Completed Task
-
-```dataview
-TASK
-WHERE icontains(text, this.file.name)
-AND (icontains(tags, "#task") OR icontains(text, "#questions"))
-AND completed
-GROUP BY file.name as filename
-SORT filename DESC
-```
-
-## Sprints
-
-```dataview
-TASK
-WHERE icontains(text, this.file.name)
-AND icontains(text, "#log/sprints")
-GROUP BY file.name as filename
-SORT filename DESC
 ```
 
 ## Objective

@@ -450,6 +450,13 @@ lsusb
 
 ^qcom-linux-fuzz-ref
 1. Project Zero Blog on Android Kernel Driver exploitation: [[Android Kernel Driver Bug]]
+2. [KFuzzTest: a new kernel fuzzing framework](https://lwn.net/ml/all/20250901164212.460229-1-ethan.w.s.graham@gmail.com/)
+	1. This framework provides fuzzing deep state function
+3. [New kernel tools: wprobes, KStackWatch, and KFuzzTest](https://lwn.net/Articles/1037390/)
+	1. There interesting patches wprobes, KStackWatch, KFuzzTest.
+	2. Kernel Patches that improve monitoring of kernel
+4. [Kernel Probes (Kprobes) - dynamically instrument the kernel(linux kernel doc)](https://docs.kernel.org/trace/kprobes.html)
+5. [Phrack - Kernel instrumentation using kprobes](https://phrack.org/issues/67/6)
 
 ## Archived Task
 

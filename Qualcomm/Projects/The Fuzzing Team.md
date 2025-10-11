@@ -1,11 +1,16 @@
 ---
 up: "[[Qualcomm Project MoC]]"
-related: 
+related:
 created-date: 2025-04-02
 status: in-progress
 tags:
   - "#type/project"
   - "#qpsi/project"
+  - type/pinned-docs
+team-members:
+  - "[[Satish Kurada]]"
+  - "[[Ashish]]"
+  - "[[Neeraj Pal]]"
 ---
 
 > **Summary**:: This document contains the update from 

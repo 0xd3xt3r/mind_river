@@ -1,18 +1,17 @@
 ---
 tags:
   - "#type/sub-project"
-  - "#status/active"
   - "#qpsi/project"
 status: archived
 up: "[[Android Kernel Driver Fuzzing]]"
 created-date: 2024-12-14
-summary: Fulfilling device reqirement
 ---
 
-> **Summary**:: 
+> **Summary**:: The goal of this project is to scale the fuzzing effort to multiple device.
 
 ## Requirement
 
+- Device Procurement and Setup Requirement
 - Having a debug build from source is important because we need code coverage reports which very important part of our project KPI.
 - The base system will depend on the target we are fuzzing.
 	- Base system : the system to which we will connect remotely and through which we will have access to device, this system will also have the code cloned and build on it, which will flash it to the device.

@@ -11,6 +11,7 @@ summary: Writing everything down
 ```dataview
 TABLE created-date, status 
 FROM #type/writing/article AND -"Templates"
+SORT created-date DESC
 ```
 
 ## Social Media Post

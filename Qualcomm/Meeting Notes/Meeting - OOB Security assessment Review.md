@@ -27,5 +27,5 @@ tags:
 
 ## Action Item
 
-- [ ] Catch up with [[Marcel]] who was part of review and understand what has been done. [[Nagaraju]] #task
+- [x] Catch up with [[Marcel]] who was part of review and understand what has been done. [[Nagaraju]] #task
 - [ ] #task create proposal in 2nd week of Jan [[Out of Band System Management]]

@@ -2,11 +2,10 @@
 up: "[[Qualcomm Project MoC]]"
 related:
   - "[[Qualcomm MoC]]"
-status:
-  - in-progress
+status: done
 tags:
   - "#qpsi/project"
-  - "#type/pinned-docs"
+  - type/project
 created-date: 2024-12-14
 summary: Security Training in QIPL
 ---

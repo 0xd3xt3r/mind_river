@@ -1,10 +1,10 @@
 ---
 up: "[[People MoC]]"
-full-name: Marcel Selhorst
-created-date: 2024-12-20
+full-name: Ashish Undirwade
+created-date: 2025-10-08
 tags:
   - "#type/person"
-summary: Platform Security Lead
+summary: Fuzzing team
 ---
 
 ## Meetings

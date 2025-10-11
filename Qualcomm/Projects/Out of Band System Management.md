@@ -2,43 +2,27 @@
 up: "[[Qualcomm Project MoC]]"
 related:
   - "[[Rootkits and Bootkits]]"
+  - "[[OOB 3rd party analysis]]"
 aliases:
   - OOB Security
 created-date: 2024-12-18
-status: on-hold
+status: in-progress
 tags:
   - "#type/project"
   - "#qpsi/project"
+  - type/pinned-docs
 ---
 
 > **Summary**:: OOB Sub-System helps IT Admins to remotely manage and repair office machines. Security of This component is critical since someone can access the machine remotely. 
 
 The main use-cases are remote power on/off, remote wipe, remote diagnostics, etc. This feature is important from a security point of view as it immediately impacts customer and consumer data and execution.
 
-# Project Research
+## PoC
 
-## Fleeting Notes
-
-- [Intel](https://www.intel.com/content/www/us/en/business/enterprise-computers/resources/out-of-band-management.html) and AMD supporting this tech since long.
-	- Intel has Intel vPro Enterprise for Windows OS
-		- Its based on Intel Active Management Technology (Intel AMT)
-		- These RMM hardware-based capabilities operate independently of the OS and provide persistent connectivity
-		- With remote keyboard, video, and mouse (KVM) control, IT administrators can access and work on remote PCs and devices as if they were *hands on*.
-		- **Intel Mesh Commander** and **MeshCentral** for peer-to-peer remote management.
-	- AMD : Out-Of-Band PC Management with AMD PRO Manageability
-		- Standards DASH - Desktop & Mobile Architecture for System Hardware
-		- DASH is part of DMTF (formerly known as the Distributed Management Task Force).
-			- https://www.dmtf.org/standards/dash
-		- Couple of Solution
-			- EPYC System Management Software (E-SMS)
-				- https://www.amd.com/en/developer/e-sms.html
-			- Advanced Platform Management Link (APML) Library
-				- https://www.amd.com/en/developer/e-sms/apml-library.html
-				- https://github.com/amd/esmi_oob_library
-
-- Hypervisor breach may fall in high to medium impact but OOB breach will have sever impact
-- We need to prioritize it internally at QPSI. That SS is called OOB SS and it should be our priority but some reason it is not.
-- Please work with Nagaraju and Initiate this discussion. We can discuss and make case but any new topic has to go through QPSI vetting process. It means Murali, Nicolas and We should be aligned.
+- Eshwar Muppala - mqttclient entrypoints
+- Sachin Sharma - ssg designer for ssg oob side (already went through architecture design with Marcel)
+- David Collins + Subbaraman Narayanamurthy: core team direct engineers, they will know about QMI pathway from OOB TEE Service to HLOS (they handle OOB TEE Service and OOB NS Service)
+- Gerald Dasal - securelib entry point
 
 ## Qualcomm
 
@@ -64,6 +48,7 @@ The main use-cases are remote power on/off, remote wipe, remote diagnostics, etc
 	3. From the QOMS application running on Windows to trigger enrollment
 	4.  From the OEM/Enterprise tool running on Windows to pull a QOMS chipset public key
 2. [QCOM OOBM Service Specification](https://github.qualcomm.com/pages/CorePlatform/oobm-service/index.html)
+3. [Zephyr QC Docs](http://go.qualcomm.com/corezephyr)
 
 ## Attack Surface
 
@@ -71,10 +56,63 @@ The main use-cases are remote power on/off, remote wipe, remote diagnostics, etc
 2. Malicious Server
 3. Malicious Client
 4. Data Format
-	1. COSE
-	2. QC CBOR
+	1. COSE - this also has RFC. This is build on top of CBOR.
+	2. QC CBOR - borrowed from TZ code base
 	3. MQTT from zephyr core library.
-	4. MBED TLS library crypto data parsing - accepting certificate from untrusted sources.
+	4. mTLS library crypto data parsing - accepting certificate from untrusted sources.
+	5. ASN1 parser - borrowed from TZ code base
+5. First the data is deserialzied then the signature verification is done.
+6. EC - enterprise chip, request by enterprise. Customer req not sure if it is still active.
+7. TCP and MQTT protocol stack on needs to be fuzzed as it is not fuzzed on OSS-Fuzz
+	1. where is the transport layer stack HAL implement?
+
+## Threat Model
+1. Assets - 
+	1. RCE in OOB Firmware NS
+2. Entry Point
+3. External entities
+	1. QWES Server
+4. External trust levels
+5. Major Components
+6. Use Scenarios (also useful for CRA)
+	1. OOB to UEFI
+		1. GLINK to query UEFI
+	2. OOB firmware
+		1. Can unknown host send mTLS certificate to the firmware(device)?
+			1. may be during enrollment
+			2. NO ! host is set from HLOS config.
+			3. Trigger packet is signed, with license key
+			4. locked at the end of enrollment phase.
+		2. Can unknown host have contact with firmware network stack?
+	3. OOB in Windows
+		1. Windows to OOB Entry Point function - OobSecLib_process
+		2. OOB to HLOS handling of at least one use-case, SDK/APIs for HLOS clients from OOB Service, IPC interfacing with OOB.
+			1. Handled by Core team, send request to HLOS.
+			2. There is also back channel for enrollment
+			3. Managed by QMI IPC.
+	4. Device Enrollment
+		1. Initiated by windows interaction only? is the port listening ?
+			1. Windows via QMI
+	5. Enterprise-specific command that are issued using enterprise key
+	6. Per-device certificate which is generated during device enrollment
+	7. QMI run on GLINK, and GLINK runs on shared memory. Check only two sub-system are using it. Confused deputy.
+	8. How can we attack the storage? change the keys? change host? certificate pinning.
+	9. OOB-TEE <--> OOB-NS
+		1. Entry Point function - MqttDataProcessor_handleSecLib
+
+---
+## CR Raised
+> Some of the bugs which you created while working on the project
+
+### Bug Tracker
+
+| ID  | CR                       | Rating | Date       | Comment                                                |
+| --- | ------------------------ | ------ | ---------- | ------------------------------------------------------ |
+| 1   | https://orbit/CR/4313897 | Medium | 2025-10-08 | OOB write while loading public key from secure storage |
+| 2   | https://orbit/CR/4314811 | High   | 2025-10-09 | OOB write while loading public key from MQTT payload   | 
+| 3   | https://orbit/CR/4314872 | Hight  | 2025-10-09 | OOB read reading SALT value from MQTT payload         |
+
+---
 
 ## Tainted Functions
 
@@ -91,6 +129,7 @@ The main use-cases are remote power on/off, remote wipe, remote diagnostics, etc
 -  [CBOR RPC 8152 Specs](https://datatracker.ietf.org/doc/html/rfc8152)
 	- Concise Binary Object Representation (CBOR) is a data format designed for small code size and small message size
 	- CBOR Object Signing and Encryption (COSE)
+- [Zephyr Fuzzing Docs](https://docs.zephyrproject.org/latest/samples/subsys/debug/fuzz/README.html)
 
 # Project Management 
 

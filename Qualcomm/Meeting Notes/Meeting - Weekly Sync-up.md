@@ -1,8 +1,8 @@
 ---
 up: "[[Meeting MoC]]"
 related:
-  - "[[Fuzzing Team Project Update]]"
-participants: 
+  - "[[The Fuzzing Team]]"
+participants:
 created-date: 2025-04-02T11:35
 tags:
   - "#type/meeting"
