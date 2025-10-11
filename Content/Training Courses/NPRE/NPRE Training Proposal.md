@@ -130,12 +130,13 @@ Munawwar Hussain Shelia is currently working as a Vulnerability Researcher at Qu
 
 ## References
 
-1. [Reverse-Engineering and Fuzzing Custom Network Protocol - Blueteam Con Chicago, USA 2024](https://blueteamcon.com/directory/reverse-engineering-and-fuzzing-custom-network-protocol/)
-2. [Reverse-Engineering and Fuzzing Custom Network Protocol - Nullcon Goa 2023](https://web.archive.org/web/20230628082912/https://nullcon.net/goa-2023/training/reverse-engineering-and-fuzzing-protocol/)
-3. Reverse-Engineering and Fuzzing Custom Network Protocol - Nullcon Goa 2020
-4. [Firmware Reverse Engineering - a Pragmatic Approach (Besides Delhi, 2020)](https://bsidesdelhi.in/speakers.php)
-5. [Reverse Engineering Bare-Metal IoT Firmwares - Moving beyond Linux (c0c0n Conference, 2020) ](https://india.c0c0n.org/2020/agenda)
-6. [Practical IoT Hacking Training, Nullcon Goa 2020](https://web.archive.org/web/20201203003925/https://nullcon.net/website/goa-2020/training/practical-iot-hacking.php)
-7. [IoT Hacking workshop (1-Day, CPX 360)](https://www.checkpoint.com/cpx/asia/)
-8. [HITB Lab - Writing Bare-Metal ARM Shellcode](https://web.archive.org/web/20211016153622/https://cyberweek.ae/2020/writing-bare-metal-arm-shellcode/)
+1. [Reverse Engineering Proprietary Protocols - OWASP New Zealand Day 2025](https://appsec.org.nz/conference/training-reverse_engineering_proprietary_protocols.html)
+2. [Reverse-Engineering and Fuzzing Custom Network Protocol - Blueteam Con Chicago, USA 2024](https://blueteamcon.com/directory/reverse-engineering-and-fuzzing-custom-network-protocol/)
+3. [Reverse-Engineering and Fuzzing Custom Network Protocol - Nullcon Goa 2023](https://web.archive.org/web/20230628082912/https://nullcon.net/goa-2023/training/reverse-engineering-and-fuzzing-protocol/)
+4. Reverse-Engineering and Fuzzing Custom Network Protocol - Nullcon Goa 2020
+5. [Firmware Reverse Engineering - a Pragmatic Approach (Besides Delhi, 2020)](https://bsidesdelhi.in/speakers.php)
+6. [Reverse Engineering Bare-Metal IoT Firmwares - Moving beyond Linux (c0c0n Conference, 2020) ](https://india.c0c0n.org/2020/agenda)
+7. [Practical IoT Hacking Training, Nullcon Goa 2020](https://web.archive.org/web/20201203003925/https://nullcon.net/website/goa-2020/training/practical-iot-hacking.php)
+8. [IoT Hacking workshop (1-Day, CPX 360)](https://www.checkpoint.com/cpx/asia/)
+9. [HITB Lab - Writing Bare-Metal ARM Shellcode](https://web.archive.org/web/20211016153622/https://cyberweek.ae/2020/writing-bare-metal-arm-shellcode/)
 
