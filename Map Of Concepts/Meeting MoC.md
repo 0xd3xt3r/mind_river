@@ -6,10 +6,27 @@ tags:
 summary: All the Meetings in the World
 ---
 
-```dataview
-TABLE WITHOUT ID
-file.link AS "Meeting", summary, participants, created-date
-FROM !"Templates"
-WHERE icontains(tags, "#type/meeting")
-SORT created-date DESC
+```base
+filters:
+  and:
+    - file.hasTag("type/meeting")
+    - not:
+        - file.inFolder("Templates")
+properties:
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: All the meetings
+    order:
+      - file.name
+      - participants
+      - summary
+      - created-date
+    sort:
+      - property: created-date
+        direction: DESC
+    columnSize:
+      file.name: 424
+      note.summary: 449
 ```

@@ -6,12 +6,34 @@ created-date: 2024-12-15
 summary: Everything Related to things I have Read
 ---
 
+```base
+filters:
+  and:
+    - file.hasTag("type/reading/book")
+    - not:
+        - file.inFolder("Templates")
+properties:
+  note.summary:
+    displayName: Summary
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Pinned Docs
+    order:
+      - file.name
+      - summary
+      - author
+      - status
+    sort:
+      - property: summary
+        direction: ASC
+    columnSize:
+      file.name: 386
+      note.summary: 700
+      note.author: 348
+      note.status: 190
 
-```dataview
-TABLE tags, status, author, file.mtime as "Last Modified"
-FROM #type/reading/book and !"Templates"
-SORT file.mtime DESC
-LIMIT 20
 ```
 
 ## Logs
@@ -29,17 +51,12 @@ LIMIT 20
 ## Wish List
 
 - Godel Escher Bach	Paused	Computers, Math,Science	
-- Meditations - Marcus Aurelius	Done	Philosophy	
 - Linux Kernel	Currently Reading	Computers,Security	Robert Love
-- Homo Deus	Done	Future	
 - Digital Minimalist	Done	Productivity	Cal Newport
-- Deep Work	Done	Productivity	Cal Newport
 - How to read a book	Paused	Skill-Building	
-- Atomic Habits	Currently Reading	Productivity	James Clear
 - 7 Habits of Highly Effective People	Want To Read		
 - Secrets and Lies: Digital Security in a Networked World	Want To Read	Computer-Security,Skill-Building	Bruce Schneier
 - Your Money or Your Life	Want To Read	Skill-Building	
 - Make Time: How to focus on what matters every day	Want To Read	Productivity	
 - The Theoretical Minimum: What You Need to Know to Start Doing Physics	Want To Read		
-- On Writing Well: The Classic Guide to Writing Nonfiction	Want To Read		
 - The World Beyond Your Head: On Becoming an Individual in an Age of Distraction	Want To Read	Skill-Building	

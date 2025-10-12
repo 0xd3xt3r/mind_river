@@ -4,7 +4,7 @@ tags:
 status: reading
 created-date: 2024-12-14
 completed-date: 2024-12-14
-author: 
+author:
 title: Rework
 up: "[[Reading MoC]]"
 ---

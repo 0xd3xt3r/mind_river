@@ -1,9 +1,9 @@
 ---
 up: "[[Reading MoC]]"
 tags:
-- "#type/reading/book"
-author : Robert Green
-created-date : 2024-12-09
+  - "#type/reading/book"
+author: Robert Green
+created-date: 2024-12-09
 status: reading
 ---
 

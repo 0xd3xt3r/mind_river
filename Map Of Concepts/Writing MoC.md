@@ -8,28 +8,77 @@ summary: Writing everything down
 
 ## Blogpost
 
-```dataview
-TABLE created-date, status 
-FROM #type/writing/article AND -"Templates"
-SORT created-date DESC
+```base
+filters:
+  and:
+    - file.hasTag("type/writing/article")
+    - not:
+        - file.inFolder("Templates")
+properties:
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Pinned Docs
+    filters:
+      and:
+        - status == "todo"
+    order:
+      - file.name
+      - status
+      - created-date
+    sort:
+      - property: summary
+        direction: ASC
+    columnSize:
+      file.name: 597
+      note.status: 195
+
 ```
 
 ## Social Media Post
 
-```dataview
-TABLE created-date, status 
-FROM #type/writing/social-media and -"Templates"
-WHERE status = "todo"
-SORT created-date DESC
-```
+```base
+filters:
+  and:
+    - file.hasTag("type/writing/social-media")
+    - not:
+        - file.inFolder("Templates")
+properties:
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Todo Post
+    filters:
+      and:
+        - status == "todo"
+    order:
+      - file.name
+      - status
+      - created-date
+    sort:
+      - property: summary
+        direction: ASC
+    columnSize:
+      file.name: 559
+      note.status: 195
+  - type: table
+    name: Published Post
+    filters:
+      and:
+        - status == "published"
+    order:
+      - file.name
+      - status
+      - created-date
+    sort:
+      - property: summary
+        direction: ASC
+    columnSize:
+      file.name: 559
+      note.status: 195
 
-```dataview
-TABLE created-date, status 
-FROM #type/writing/social-media
-SORT filename
-SORT date
-WHERE status = "published"
-LIMIT 10
 ```
 
 ## Books

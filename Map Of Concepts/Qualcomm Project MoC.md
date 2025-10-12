@@ -10,13 +10,32 @@ summary: All the Project going on in Qualcomm
 
 ## Pinned Docs
 
-```dataview
-TABLE WITHOUT ID
-	file.link as "Sub Project", summary, status, created-date AS Date
-FROM !"Templates"
-WHERE icontains(up, this.file.link)
-AND icontains(tags, "type/pinned-docs")
-SORT filename DESC
+```base
+filters:
+  and:
+    - file.hasTag("type/pinned-docs")
+properties:
+  note.summary:
+    displayName: Summary
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Pinned Docs
+    order:
+      - file.name
+      - summary
+      - status
+      - file.ctime
+    sort:
+      - property: summary
+        direction: ASC
+    limit: 10
+    columnSize:
+      file.name: 386
+      note.summary: 586
+      note.status: 190
+
 ```
 
 ### Projects In-Progress
