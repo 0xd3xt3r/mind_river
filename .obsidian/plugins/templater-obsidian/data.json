@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "",
+  "templates_folder": "Templates",
   "templates_pairs": [
     [
       "",
@@ -29,6 +29,10 @@
     {
       "folder": "Wiki/Book Notes",
       "template": "Templates/book-template.md"
+    },
+    {
+      "folder": "Qualcomm/Projects",
+      "template": "Templates/Sub Project Lite Template.md"
     }
   ],
   "enable_file_templates": false,

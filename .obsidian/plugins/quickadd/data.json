@@ -314,6 +314,13 @@
       },
       "openFile": false,
       "openFileInMode": "default"
+    },
+    {
+      "id": "2c2d026a-e3a9-4c18-9731-af5ef1ae0e6b",
+      "name": "Weekly Notes",
+      "type": "Macro",
+      "command": false,
+      "macroId": "779b77d7-3467-4353-931a-364e56d56139"
     }
   ],
   "macros": [

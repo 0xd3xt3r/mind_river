@@ -10,9 +10,9 @@
   },
   "weekly": {
     "format": "YYYY-WW",
-    "template": "Templates/Weekly Note template.md",
+    "template": "Templates/weekly-report-template.md",
     "folder": "Journal/Weekly",
-    "enabled": false
+    "enabled": true
   },
   "monthly": {
     "format": "",

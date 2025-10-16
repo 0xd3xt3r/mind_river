@@ -1,9 +1,9 @@
 ---
 created-date: 2025-01-08T18:15
 up: "[[Meeting MoC]]"
-presented-by: 
+presented-by:
 participants: "[[Veera Venkata Satish Mandru]]"
-related: "[[Camera Driver Fuzzing]]"
+related: "[[Qualcomm/Projects/Camera Driver Fuzzing]]"
 tags:
   - "#type/meeting"
   - "#qpsi/meeting"

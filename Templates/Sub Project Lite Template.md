@@ -5,14 +5,23 @@ tags:
 status: todo
 up: 
 related: 
-created-date : {{DATE:YYYY-MM-DD}}
+created-date : {{DATE}}
 summary:
 ---
 
 > **Summary**:: 
 
+## Notes
+> What did you learn?
+- 
 
-## Meetings
+## Task
+> What needs to be done!
+- 
+
+## Project Management
+
+### Meetings
 
 ```dataview
 TABLE WITHOUT ID
@@ -24,7 +33,7 @@ AND icontains(tags, "type/meeting")
 SORT file.link DESC
 ```
 
-## Tasks and Questions
+### Tasks and Questions
 
 ```dataview
 TASK
@@ -34,3 +43,5 @@ AND !completed
 GROUP BY file.name as filename
 SORT filename DESC
 ```
+
+### Archived Task

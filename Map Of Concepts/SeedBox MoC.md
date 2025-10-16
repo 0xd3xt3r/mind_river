@@ -8,13 +8,43 @@ summary: All notes or idea which you should work on!
 
 ## Seed Thoughts
 
-```dataview
-TABLE
-file.mtime as "Last Modified"
-from "Seedbox"
-SORT file.ctime ASC
-```
+```base
+filters:
+  and:
+    - file.inFolder("Seedbox")
+    - not:
+        - file.inFolder("Templates")
+properties:
+  note.summary:
+    displayName: Summary
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Done
+    filters:
+      and:
+        - status == "done"
+    order:
+      - file.name
+      - summary
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 392
+      note.summary: 700
+  - type: table
+    name: All
+    order:
+      - file.name
+      - summary
+      - status
+    sort:
+      - property: file.mtime
+        direction: DESC
 
+```
 ## Seed Logs
 
 ```dataview

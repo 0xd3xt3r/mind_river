@@ -4,7 +4,7 @@ tags:
   - "#type/knowledge"
 status: todo
 created-date: 2024-12-23
-summary: Health experiment I did
+summary: Experiments I did to improve my health
 ---
 
 # Fitness & Health

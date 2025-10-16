@@ -61,7 +61,7 @@ SORT file.link DESC
 ### Phase 1 : Setup
 
 1. [x] #task Collect all the devices in Hyderabad with [[Nagaraju]] help
-2. [ ] #task Hardware Requirement
+2. [x] #task Hardware Requirement
 	1. [ ] USB Hub
 	2. [ ] Lab Machines to attach MTP Devices
 	3. [ ] MTP Devices which will be sent to Hyderabad

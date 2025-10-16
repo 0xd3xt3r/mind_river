@@ -7,8 +7,9 @@
     "start-date": "date",
     "complete-date": "date",
     "created-date": "date",
-    "related": "multitext",
+    "related": "text",
     "participants": "multitext",
-    "up": "text"
+    "up": "text",
+    "author": "multitext"
   }
 }

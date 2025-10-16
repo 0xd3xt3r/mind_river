@@ -16,4 +16,4 @@ media_link: https://www.youtube.com/watch?v=9U-FK_Qi1XQ&t=1s
 
 ## Task
 
-- [ ] Complete watching "Fuzzing by principles" stream #task #learning ➕ 2024-12-06
+- [x] Complete watching "Fuzzing by principles" stream #task #learning ➕ 2024-12-06

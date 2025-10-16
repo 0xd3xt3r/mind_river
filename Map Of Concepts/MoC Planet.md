@@ -22,8 +22,8 @@ views:
       - Summary
       - file.mtime
     sort:
-      - property: summary
-        direction: ASC
+      - property: file.mtime
+        direction: DESC
     columnSize:
       file.name: 241
       note.summary: 834

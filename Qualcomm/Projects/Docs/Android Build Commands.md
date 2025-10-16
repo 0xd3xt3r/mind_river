@@ -4,7 +4,7 @@ tags:
   - "#type/qcom"
   - "#type/pinned-docs"
 related:
-  - "[[Camera Driver Fuzzing]]"
+  - "[[Qualcomm/Projects/Camera Driver Fuzzing]]"
 status: done
 created-date: 2024-12-18
 summary: Build commands for Androids systems
@@ -39,6 +39,7 @@ sanitizer-status
 # check if kcov is enabled
 ls /sys/kernel/debug/kcov
 ```
+
 
 ## Camera Device Setup Commands
 
@@ -95,10 +96,7 @@ go test -gcflags='all=-N -l' -c -v ./prog -o mytest.test
 # run the single test-case `TestTransitivelyEnabledCalls` from the binary
 dlv exec ./mytest.test -- -test.run ^TestTransitivelyEnabledCalls$
 dlv exec ./mytest.test -- -test.run ^TestResourceCtors$ > data.txt
-
-
 ```
-
 ### Compiling Syzkaller
 
 ```bash

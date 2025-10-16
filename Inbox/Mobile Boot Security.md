@@ -2,10 +2,10 @@
 up: "[[Knowledge Base MoC]]"
 tags:
   - "#type/knowledge"
-status: todo
+status: in-progress
 created-date: 2025-08-09
-related: 
-summary:
+related:
+summary: Security of Bootloader and other low-level attack surface
 ---
 
 ## Pre-requisites

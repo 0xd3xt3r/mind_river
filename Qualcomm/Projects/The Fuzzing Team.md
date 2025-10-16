@@ -11,9 +11,8 @@ team-members:
   - "[[Satish Kurada]]"
   - "[[Ashish]]"
   - "[[Neeraj Pal]]"
+summary: This document contains team updates and task
 ---
-
-> **Summary**:: This document contains the update from 
 
 ## Meetings or Reports
 

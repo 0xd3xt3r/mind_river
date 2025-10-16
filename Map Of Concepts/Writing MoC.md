@@ -55,14 +55,12 @@ views:
         - status == "todo"
     order:
       - file.name
-      - status
       - created-date
     sort:
       - property: summary
         direction: ASC
     columnSize:
-      file.name: 559
-      note.status: 195
+      file.name: 796
   - type: table
     name: Published Post
     filters:

@@ -2,7 +2,7 @@
 up: "[[Qualcomm Project MoC]]"
 related:
   - "[[Qualcomm MoC]]"
-status: done
+status: in-progress
 tags:
   - "#qpsi/project"
   - type/project
@@ -14,15 +14,33 @@ summary: Security Training in QIPL
 
 ## Sub Projects
 
-```dataview
-TABLE WITHOUT ID
-	file.link as "Sub Projects",
-	up, created-date, summary, tags
-FROM !"Templates"
-WHERE icontains(up, this.file.link)
-AND icontains(tags, "type/sub-project")
-SORT filename DESC
-```
+```base
+filters:
+  and:
+    - file.hasTag("type/sub-project")
+    - file.hasTag("qpsi/project")
+    - file.hasLink(this.file)
+properties:
+  note.summary:
+    displayName: Summary
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Sub-Projects
+    order:
+      - file.name
+      - summary
+      - status
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 10
+    columnSize:
+      file.name: 386
+      note.summary: 866
+  ```
 
 ## Meetings
 

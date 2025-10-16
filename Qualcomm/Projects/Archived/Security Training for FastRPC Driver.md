@@ -7,11 +7,10 @@ tags:
   - "#qpsi/project"
   - "#type/sub-project"
   - "#status/active"
-status: in-progress
-up: "[[Security Trainings]]"
-related: 
+status: done
+up: "[[QPSI Security Trainings]]"
 created-date: 24-09-2024
-summary:
+summary: The training delivered to FastRPC Team
 ---
 
 > **Summary**:: 

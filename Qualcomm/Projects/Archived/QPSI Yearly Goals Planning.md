@@ -64,7 +64,7 @@ Update: I am working with the tech team to got those bugs fixed.
 
 ### Action Projects
 
-- [[Camera Driver Fuzzing]]
+- [[Qualcomm/Projects/Camera Driver Fuzzing]]
 - [[Gunyah Hypervisor Fuzzing]]
 - [[Sub Project - Video Driver security assessment]]
 

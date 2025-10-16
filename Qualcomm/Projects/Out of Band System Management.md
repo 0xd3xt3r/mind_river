@@ -11,9 +11,12 @@ tags:
   - "#type/project"
   - "#qpsi/project"
   - type/pinned-docs
+
+summary: OOB Sub-System helps IT Admins to remotely manage and repair office machines. Security of This component is critical since someone can access the machine remotely. 
+link : "https://confluence.qualcomm.com/confluence/display/QPSIFT/Out-of-Band+%28OOBMS%29+fuzzing"
 ---
 
-> **Summary**:: OOB Sub-System helps IT Admins to remotely manage and repair office machines. Security of This component is critical since someone can access the machine remotely. 
+
 
 The main use-cases are remote power on/off, remote wipe, remote diagnostics, etc. This feature is important from a security point of view as it immediately impacts customer and consumer data and execution.
 
@@ -64,7 +67,7 @@ The main use-cases are remote power on/off, remote wipe, remote diagnostics, etc
 5. First the data is deserialzied then the signature verification is done.
 6. EC - enterprise chip, request by enterprise. Customer req not sure if it is still active.
 7. TCP and MQTT protocol stack on needs to be fuzzed as it is not fuzzed on OSS-Fuzz
-	1. where is the transport layer stack HAL implement?
+8. where is the transport layer stack HAL implement?
 
 ## Threat Model
 1. Assets - 
@@ -109,8 +112,8 @@ The main use-cases are remote power on/off, remote wipe, remote diagnostics, etc
 | ID  | CR                       | Rating | Date       | Comment                                                |
 | --- | ------------------------ | ------ | ---------- | ------------------------------------------------------ |
 | 1   | https://orbit/CR/4313897 | Medium | 2025-10-08 | OOB write while loading public key from secure storage |
-| 2   | https://orbit/CR/4314811 | High   | 2025-10-09 | OOB write while loading public key from MQTT payload   | 
-| 3   | https://orbit/CR/4314872 | Hight  | 2025-10-09 | OOB read reading SALT value from MQTT payload         |
+| 2   | https://orbit/CR/4314811 | High   | 2025-10-09 | OOB write while loading public key from MQTT payload   |
+| 3   | https://orbit/CR/4314872 | High   | 2025-10-09 | OOB read reading SALT value from MQTT payload          |
 
 ---
 

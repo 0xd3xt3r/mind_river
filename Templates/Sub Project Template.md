@@ -5,7 +5,7 @@ tags:
 status: todo
 up: 
 related: 
-created-date : {{DATE: "YYYY-MM-DDTHH:mm"}}
+created-date : {{DATE}}
 summary:
 ---
 

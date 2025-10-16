@@ -23,9 +23,13 @@ views:
     order:
       - file.name
       - summary
+    sort:
+      - property: file.mtime
+        direction: DESC
     columnSize:
       file.name: 392
       note.summary: 700
+
 ```
 
 ## Operating Systems
@@ -33,7 +37,7 @@ views:
 ```base
 filters:
   and:
-    - file.hasTag("type/os/linux")
+    - file.hasTag("type/os")
     - not:
         - file.inFolder("Templates")
 properties:
@@ -44,22 +48,36 @@ properties:
 views:
   - type: table
     name: Linux
+    filters:
+      and:
+        - file.tags.containsAny("type/os/linux")
     order:
       - file.name
       - summary
     columnSize:
       file.name: 392
       note.summary: 700
-```
-
-```dataview
-TABLE summary as Summary
-FROM #type/os/windows  and -"Templates"
-SORT file.name
-```
-
-```dataview
-TABLE summary as Summary
-FROM #type/os AND -"Templates" AND -#type/os/windows AND -#type/os/linux
-SORT file.name
+  - type: table
+    name: Windows
+    filters:
+      and:
+        - file.tags.containsAny("type/os/windows")
+    order:
+      - file.name
+      - summary
+    columnSize:
+      file.name: 392
+      note.summary: 700
+  - type: table
+    name: Misc
+    filters:
+      not:
+        - file.tags.containsAny("type/os/windows")
+        - file.tags.containsAny("type/os/linux")    
+    order:
+      - file.name
+      - summary
+    columnSize:
+      file.name: 392
+      note.summary: 700
 ```

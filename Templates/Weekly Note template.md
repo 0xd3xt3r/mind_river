@@ -1,4 +1,5 @@
 ---
+up: "[[Welcome Home]]"
 created-date: {{DATE}}
 tags: "#type/note/weekly"
 score: -1

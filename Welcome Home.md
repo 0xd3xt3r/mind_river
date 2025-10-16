@@ -1,12 +1,10 @@
 ---
 up: "[[Knowledge Base MoC]]"
-tags:
-  - "#type/knowledge"
 ---
 
 > This is a home screen for Project "Mind River"
 
-## Pinned Docs
+## Important Docs
 
 
 | Office                   | Creative               | Misc                     |
@@ -17,3 +15,67 @@ tags:
 | [[People MoC]]           | [[SeedBox MoC]]        | [[Personal Project MoC]] |
 | [[Meeting MoC]]          | [[Research Paper MoC]] | [[MoC Planet]]           |
 
+## Weekly Notes
+
+```base
+filters:
+  and:
+    - file.hasTag("type/note/weekly")
+    - not:
+        - file.inFolder("Templates")
+properties:
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Most Recent Weekly Notes
+    order:
+      - file.name
+      - summary
+      - score
+      - created-date
+    sort:
+      - property: created-date
+        direction: DESC
+    limit: 5
+    columnSize:
+      file.name: 159
+      note.summary: 1027
+      note.score: 98
+
+```
+
+## Recent Files
+
+```base
+views:
+  - type: table
+    name: Recent Files
+    order:
+      - file.name
+      - summary
+      - file.tags
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 5
+    columnSize:
+      note.summary: 553
+  - type: table
+    name: Projects
+    filters:
+      and:
+        - file.tags.contains("type/project")
+        - file.tags.contains("qpsi/project")
+    order:
+      - file.name
+      - summary
+    limit: 10
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 380
+      note.summary: 553
+
+```

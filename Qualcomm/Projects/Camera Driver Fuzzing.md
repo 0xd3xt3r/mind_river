@@ -76,15 +76,15 @@ SORT filename DESC
 
 ## Task
 
-- [ ] #task Klockwork rules for camera driver attack surface #qpsi ➕ 2024-12-12
-- [ ] cam_private_ioctl - 70 Request manager
+- [x] #task Klockwork rules for camera driver attack surface #qpsi ➕ 2024-12-12 ✅ 2025-10-13
+- [x] cam_private_ioctl - 70 Request manager
 	- this function is already has the necessary grammar
 - [ ] cam_sync_dev_ioctl - 63
 	- [ ] this function is not directly reachable
-- [ ] cam_node_handle_ioctl - 18
+- [x] cam_node_handle_ioctl - 18
 	- function resolution doesn't make sense
-- [ ] cam_subdev_ioctl - not sure why there are so many unresolved function
-- [ ] cam_flash_subdev_ioctl - 55
+- [x] cam_subdev_ioctl - not sure why there are so many unresolved function
+- [x] cam_flash_subdev_ioctl - 55
 - [x] cam_cpas_subdev_ioctl
 - [x] cam_actuator_subdev_ioctl
 - [x] cam_csiphy_subdev_ioctl
@@ -342,9 +342,7 @@ lsusb
 - the problem with shared buffer is, if some pointer assigned in the buffer and later if the 
 
 ### Sub-system Tracking
-
 ^c07fb6
-
 - Create a overview of all the device
 - Below list has been prepared using media numeration API exposed by linux-v4l sub-system.
 
@@ -387,32 +385,32 @@ lsusb
 
 ### Bug Tracker
 
-| ID  | CR                                   | Rating | Created On | Comment                                                                                                              |                                                       |     |
-| --- | ------------------------------------ | ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | --- |
-| 1   | https://orbit/CR/3945652             | Medium | 10-10-2024 | CPAS sub-system OOB Write                                                                                            |                                                       |     |
-| 2   | https://orbit/CR/3953618             | Medium | 18-10-2024 | CSIPHY sub-system OOB Read/Write                                                                                     |                                                       |     |
-| 3   | https://orbit/CR/3957101             | Low    | 23-10-2024 | JPEG Wild pointer free                                                                                               |                                                       |     |
-| 4   | https://orbit/CR/3957873             | Medium | 24-10-2024 | Request Manager CAM_REQ_MGR_SCHED_REQ_V3 integer overflow                                                            |                                                       |     |
-| 5   | https://orbit/CR/3990693             | medium | 03-12-2024 | Register dumping problem cam_common_user_dump_helper oob write                                                       |                                                       |     |
-| 6   | https://orbit/CR/3990727             | medium | 03-12-2024 | Register dumping problem cam_soc_util_dump_dmi_ctxt_reg_range_user_buf and cam_soc_util_dump_cont_reg_range_user_buf |                                                       |     |
-| 7   | https://orbit/CR/3991144             | medium | 04-12-2024 | OPE Manager cam_ope_mgr_process_cmd_io_buf_req                                                                       |                                                       |     |
-| 8   | https://orbit/CR/4021514             | Low    | 2025-01-09 | OPE cam_ope_packet_generic_blob_handler                                                                              |                                                       |     |
-| 9   | https://orbit/CR/4021530             | Medium | 2025-01-09 | cam_packet_util_dump_patch_info in ICP Sub-system                                                                    |                                                       |     |
-| 10  | https://orbit/CR/4042291 ~~4022403~~ | Medium | 2025-01-10 | This is a dense CR lots of fields need to be validated in OPE sub-system                                             |                                                       |     |
-| 11  | https://orbit/CR/4042296 ~~4022644~~ | Medium | 2025-01-10 | ope_create_frame_cmd_batch in OPE Sub-system                                                                         |                                                       |     |
-| 12  | https://orbit/CR/4042285 ~~4022860~~ | Medium | 2025-01-10 | ope_create_stripe_cmd in OPE                                                                                         |                                                       |     |
-| 13  | https://orbit/CR/4056304             | Medium | 2025-02-14 | eeprom parse_memory_map signed to unsigned comparision                                                               |                                                       |     |
-| 14  | https://orbit/CR/4056616             | Medium | 2025-02-14 | cam_sensor_update_power_settings out of bound read                                                                   |                                                       |     |
-| 15  | https://orbit/CR/4056681             | Low    | 2025-02-14 | Infinite loop, functional bug not security issue                                                                     |                                                       |     |
-| 16  | https://orbit/CR/4070376             | Medium | 2025-02-27 | TFE sub-system                                                                                                       |                                                       |     |
-| 17  | https://orbit/CR/4070420             | Medium | 2025-02-27 | IFE Sub-system                                                                                                       |                                                       |     |
-| 18  | https://orbit/CR/4070436             | Medium | 2025-02-27 | cam_tfe_cam_cdm_callback in TFE sub-system                                                                           |                                                       |     |
-| 19  | https://orbit/CR/4070441             | Low    | 2025-02-27 | cam_custom_mgr_prepare_hw_update                                                                                     |                                                       |     |
-| 20  | https://orbit/CR/4070467             | Medium | 2025-02-27 | "cam_sensor_i2c_command_parser" "header.count" field needs to be validated                                           |                                                       |     |
-| 21  | https://orbit/CR/4070498             | Medium | 2025-02-27 | "cam_ois_fw_info_pkt_parser" memcpy in the can lead to out of bound read                                             |                                                       |     |
-| 22  | https://orbit/CR/4071376             | Medium | 2025-02-27 | "cam_tpg_validate_cmd_descriptor" TOCTOU                                                                             |                                                       |     |
-| 23  | https://orbit/CR/4092273             | Medium | 2025-03-21 | offset validation in "cam_icp_process_stream_settings"                                                               |                                                       |     |
-| 24  | https://orbit/CR/4103733             | Low    | Fuzzing    | 02 Apr 2025                                                                                                          | Firmware Crash in ICP sub-system will calling aquire. |     |
+| ID  | CR                                   | Rating | Created On | Comment                                                                                                              |
+| --- | ------------------------------------ | ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| 1   | https://orbit/CR/3945652             | Medium | 10-10-2024 | CPAS sub-system OOB Write                                                                                            |
+| 2   | https://orbit/CR/3953618             | Medium | 18-10-2024 | CSIPHY sub-system OOB Read/Write                                                                                     |
+| 3   | https://orbit/CR/3957101             | Low    | 23-10-2024 | JPEG Wild pointer free                                                                                               |
+| 4   | https://orbit/CR/3957873             | Medium | 24-10-2024 | Request Manager CAM_REQ_MGR_SCHED_REQ_V3 integer overflow                                                            |
+| 5   | https://orbit/CR/3990693             | medium | 03-12-2024 | Register dumping problem cam_common_user_dump_helper oob write                                                       |
+| 6   | https://orbit/CR/3990727             | medium | 03-12-2024 | Register dumping problem cam_soc_util_dump_dmi_ctxt_reg_range_user_buf and cam_soc_util_dump_cont_reg_range_user_buf |
+| 7   | https://orbit/CR/3991144             | medium | 04-12-2024 | OPE Manager cam_ope_mgr_process_cmd_io_buf_req                                                                       |
+| 8   | https://orbit/CR/4021514             | Low    | 2025-01-09 | OPE cam_ope_packet_generic_blob_handler                                                                              |
+| 9   | https://orbit/CR/4021530             | Medium | 2025-01-09 | cam_packet_util_dump_patch_info in ICP Sub-system                                                                    |
+| 10  | https://orbit/CR/4042291 ~~4022403~~ | Medium | 2025-01-10 | This is a dense CR lots of fields need to be validated in OPE sub-system                                             |
+| 11  | https://orbit/CR/4042296 ~~4022644~~ | Medium | 2025-01-10 | ope_create_frame_cmd_batch in OPE Sub-system                                                                         |
+| 12  | https://orbit/CR/4042285 ~~4022860~~ | Medium | 2025-01-10 | ope_create_stripe_cmd in OPE                                                                                         |
+| 13  | https://orbit/CR/4056304             | Medium | 2025-02-14 | eeprom parse_memory_map signed to unsigned comparision                                                               |
+| 14  | https://orbit/CR/4056616             | Medium | 2025-02-14 | cam_sensor_update_power_settings out of bound read                                                                   |
+| 15  | https://orbit/CR/4056681             | Low    | 2025-02-14 | Infinite loop, functional bug not security issue                                                                     |
+| 16  | https://orbit/CR/4070376             | Medium | 2025-02-27 | TFE sub-system                                                                                                       |
+| 17  | https://orbit/CR/4070420             | Medium | 2025-02-27 | IFE Sub-system                                                                                                       |
+| 18  | https://orbit/CR/4070436             | Medium | 2025-02-27 | cam_tfe_cam_cdm_callback in TFE sub-system                                                                           |
+| 19  | https://orbit/CR/4070441             | Low    | 2025-02-27 | cam_custom_mgr_prepare_hw_update                                                                                     |
+| 20  | https://orbit/CR/4070467             | Medium | 2025-02-27 | "cam_sensor_i2c_command_parser" "header.count" field needs to be validated                                           |
+| 21  | https://orbit/CR/4070498             | Medium | 2025-02-27 | "cam_ois_fw_info_pkt_parser" memcpy in the can lead to out of bound read                                             |
+| 22  | https://orbit/CR/4071376             | Medium | 2025-02-27 | "cam_tpg_validate_cmd_descriptor" TOCTOU                                                                             |
+| 23  | https://orbit/CR/4092273             | Medium | 2025-03-21 | offset validation in "cam_icp_process_stream_settings"                                                               |
+| 24  | https://orbit/CR/4103733             | Low    | Fuzzing    | 02 Apr 2025, Firmware Crash in ICP sub-system will calling aquire.                                                   |
 
 ---
 
@@ -462,7 +460,7 @@ lsusb
 
 - [x] #task #qpsi Setup new pakala v2 device with source code ➕ 2024-12-06 ✅ 2024-12-08 🔒 [[2024-12-09 QPSI All Hands]] 🕸️ Task
 - [x] #task #qpsi code review "cam_mem_get_cpu_buf" 🔼 ➕ 2024-12-05 ⏳ 2024-12-06 ✅ 2024-12-10 🔒 [[2025-01-10]] 🕸️ Project Info > Task
-- [x] #task #qpsi gcov code report [[Camera Driver Fuzzing]] 🔺 ➕ 2024-12-05 🛫 2024-12-11 📅 2024-12-14 ✅ 2024-12-19 🔒 [[2025-01-10]] 🕸️ Project Info > Task
+- [x] #task #qpsi gcov code report [[Qualcomm/Projects/Camera Driver Fuzzing]] 🔺 ➕ 2024-12-05 🛫 2024-12-11 📅 2024-12-14 ✅ 2024-12-19 🔒 [[2025-01-10]] 🕸️ Project Info > Task
 - [x] #task #qpsi code review "cam_mem_cpu_io_buf" ➕ 2024-12-05 📅 2024-12-13 ✅ 2025-03-19 🔒 [[2025-03-19]] 🕸️ Project Info > Task
 - [x] #task #qpsi create pull request for jpeg grammar ➕ 2024-12-05 🛫 2024-12-12 ✅ 2025-03-19 🔒 [[2025-03-19]] 🕸️ Project Info > Task
 - [x] #task #qpsi code review function "cam_packet_util_get_cmd_mem_addr" ➕ 2024-12-10 ✅ 2025-03-19 🔒 [[2025-03-19]] 🕸️ Project Info > Task

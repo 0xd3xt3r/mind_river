@@ -5,8 +5,8 @@ tags:
   - "#type/habit-tracker"
 status: todo
 created-date: 2025-04-04
-related: 
-summary:
+related:
+summary: Time Spent on focused learning
 ---
 
 ## Focus Schedule

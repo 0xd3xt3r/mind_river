@@ -124,7 +124,7 @@ status: archived
 
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] JPEG
 		- [ ] TFE
@@ -221,7 +221,7 @@ status: archived
 
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] JPEG
 		- [ ] TFE
@@ -290,7 +290,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] JPEG
 		- [ ] TFE
@@ -411,7 +411,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] JPEG
 		- [ ] TFE
@@ -485,7 +485,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] TFE
 		- [ ] JPEG
@@ -561,7 +561,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [x] CISPHY
 		- [ ] TFE
@@ -651,7 +651,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [x] Sensor
 		- [ ] CISPHY
@@ -750,7 +750,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] Sensor
 		- [ ] CISPHY
@@ -830,7 +830,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] Sensor
 		- [ ] CISPHY
@@ -1060,7 +1060,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [x] EEPROM Sub-system
 		- [x] Flash
@@ -1136,7 +1136,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [x] EEPROM Sub-system
 		- [x] Flash
@@ -1223,7 +1223,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] EEPROM Sub-system
 - [ ] [[Sub Project - Video Driver security assessment|WoS Kernel Driver Fuzzing]]
@@ -1296,7 +1296,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] TPG Sub-system
 			- [ ] Start working on syzlang shared buffer command
@@ -1323,7 +1323,7 @@ status: archived
 - [ ] Start writing Annual Review documents.
 - [ ] Fuzz-Vision tool issue
 	- [ ] Not able to trace LTE RRC binary the, its ubuntu 22 and previously I have tested it on ubuntu 18.
-- [ ] Nicolas email about a CR 3847126 ?
+- [x] Nicolas email about a CR 3847126 ?
 	- CR is a clone of 3757119 which was create by Guilan Li (guilli)
 	- CR Description : Incorrect action to retrieve input buffer for METHOD_NEITHER buffer mode 
 - [ ] Build QPIL CTF challenges
@@ -1409,7 +1409,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] TPG Sub-system
 			- [ ] Start working on syzlang shared buffer command
@@ -1434,7 +1434,7 @@ status: archived
 - [ ] Fuzz-Vision tool issue
 	- [ ] Not able to trace LTE RRC binary the, its ubuntu 22 and previously I have tested it on ubuntu 18.
 - [ ] Lab Access training
-- [ ] Nicolas email about a CR 3847126 ?
+- [x] Nicolas email about a CR 3847126 ?
 	- CR is a clone of 3757119 which was create by Guilan Li (guilli)
 	- CR Description : Incorrect action to retrieve input buffer for METHOD_NEITHER buffer mode 
 - [ ] Build QPIL CTF challenges
@@ -1506,7 +1506,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [x] syz-extract to extract camera constant
 			- manually entering it in the .const file
@@ -1533,7 +1533,7 @@ status: archived
 - [ ] Fuzz-Vision tool issue
 	- [ ] Not able to trace LTE RRC binary the, its ubuntu 22 and previously I have tested it on ubuntu 18.
 - [ ] Lab Access training
-- [ ] Nicolas email about a CR 3847126 ?
+- [x] Nicolas email about a CR 3847126 ?
 	- CR is a clone of 3757119 which was create by Guilan Li (guilli)
 	- CR Description : Incorrect action to retrieve input buffer for METHOD_NEITHER buffer mode 
 - [ ] QC Trainings : Prevention of Sexual Harassment
@@ -1644,7 +1644,7 @@ status: archived
 	- interview with Lanka
 - **Wednesday**
 	- Done 2 candidate DR Training test review
-	- Reading Project Zero blogpost on Android Driver Research [[Camera Driver Fuzzing#^qcom-linux-fuzz-ref]]
+	- Reading Project Zero blogpost on Android Driver Research [[Qualcomm/Projects/Camera Driver Fuzzing#^qcom-linux-fuzz-ref]]
 	- able to compile and run pseudo syscall for camera driver
 		- not getting any coverage
 		- able to generate grammar with syz-mutate
@@ -1655,14 +1655,14 @@ status: archived
 	- Monthly Update
 	- Had call with *Vinod Kumar Reddy Kothakapu* he can help anything related to syzkaller fuzzing.
 	- Had call with Nagaraju, update the conference page for fuzzing overview.
-	- Camera Driver Entry pointer analysis - its has 136 ioctl processing command update on [[Camera Driver Fuzzing#^c07fb6]]
+	- Camera Driver Entry pointer analysis - its has 136 ioctl processing command update on [[Qualcomm/Projects/Camera Driver Fuzzing#^c07fb6]]
 	- Applied for presentation in *Core Platform & Security Tech Day 2024*.
 	- send monthly update to nagaraju
 
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [ ] syz-extract to extract camera constant
 		- [ ] TPG Sub-system
@@ -1688,7 +1688,7 @@ status: archived
 - [x] Move your MTP devices and Harvester to Labs.
 	- Device Restart Issue
 	- Do Lab training
-- [ ] Nicolas email about a CR 3847126 ?
+- [x] Nicolas email about a CR 3847126 ?
 	- CR is a clone of 3757119 which was create by Guilan Li (guilli)
 	- CR Description : Incorrect action to retrieve input buffer for METHOD_NEITHER buffer mode 
 - [ ] QC Trainings : Prevention of Sexual Harassment
@@ -1822,7 +1822,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [ ] Camera Driver Harness for Syzkaller
 		- [x] pseudo syscall to for camera command buffer
 		- [x] pseudo syscall to for camera device discover to create appropriate handler/file descriptor.
@@ -1853,7 +1853,7 @@ status: archived
 
 - [ ] Windows Drivers Workshop on #02-07-2024
 - [ ] Ranjana Email about the CR Assessment locking
-- [ ] Nicolas email about a CR 3847126 ?
+- [x] Nicolas email about a CR 3847126 ?
 	- CR is a clone of 3757119 which was create by Guilan Li (guilli)
 	- CR Description : Incorrect action to retrieve input buffer for METHOD_NEITHER buffer mode 
 - [x] Interview *Rathnakar Madhukar Yerraguntla*
@@ -2009,7 +2009,7 @@ status: archived
 #### Task
 > What all things you have to do and what all things you want to achieve this week.
 
-- [ ] [[Camera Driver Fuzzing]]
+- [ ] [[Qualcomm/Projects/Camera Driver Fuzzing]]
 	- [x] Pakala KCOV & KASAN Build
 	- [x] Pakala Syzkaller Fuzzing Setup
 	- [x] Build and run Camera IRVR PoC Code

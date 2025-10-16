@@ -6,9 +6,8 @@ created-date: {{DATE}}T{{TIME:HH:mm}}
 tags:
   - "#type/meeting"
   - "#qpsi/meeting"
+summary:
 ---
-
-> **summary**::
 
 ## Meeting Minutes
 

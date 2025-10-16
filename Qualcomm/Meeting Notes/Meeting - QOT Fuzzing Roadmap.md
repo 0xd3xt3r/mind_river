@@ -8,9 +8,10 @@ created-date: 2025-07-02T16:00
 tags:
   - "#type/meeting"
   - "#qpsi/meeting"
+summary: Roadmap for QOT Fuzz
 ---
 
-> **summary**:: Roadmap for QOT Fuzz
+
 
 ## Meeting Minutes
 

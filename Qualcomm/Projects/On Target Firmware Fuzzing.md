@@ -9,7 +9,8 @@ tags:
 status: on-hold
 up: "[[Qualcomm Project MoC]]"
 summary: Fuzzing SoC Firmware
-related: 
+related:
+  - "[[Snapshot Fuzzing using QEMU]]"
 created-date: 2024-09-25
 ---
 

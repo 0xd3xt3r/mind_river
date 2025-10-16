@@ -10,7 +10,7 @@ created-date: 2024-12-09
 summary: Everything Related to Qualcomm will be placed here
 ---
 
-> Last Internet Reimbursement File Date : 11-12-2024
+> Last Internet Reimbursement File Date : 01-10-2025
 
 ## Pinned Docs
 

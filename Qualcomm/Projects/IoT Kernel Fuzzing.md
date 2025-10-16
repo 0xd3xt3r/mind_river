@@ -7,10 +7,8 @@ tags:
 status: on-hold
 created-date: 2025-06-10
 completed-date: 2025-06-10
+summary: The goal of this project is to fuzz the QCLinux kernel. We are trying to achieve this my porting Android harness to IoT kernel.
 ---
-
-> **summary**:: The goal of this project is to fuzz the QCLinux kernel. We are trying to achieve this my porting Android harness to IoT kernel.
-
 ## Objective
 > What were you trying to achieve with this project.
 

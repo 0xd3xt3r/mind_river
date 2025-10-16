@@ -14,8 +14,8 @@ created-date: 2024-12-21
 
 ## Tasks
 
-- [ ] Example Documentation #task #shaman ➕ 2024-12-08 📅 2024-12-08
-- [ ] Code Coverage Feature Documentation #task #shaman ➕ 2024-12-08
+- [x] Example Documentation #task #shaman ➕ 2024-12-08 📅 2024-12-08
+- [x] Code Coverage Feature Documentation #task #shaman ➕ 2024-12-08
 
 ## Abstract
 

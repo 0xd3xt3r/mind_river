@@ -13,7 +13,7 @@ created-date: 2025-04-15
 
 ### Tasks and Questions
 
-- [ ] #task Figure out the entry points ➕ 2025-04-15
+- [x] #task Figure out the entry points ➕ 2025-04-15
 
 ## Code Cues
 

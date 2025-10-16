@@ -1,9 +1,9 @@
 ---
 up: "[[Meeting MoC]]"
-related: "[[Camera Driver Fuzzing]]"
-participants: 
-- "[[Veera Venkata Satish Mandru]]"
-- "[[Daksha]]"
+related: "[[Qualcomm/Projects/Camera Driver Fuzzing]]"
+participants:
+  - "[[Veera Venkata Satish Mandru]]"
+  - "[[Daksha]]"
 created-date: 2025-01-10T14:56
 tags:
   - "#type/meeting"

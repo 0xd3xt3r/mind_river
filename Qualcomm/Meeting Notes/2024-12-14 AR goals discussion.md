@@ -40,5 +40,5 @@ summary: AR Goals discussions
 
 ## Action Item
 
-- [ ] #task [[Surendra]] 2 people with whom you have improved your relation.
-	- [ ] guide, support and listen to you
+- [x] #task [[Surendra]] 2 people with whom you have improved your relation.
+	- [x] guide, support and listen to you

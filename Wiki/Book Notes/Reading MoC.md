@@ -19,17 +19,38 @@ properties:
     displayName: File name
 views:
   - type: table
-    name: Pinned Docs
+    name: Reading
+    filters:
+      and:
+        - status == "reading"
     order:
       - file.name
       - summary
       - author
-      - status
     sort:
-      - property: summary
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 340
+      note.summary: 700
+      note.author: 348
+      note.status: 190
+  - type: table
+    name: Todo
+    filters:
+      and:
+        - status == "todo"
+    order:
+      - file.name
+      - summary
+      - author
+    sort:
+      - property: status
+        direction: ASC
+      - property: file.mtime
         direction: ASC
     columnSize:
-      file.name: 386
+      file.name: 340
       note.summary: 700
       note.author: 348
       note.status: 190
@@ -50,13 +71,12 @@ LIMIT 20
 
 ## Wish List
 
-- Godel Escher Bach	Paused	Computers, Math,Science	
-- Linux Kernel	Currently Reading	Computers,Security	Robert Love
-- Digital Minimalist	Done	Productivity	Cal Newport
-- How to read a book	Paused	Skill-Building	
-- 7 Habits of Highly Effective People	Want To Read		
-- Secrets and Lies: Digital Security in a Networked World	Want To Read	Computer-Security,Skill-Building	Bruce Schneier
-- Your Money or Your Life	Want To Read	Skill-Building	
-- Make Time: How to focus on what matters every day	Want To Read	Productivity	
-- The Theoretical Minimum: What You Need to Know to Start Doing Physics	Want To Read		
-- The World Beyond Your Head: On Becoming an Individual in an Age of Distraction	Want To Read	Skill-Building	
+1. Godel Escher Bach
+2. Linux Kernel	
+3. Digital Minimalist
+4. How to read a book
+5. 7 Habits of Highly Effective People
+6. Secrets and Lies: Digital Security in a Networked World
+7. Your Money or Your Life
+8. The Theoretical Minimum: What You Need to Know to Start Doing Physics
+9. The World Beyond Your Head: On Becoming an Individual in an Age of Distraction

@@ -6,10 +6,8 @@ created-date: 2025-04-21T21:31
 tags:
   - "#type/meeting"
   - "#qpsi/meeting"
+summary: Fuzzing Prospects with Protocol Fuzzing
 ---
-
-> **summary**:: Fuzzing Prospects with Protocol Fuzzing
-
 ## Meeting Minutes
 
 - IMS huge modem stack, IP stack, DHCP,

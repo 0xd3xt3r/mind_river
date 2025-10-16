@@ -20,13 +20,14 @@ views:
     name: All the meetings
     order:
       - file.name
-      - participants
       - summary
+      - participants
       - created-date
     sort:
       - property: created-date
         direction: DESC
     columnSize:
       file.name: 424
-      note.summary: 449
+      note.summary: 645
+
 ```

@@ -213,7 +213,7 @@ chunk_array = kvmalloc_array(cs->in.num_chunks, sizeof(uint64_t),
 ---
 ## Task
 
-- [ ] #task find hardware ⏳ 2024-12-07
+- [x] #task find hardware ⏳ 2024-12-07
 
 ## Docs
 - https://amdgpu-install.readthedocs.io/en/latest/install-installing.html

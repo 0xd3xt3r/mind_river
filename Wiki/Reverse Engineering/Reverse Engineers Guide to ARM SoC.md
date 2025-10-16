@@ -12,8 +12,8 @@ tags:
 status: todo
 created-date: 2024-12-15
 up: "[[Knowledge Base MoC]]"
-related: 
-summary:
+related:
+summary: understand low-level components
 ---
 
 

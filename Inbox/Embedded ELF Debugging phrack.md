@@ -1,3 +1,22 @@
+---
+up: "[[Research Paper MoC]]"
+tags:
+  - "#reading/research-paper"
+status: todo
+created-date: 2025-10-13
+---
+
+## Core Idea
+
+
+## Notes
+
+
+## Connected Concepts
+
+
+## Paper
+
 ```bash
 
 							 ==Phrack Inc.==
