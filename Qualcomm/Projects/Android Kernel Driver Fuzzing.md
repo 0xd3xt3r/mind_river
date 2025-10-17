@@ -7,7 +7,6 @@ created-date: 2024-12-14
 status: in-progress
 tags:
   - "#type/project"
-  - "#status/active"
   - "#qpsi/project"
 summary: Fuzzing Qualcomm android drivers
 ---

@@ -1,10 +1,9 @@
 ---
 tags:
   - "#type/sub-project"
-  - "#status/active"
-status: todo
+status: done
 up: "[[Android Kernel Driver Fuzzing]]"
-related: 
+related:
 created-date: 2025-07-21
 summary: Details understanding of camera driver attack surface
 ---

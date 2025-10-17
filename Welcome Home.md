@@ -65,17 +65,26 @@ views:
     name: Projects
     filters:
       and:
-        - file.tags.contains("type/project")
-        - file.tags.contains("qpsi/project")
+        - or:
+            - file.tags.contains("type/project")
+            - file.tags.contains("qpsi/project")
+            - file.tags.contains("type/sub-project")
+        - not:
+            - file.inFolder("Templates")
+            - file.hasTag("type/project/personal")
+        - file.tags.contains("status/active")
     order:
       - file.name
       - summary
-    limit: 10
+      - file.tags
+      - status
     sort:
       - property: file.mtime
         direction: DESC
+    limit: 10
     columnSize:
-      file.name: 380
-      note.summary: 553
+      file.name: 437
+      note.summary: 599
+      file.tags: 443
 
 ```

@@ -3,7 +3,7 @@ tags:
   - "#type/sub-project"
   - "#status/active"
   - qpsi/project
-status: todo
+status: in-progress
 up: "[[QPSI Security Trainings]]"
 related:
 created-date: 2025-10-16
@@ -13,7 +13,7 @@ summary: Create training for Camera Kernel team and integerate it in Workday. Th
 ## Notes
 > What did you learn?
 
-- . Discussion with the Nicolas on how to implement the training.
+- Discussion with the Nicolas on how to implement the training.
 	1. the learning team, create slide with specific teams, n2k support to team specific team and channels team
 	2. LMS team - learning team
 	3. Channel - create channel for the training, do it with channel team.
@@ -31,7 +31,8 @@ summary: Create training for Camera Kernel team and integerate it in Workday. Th
 ## Task
 > What needs to be done!
 
-- [ ] #task Create the v1 of the training and present it to the tech team and verify the content. ➕ 2025-10-16
+- [ ] #task #qpsi Create the v1 of the training and present it to the tech team and verify the content. ➕ 2025-10-16
+- [ ] #task #qpsi Get confirmation from tech team to conduct the Camera Driver Training ➕ 2025-10-17
 
 ## Project Management
 

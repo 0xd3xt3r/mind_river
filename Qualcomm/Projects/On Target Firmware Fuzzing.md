@@ -5,7 +5,6 @@ tags:
   - "#qpsi/project"
   - "#firmware-security"
   - "#type/project"
-  - "#status/active"
 status: on-hold
 up: "[[Qualcomm Project MoC]]"
 summary: Fuzzing SoC Firmware

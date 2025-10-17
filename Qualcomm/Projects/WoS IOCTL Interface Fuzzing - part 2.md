@@ -1,10 +1,9 @@
 ---
+up: "[[WoS Kernel Driver Fuzzing]]"
 tags:
   - "#type/sub-project"
-  - "#status/active"
 status: todo
-up: "[[WoS Kernel Driver Fuzzing]]"
-related: 
+related:
 created-date: 2025-04-15
 ---
 

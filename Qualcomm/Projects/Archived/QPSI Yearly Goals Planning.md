@@ -15,7 +15,7 @@ summary: Goal planning for 2021
 2. [[eAI Driver Fuzzing]]
 3. [[EVS vocodec Fuzzing]]
 4. [[Codec Fuzzing]] - OMX Integration (Android Multimedia)
-5. [[WIN 7 - Vulnerability Detection]]
+5. [[Router WIN 7 - Vulnerability Detection]]
 6. Auto HLOS Driver fuzzing
 7. [[Lassen]] - Modem on x86
 

@@ -3,10 +3,11 @@ up: "[[Project Shaman]]"
 tags:
   - "#type/sub-project"
   - "#status/active"
+  - type/project/personal
 aliases:
   - shaman
 status: todo
-related: 
+related:
 created-date: 2024-12-21
 ---
 

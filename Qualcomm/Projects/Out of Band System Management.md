@@ -11,9 +11,9 @@ tags:
   - "#type/project"
   - "#qpsi/project"
   - type/pinned-docs
-
-summary: OOB Sub-System helps IT Admins to remotely manage and repair office machines. Security of This component is critical since someone can access the machine remotely. 
-link : "https://confluence.qualcomm.com/confluence/display/QPSIFT/Out-of-Band+%28OOBMS%29+fuzzing"
+  - status/active
+summary: OOB Sub-System helps IT Admins to remotely manage and repair office machines. Security of This component is critical since someone can access the machine remotely.
+link: https://confluence.qualcomm.com/confluence/display/QPSIFT/Out-of-Band+%28OOBMS%29+fuzzing
 ---
 
 

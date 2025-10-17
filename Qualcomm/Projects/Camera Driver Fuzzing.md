@@ -9,6 +9,7 @@ tags:
   - "#qpsi/project"
   - "#type/meeting"
   - "#qpsi/meeting"
+  - status/active
 status: in-progress
 created-date: 2025-02-12T11:13
 summary: Fuzzing Qualcomm Android Kernel Driver with Syzkaller
@@ -76,22 +77,8 @@ SORT filename DESC
 
 ## Task
 
-- [x] #task Klockwork rules for camera driver attack surface #qpsi ➕ 2024-12-12 ✅ 2025-10-13
-- [x] cam_private_ioctl - 70 Request manager
-	- this function is already has the necessary grammar
-- [ ] cam_sync_dev_ioctl - 63
-	- [ ] this function is not directly reachable
-- [x] cam_node_handle_ioctl - 18
-	- function resolution doesn't make sense
-- [x] cam_subdev_ioctl - not sure why there are so many unresolved function
-- [x] cam_flash_subdev_ioctl - 55
-- [x] cam_cpas_subdev_ioctl
-- [x] cam_actuator_subdev_ioctl
-- [x] cam_csiphy_subdev_ioctl
-- [x] cam_eeprom_subdev_ioctl
-- [x] cam_ois_subdev_ioctl
-- [x] cam_tpg_subdev_ioctl
-
+- [ ] #task #qpsi Deploy Camera Driver with Nilo's setup ➕ 2025-10-17
+- [ ] #task #qpsi Create AI assisted Code review for Camera Driver ➕ 2025-10-17
 ## Notes
 
 - [Pakala Syzkaller Dashboard](http://apt-lnxsec05:12345/)
@@ -472,3 +459,4 @@ lsusb
 	- Add Number of CRs fixed as part of the KPIs
 	- Investigate other CRs filed and not found through the fuzzing
 	- Follow up with new CR rating guidelines and re-evaluate the Camera driver CRs
+- [x] #task Klockwork rules for camera driver attack surface #qpsi ➕ 2024-12-12 ✅ 2025-10-13 🔒 [[2025-10-17]] 🕸️ Project Info > Task

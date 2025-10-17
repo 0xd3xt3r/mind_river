@@ -8,10 +8,8 @@ tags:
 status: todo
 up: "[[Personal Project MoC]]"
 created-date: 2024-12-21
+summary: Hunting for bugs in AMD open-source software.
 ---
-
-> **Summary**:: Hunting for bugs in AMD open-source software.
-
 ## Tasks and Questions
 
 - [ ]

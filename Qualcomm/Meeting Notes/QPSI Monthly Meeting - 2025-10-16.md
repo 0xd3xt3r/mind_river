@@ -12,5 +12,7 @@ summary: Monthly Meeting
 ## Meeting Minutes
 
 - Much bigger session from each team. VD, Counter measure testing.
+- Build system abstraction - madhukar
+- TME review by [[Marcel]]
 
 ## Action Item

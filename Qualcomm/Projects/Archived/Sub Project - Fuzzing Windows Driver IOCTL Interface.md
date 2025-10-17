@@ -1,18 +1,16 @@
 ---
 tags:
   - Qualcomm
-  - Windows
   - fuzzing
   - qpsi/project
   - kernel
   - "#type/sub-project"
-  - "#status/active"
 aliases:
   - windows kernel fuzzing
   - WoS Kernel Driver Fuzzing
 status: done
 up: "[[WoS Kernel Driver Fuzzing]]"
-related: 
+related:
 created-date: 2024-12-14
 summary: Fuzzing windows IOCTL Interface
 ---

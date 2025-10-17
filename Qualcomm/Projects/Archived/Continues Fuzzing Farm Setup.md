@@ -6,7 +6,6 @@ tags:
   - "#qpsi/project"
   - "#fuzzing"
   - "#type/sub-project"
-  - "#status/active"
 status: archived
 up: "[[Android Kernel Driver Fuzzing]]"
 related:

@@ -6,7 +6,6 @@ tags:
   - "#linux-security"
   - "#qpsi/project"
   - "#type/sub-project"
-  - "#status/active"
 status: done
 up: "[[QPSI Security Trainings]]"
 created-date: 24-09-2024

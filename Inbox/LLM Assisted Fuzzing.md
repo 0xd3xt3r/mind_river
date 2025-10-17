@@ -2,7 +2,7 @@
 up: "[[Research Paper MoC]]"
 tags:
   - "#reading/research-paper"
-status: todo
+status: in-progress
 created-date: 2025-10-16
 summary: Using LLM to improve the fuzzing harness
 ---

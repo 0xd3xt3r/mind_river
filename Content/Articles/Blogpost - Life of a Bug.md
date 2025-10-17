@@ -111,3 +111,17 @@ We try to achieve some of this characteristic in automated fashion in different 
 3. By fuzzing we trying to take input semantics and crafting semi-malformed input to poke the corner cases of the system and trigger the unexpected behaviour. But the change this technique faces is the execution environment.
 4. The code review is the step which is trying to create a semantic understand of the system in the analyst mind, 
 
+
+
+- Security Training to the developers
+
+## Measuring the Security out comes
+
+1. Representing fuzzing coverage as function of the attack surface for an image. This assumes that we have put in thought on attack surface enumeration. I can understand some “unknown” attack surfaces. Also, there will be some known surfaces with no harness like fbe() and tghr()
+	1. ![[attack-surface-graph-example.png]]
+2. As I see it, we’d need the tool based on either LLVM or KW that’d provide a call graph for a given entrypoint.
+	1. Maybe for each major image (like WLAN/MPSS) we should document the set of heuristics to look for parsers (like here https://confluence.qualcomm.com/confluence/pages/viewpage.action?pageId=573375230 ) and then this can either be automated or someone has to do it once a few months.
+3. Alex
+	1. How do I read the chart?  Functions on the x-axis and coverage on the y-axis?
+	2. What makes it a map of the attack surface?  How is a single function with a giant switch on the message type differ from 100 different functions (one per message type)?
+	3. How do we plan to use this data to influence our decisions?
