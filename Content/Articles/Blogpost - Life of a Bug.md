@@ -2,7 +2,7 @@
 up: "[[Writing MoC]]"
 tags:
   - "#type/writing/article"
-status: todo
+status: in-progress
 created-date: 2025-09-13
 ---
 
@@ -111,9 +111,11 @@ We try to achieve some of this characteristic in automated fashion in different 
 3. By fuzzing we trying to take input semantics and crafting semi-malformed input to poke the corner cases of the system and trigger the unexpected behaviour. But the change this technique faces is the execution environment.
 4. The code review is the step which is trying to create a semantic understand of the system in the analyst mind, 
 
+## Security Trainings
 
-
-- Security Training to the developers
+- Its very important to have a secure coding training for the developer who are writing the code for the organization. Such training will not only help them to improve their understand of the different vulnerability class but also how to correctly fix them. If they don't have the foundational knowledge they will the knowledge gap when they are fixing the security bug or when the security issue is reported to them or even while there is some issue caught while debugging or development.
+- The training will help them to understand various aspect of the security. There are different level of security requirement depending upon the software modules. A generic "C language" issue training can help across the board, wherever you are writing the C code. But there could be platform specific training for example Linux kernel driver security which help the developers to understand privilege boundaries and other exploit primitives.
+- The best way to carry out this exercise is to have video trainings and exam following this training. Video training are scalable and the developer join the team at anytime.
 
 ## Measuring the Security out comes
 

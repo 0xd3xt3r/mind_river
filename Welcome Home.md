@@ -50,18 +50,6 @@ views:
 ```base
 views:
   - type: table
-    name: Recent Files
-    order:
-      - file.name
-      - summary
-      - file.tags
-    sort:
-      - property: file.mtime
-        direction: DESC
-    limit: 5
-    columnSize:
-      note.summary: 553
-  - type: table
     name: Projects
     filters:
       and:
@@ -86,5 +74,18 @@ views:
       file.name: 437
       note.summary: 599
       file.tags: 443
+  - type: table
+    name: Recent Files
+    order:
+      - file.name
+      - summary
+      - file.tags
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 5
+    columnSize:
+      note.summary: 553
+
 
 ```

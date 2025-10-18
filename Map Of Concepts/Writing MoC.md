@@ -19,17 +19,17 @@ properties:
     displayName: File name
 views:
   - type: table
-    name: Pinned Docs
+    name: ToDo
     filters:
       and:
-        - status == "todo"
+        - status != "done"
     order:
       - file.name
       - status
       - created-date
     sort:
-      - property: summary
-        direction: ASC
+      - property: file.mtime
+        direction: DESC
     columnSize:
       file.name: 597
       note.status: 195
