@@ -2,6 +2,7 @@
 up: "[[Qualcomm MoC]]"
 tags:
   - "#type/qcom"
+  - type/os/android
 aliases:
   - kgsl
   - adreno

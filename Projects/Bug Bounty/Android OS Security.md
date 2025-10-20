@@ -3,6 +3,7 @@ aliases:
   - Android Security
 tags:
   - vulnerability-research
+  - type/os/android
 ---
 
 

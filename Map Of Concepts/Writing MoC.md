@@ -57,8 +57,8 @@ views:
       - file.name
       - created-date
     sort:
-      - property: summary
-        direction: ASC
+      - property: file.mtime
+        direction: DESC
     columnSize:
       file.name: 796
   - type: table

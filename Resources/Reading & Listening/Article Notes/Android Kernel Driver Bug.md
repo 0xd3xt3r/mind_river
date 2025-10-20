@@ -3,6 +3,7 @@ up: "[[Reading MoC]]"
 tags:
   - article-notes
   - "#reading/article"
+  - type/os/android
 link: https://googleprojectzero.blogspot.com/2024/06/driving-forward-in-android-drivers.html
 author: Seth Jenkins
 created-date: 2024-12-14
