@@ -117,9 +117,18 @@ We try to achieve some of this characteristic in automated fashion in different 
 - The training will help them to understand various aspect of the security. There are different level of security requirement depending upon the software modules. A generic "C language" issue training can help across the board, wherever you are writing the C code. But there could be platform specific training for example Linux kernel driver security which help the developers to understand privilege boundaries and other exploit primitives.
 - The best way to carry out this exercise is to have video trainings and exam following this training. Video training are scalable and the developer join the team at anytime.
 
-## Measuring the Security out comes
+## Product Security Objective
 
-1. Representing fuzzing coverage as function of the attack surface for an image. This assumes that we have put in thought on attack surface enumeration. I can understand some “unknown” attack surfaces. Also, there will be some known surfaces with no harness like fbe() and tghr()
+Product Security organisation(DefSec) work very differently compared to offensive security groups(OffSec):
+1. DefSec have to find all the bugs in the target to claim the victory while OffSec groups can have a winning business if they find a exploitable bug.
+	1. But it not that easy these day to compromise a device with just one bug you need chain of bugs to bypass the mitigation which modern devices deploy.
+2. DefSec can't claim the victor just yet because the patches have to propagated to the software module, tested for the new changes and shipped to the customer device/product. The more stretched the timeline is for this activity the better it is for the OffSec group. In fact it better of OffSec guys the more stretched timeline they have. For OffSec forks if the find the exploitable bug and it not patch the better off they are!
+3. The product security activity described before is just a snapshot in time, as new code gets added/remove security security assessment needs to be done again. DefSec forks might have to optimize their efforts on how to spend their bandwidth on what? This is also true for OffSec guys this might be a new opportunity to find bugs in a secured target or it might make old unreachable bugs more relevant and might turn they more fruitful.
+4. DefSec guys have to report their findings to public and their vendor, the OffSec guys can perfectly get away with it. Jokes apart, the information revealed from DefSec can be used by to find new bugs by doing variant analysis, etc. The patching activity could in fact introduce new bug. While for the OffSec forks don't have those limitation, they can share the information with close group to protect their attacks and the maximize their economic value of the efforts.
+
+## Measuring the Security outcomes
+
+1. Representing fuzzing coverage as function of the attack surface for an image. This assumes that we have put in thought on attack surface enumeration. I can understand some "unknown" attack surfaces. Also, there will be some known surfaces with no harness like fbe() and tghr()
 	1. ![[attack-surface-graph-example.png]]
 2. As I see it, we’d need the tool based on either LLVM or KW that’d provide a call graph for a given entrypoint.
 	1. Maybe for each major image (like WLAN/MPSS) we should document the set of heuristics to look for parsers (like here https://confluence.qualcomm.com/confluence/pages/viewpage.action?pageId=573375230 ) and then this can either be automated or someone has to do it once a few months.
