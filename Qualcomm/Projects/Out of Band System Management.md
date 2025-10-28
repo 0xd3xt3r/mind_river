@@ -16,9 +16,25 @@ summary: OOB Sub-System helps IT Admins to remotely manage and repair office mac
 link: https://confluence.qualcomm.com/confluence/display/QPSIFT/Out-of-Band+%28OOBMS%29+fuzzing
 ---
 
-
-
 The main use-cases are remote power on/off, remote wipe, remote diagnostics, etc. This feature is important from a security point of view as it immediately impacts customer and consumer data and execution.
+
+## Goal
+
+The objective of this FR is to improve the security of the for the project to be delivered we have to do the following activity.
+
+1. Code review of the components firmware
+2. Fuzzing critical components of the system
+	1. For fuzzing we have to fuzz two type of components which is part of external third-party dependencies like MQTT protocol from zephyr
+	2. We also have implemented TCP stack which is a abstraction exposed by zephyr firmware.
+	3. There are two type of components are dealing with
+		1. Third party vendor components like zephyr
+		2. Qualcomm's components which are as follows :
+			1. File format like QCBOR and ASN1Parser the code for processing this type of data is imported from trustzone which means its already review but it will a good idea to have a fuzzing harness to doing extra level of assurance.
+			2. OOB firmware TCP stack - this is vendor dependent layer 
+			3. Since we are accepting TLS certificate, code which is processing this data also have to be fuzzed.
+	4. There are also components which are critical in nature because they are processing the data coming from remote sources like TCP, MQTT protocol data. Now securing this component is critical because the data processing is done at pre-authentication level and any vulnerability at this stage can compromise the device remotely without been authentication which is a very critical issue.
+3. Also as part of CRA we have to draw the attack path. This include how compromising one component opens attack to other components.
+4. 
 
 ## PoC
 
