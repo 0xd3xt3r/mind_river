@@ -30,11 +30,11 @@ The objective of this FR is to improve the security of the for the project to be
 		1. Third party vendor components like zephyr
 		2. Qualcomm's components which are as follows :
 			1. File format like QCBOR and ASN1Parser the code for processing this type of data is imported from trustzone which means its already review but it will a good idea to have a fuzzing harness to doing extra level of assurance.
-			2. OOB firmware TCP stack - this is vendor dependent layer 
-			3. Since we are accepting TLS certificate, code which is processing this data also have to be fuzzed.
-	4. There are also components which are critical in nature because they are processing the data coming from remote sources like TCP, MQTT protocol data. Now securing this component is critical because the data processing is done at pre-authentication level and any vulnerability at this stage can compromise the device remotely without been authentication which is a very critical issue.
+			2. OOB firmware TCP stack - this is vendor dependent layer zephyr doesn't implement this, as it might be hardware dependent it is abstracted.
+			3. Since we are accepting TLS certificate, code which is processing this data also have to be fuzzed which is ASN1Parser.
+	4. There are also components which are critical in nature because they are processing the data coming from remote sources like TCP, MQTT protocol data. Now securing this component is critical because the data processing is done at pre-authentication level and any vulnerability at this stage can compromise the device remotely without been authenticated which is a very critical issue.
 3. Also as part of CRA we have to draw the attack path. This include how compromising one component opens attack to other components.
-4. 
+
 
 ## PoC
 
@@ -65,7 +65,7 @@ The objective of this FR is to improve the security of the for the project to be
 	1. This page has instruction to clone the code and 
 	2. From the OOB-TEE service when it receives a packet from the MQTT client via OOB-Main service.
 	3. From the QOMS application running on Windows to trigger enrollment
-	4.  From the OEM/Enterprise tool running on Windows to pull a QOMS chipset public key
+	4. From the OEM/Enterprise tool running on Windows to pull a QOMS chipset public key
 2. [QCOM OOBM Service Specification](https://github.qualcomm.com/pages/CorePlatform/oobm-service/index.html)
 3. [Zephyr QC Docs](http://go.qualcomm.com/corezephyr)
 

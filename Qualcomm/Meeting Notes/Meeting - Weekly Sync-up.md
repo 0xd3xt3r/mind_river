@@ -7,9 +7,8 @@ created-date: 2025-04-02T11:35
 tags:
   - "#type/meeting"
   - "#qpsi/meeting"
+summary: The Fuzzing Team meeting
 ---
-
-> **summary**::
 
 ## Meeting Minutes
 

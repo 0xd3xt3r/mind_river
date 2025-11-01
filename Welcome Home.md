@@ -65,15 +65,16 @@ views:
       - file.name
       - summary
       - file.tags
-      - status
     sort:
+      - property: file.name
+        direction: DESC
       - property: file.mtime
         direction: DESC
     limit: 10
     columnSize:
-      file.name: 437
-      note.summary: 599
-      file.tags: 443
+      file.name: 329
+      note.summary: 1015
+      file.tags: 449
   - type: table
     name: Recent Files
     order:
@@ -86,4 +87,5 @@ views:
     limit: 5
     columnSize:
       note.summary: 553
+
 ```

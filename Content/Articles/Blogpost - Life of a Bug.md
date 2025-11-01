@@ -29,6 +29,9 @@ Well there are different techniques which are used to find the bugs like fuzzing
 1. Advantage 
 	1. this technique scales in terms of harnessing, once you have configured and written the rules for the scan the tool will keep monitoring those patterns. 
 	2. You can write a query for the tool which is matching a variance of the existing know bug.
+	3. As well as exploit development - this is to find primitive and allocation patterns
+	4.  Enumerate attack surface, highlight areas of interest: what objects are allocated, where are they accessed, which are ref counted, have fptrs etc
+	5. Automate code auditing process: check if certain fields are accessed, function is called with certain args, if a certain condition is guarded etc.
 2. The disadvantage of static analysis are as follows
 	1. you need to spend lot of computation on the scans. 
 	2. The scan are looking for pattern, so essentially you will only get what you are looking for, you cannot not expect example of variance. Then there is the problem of false positive.
@@ -122,9 +125,11 @@ We try to achieve some of this characteristic in automated fashion in different 
 Product Security organisation(DefSec) work very differently compared to offensive security groups(OffSec):
 1. DefSec have to find all the bugs in the target to claim the victory while OffSec groups can have a winning business if they find a exploitable bug.
 	1. But it not that easy these day to compromise a device with just one bug you need chain of bugs to bypass the mitigation which modern devices deploy.
-2. DefSec can't claim the victor just yet because the patches have to propagated to the software module, tested for the new changes and shipped to the customer device/product. The more stretched the timeline is for this activity the better it is for the OffSec group. In fact it better of OffSec guys the more stretched timeline they have. For OffSec forks if the find the exploitable bug and it not patch the better off they are!
-3. The product security activity described before is just a snapshot in time, as new code gets added/remove security security assessment needs to be done again. DefSec forks might have to optimize their efforts on how to spend their bandwidth on what? This is also true for OffSec guys this might be a new opportunity to find bugs in a secured target or it might make old unreachable bugs more relevant and might turn they more fruitful.
-4. DefSec guys have to report their findings to public and their vendor, the OffSec guys can perfectly get away with it. Jokes apart, the information revealed from DefSec can be used by to find new bugs by doing variant analysis, etc. The patching activity could in fact introduce new bug. While for the OffSec forks don't have those limitation, they can share the information with close group to protect their attacks and the maximize their economic value of the efforts.
+	2. That's why DefSec folks will try to gravitated towards on automated techniques and static analysis, fuzzing which provide more comprehensive coverage rather an in depth coverage.
+2. For Offsec people primitive crafting is important, DefSec folks have to identify and close those primitives.
+3. DefSec can't claim the victor just yet because the patches have to propagated to the software module, tested for the new changes and shipped to the customer device/product. The more stretched the timeline is for this activity the better it is for the OffSec group. In fact it better of OffSec guys the more stretched timeline they have. For OffSec forks if the find the exploitable bug and it not patch the better off they are!
+4. The product security activity described before is just a snapshot in time, as new code gets added/remove security security assessment needs to be done again. DefSec forks might have to optimize their efforts on how to spend their bandwidth on what? This is also true for OffSec guys this might be a new opportunity to find bugs in a secured target or it might make old unreachable bugs more relevant and might turn they more fruitful.
+5. DefSec guys have to report their findings to public and their vendor, the OffSec guys can perfectly get away with it. Jokes apart, the information revealed from DefSec can be used by to find new bugs by doing variant analysis, etc. The patching activity could in fact introduce new bug. While for the OffSec forks don't have those limitation, they can share the information with close group to protect their attacks and the maximize their economic value of the efforts.
 
 ## Measuring the Security outcomes
 

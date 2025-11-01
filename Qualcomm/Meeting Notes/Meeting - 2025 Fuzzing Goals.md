@@ -6,9 +6,8 @@ created-date: 2025-02-12T11:13
 tags:
   - "#type/meeting"
   - "#qpsi/meeting"
+summary: Fuzzing goals and though process for 2025.
 ---
-
-> **summary**:: Fuzzing goals and though process for 2025.
 
 ## Meeting Minutes
 

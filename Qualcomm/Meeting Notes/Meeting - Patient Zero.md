@@ -6,9 +6,8 @@ created-date: 2025-02-13T14:14
 tags:
   - "#type/meeting"
   - "#qpsi/meeting"
+summary: Introduction about Patient Zero project.
 ---
-
-> **summary**:: Introduction about Patient Zero project.
 
 ## Meeting Minutes
 

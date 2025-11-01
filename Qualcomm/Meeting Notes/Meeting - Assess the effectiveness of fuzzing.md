@@ -6,9 +6,8 @@ created-date: 2025-01-15T13:52
 tags:
   - "#type/meeting"
   - "#qpsi/meeting"
+summary: How fuzzing is help our organization, we need to collect data on that.
 ---
-
-> **summary**:: How fuzzing is help our organization, we need to collect data on that.
 
 ## Meeting Minutes
 
