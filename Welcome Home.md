@@ -40,7 +40,7 @@ views:
     limit: 5
     columnSize:
       file.name: 159
-      note.summary: 803
+      note.summary: 675
       note.score: 98
 
 ```
