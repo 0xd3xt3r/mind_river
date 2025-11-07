@@ -122,7 +122,7 @@ We try to achieve some of this characteristic in automated fashion in different 
 
 ## Product Security Objective
 
-Product Security organisation(DefSec) work very differently compared to offensive security groups(OffSec):
+Product Security organization(DefSec) work very differently compared to offensive security groups(OffSec):
 1. DefSec have to find all the bugs in the target to claim the victory while OffSec groups can have a winning business if they find a exploitable bug.
 	1. But it not that easy these day to compromise a device with just one bug you need chain of bugs to bypass the mitigation which modern devices deploy.
 	2. That's why DefSec folks will try to gravitated towards on automated techniques and static analysis, fuzzing which provide more comprehensive coverage rather an in depth coverage.

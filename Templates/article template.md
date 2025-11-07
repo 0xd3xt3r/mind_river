@@ -4,10 +4,8 @@ tags:
 author: 
 title: 
 up: "[[Reading MoC]]"
-created-date:
-  "{ DATE:YYYY-MM-DD }": 
-completed-date:
-  "{ DATE:YYYY-MM-DD }": 
+created-date: "{{DATE:YYYY-MM-DD}}"
+completed-date: "{{DATE:YYYY-MM-DD}}"
 link: 
 summary:
 ---
