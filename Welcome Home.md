@@ -37,7 +37,7 @@ views:
     sort:
       - property: created-date
         direction: DESC
-    limit: 5
+    limit: 8
     columnSize:
       file.name: 159
       note.summary: 675
@@ -64,7 +64,6 @@ views:
     order:
       - file.name
       - summary
-      - file.tags
     sort:
       - property: file.name
         direction: DESC
@@ -73,7 +72,7 @@ views:
     limit: 10
     columnSize:
       file.name: 329
-      note.summary: 1015
+      note.summary: 823
       file.tags: 449
   - type: table
     name: Recent Files

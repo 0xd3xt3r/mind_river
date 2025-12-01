@@ -19,8 +19,9 @@ Well there are different techniques which are used to find the bugs like fuzzing
 ### Fuzzing
 
 1. Fuzzing required you to understand the code base you have to put in lot of effort of get the target running or get the fuzzing data to the code you want to test. 
-	1. But the advantage of this technique is that it is scale-able you can start your project with 8 core 16 GB ram and still expect some results. 
-		1. Fuzzing has yield very good results and have been adopted really well in the industry.
+	1. But the advantage of this technique is that
+		1. it is scale-able you can start your project with 8 core 16 GB ram and still expect some results. 
+		2. Fuzzing has yield very good results and have been adopted really well in the industry.
 	2. But the disadvantage of this technique 
 		1. is that you have to actively maintain the harness as the target code keeps updating your harness.
 

@@ -42,6 +42,7 @@ summary: Tools to improve code review
 ## Pandoc for slideshow
 
 - theme - beamer
+- Below is the header to create the slides
 
 ```markdown
 ---
