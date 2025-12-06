@@ -2,11 +2,11 @@
 up: "[[Finance MoC]]"
 tags:
   - "#type/finance"
-status: todo
-created-date: 2024-12-23
 alias:
-- snago life sutra
-- real estate
+  - sango life sutra
+  - real estate
+created-date: 2024-12-23
+summary: Real estate investment strategies
 ---
 
 ## Real Estate Education
@@ -39,7 +39,6 @@ source : https://www.youtube.com/watch?v=r9MarnJX-jY
 		2. Tell the dealer that instead of 1%, I will give you 1.5 % if you sell it before X date and with minimum value of Y. You have to give incentive to people of you want them to perform extra-ordinarily.
 		3. To discover the rate of property to try approach to a buy some property in that area and note down the rate , this will be the max-value. Then you go to sell the property in certain area and not down the rate, this will be the min-value. The property value is somewhere between this min and max value.
 		4. don't use online platform for this approach.
-	3. 
 
 ### Which property to Buy
 
@@ -49,9 +48,10 @@ Source https://www.youtube.com/watch?v=lUt5iZ6iN78
 ### How to make money from real estate 
 
 https://www.youtube.com/watch?v=WsRp_MDG1mA
+
 ## Work Life Balance
 
 1. When you kid is starting out in his career help them to settle in new environment.
 	1. Rent a nice place and move with him with you own expense
-	2. Such behavior is not seen in kids who are sharati, but by kids who are working hard or fighter type
+	2. Such behavior is not seen in kids who are sharati(mischievous), but by kids who are working hard or fighter type
 	3. Anna Sebastian death due to work stress.

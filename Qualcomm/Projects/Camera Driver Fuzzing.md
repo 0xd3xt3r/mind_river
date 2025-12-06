@@ -335,29 +335,33 @@ lsusb
 
 **Total IOCLT command - 148**
 
-| Device          | Entry Point                                  | IOCTL Count | Status                  | Comment                                                                          |
-| --------------- | -------------------------------------------- | ----------- | ----------------------- | -------------------------------------------------------------------------------- |
-| Request Manager | cam_private_ioctl                            | 21          | syz-description exist   | **DOABLE**                                                                       |
-| Sync Driver     | cam_sync_dev_ioctl                           | 8           |                         |                                                                                  |
-| CPAS            | cam_cpas_subdev_ioctl                        | 5           | **DONE**                |                                                                                  |
-| CSIPHY          | cam_csiphy_core_cfg                          | 7           | **DONE**                |                                                                                  |
-| EEPROM          | cam_eeprom_driver_cmd                        | 4           | **DONE**                |                                                                                  |
-| OIS             | cam_ois_driver_cmd                           | 7           | **DONE**                |                                                                                  |
-| TPG             | cam_tpg_subdev_ioctl                         | 6           | **DONE**                |                                                                                  |
-| FLASH           | cam_flash_i2c_pkt_parser                     | 6           | **DONE**                |                                                                                  |
-| ACTUATOR        | cam_actuator_driver_cmd                      | 6           | **DONE**                |                                                                                  |
-| SENSOR          | cam_sensor_driver_cmd                        | 7           | **DONE**                |                                                                                  |
-| JPEG            | cam_jpeg_add_command_buffers                 | 6           | **DONE**                |                                                                        |
-| LRME            | cam_lrme_mgr_hw_config                       | 6           | syz-description exist   | #node-mngr  this functionality is exposed using function pointer in node manager |
-| ICP             | cam_node_handle_ioctl                        | 15          | syz-description exist   | #node-mngr Unable to directly open the device, error in discovery                |
-| IFE             | cam_node_handle_ioctl                        | 13          |                         | #node-mngr before pakala part of TFE_MC/TFE/ISP                                  |
-| TFE_MC          | cam_node_handle_ioctl, cam_tfe_mgr_config_hw | 13          |                         | **DOABLE**                                                                       |
-| TFE             |                                              |             |                         | part of medium chip                                                              |
-| OPE             | cam_node_handle_ioctl                        | 10          |                         | #node-mngr not enabled on pakala, part of medium chip                            |
-| CRE             | cam_node_handle_ioctl                        | 8           |                         | #node-mngr                                                                       |
-| CCI             |                                              |             | syz-description comment | Unable to directly open the device                                               |
+| Device          | Entry Point                                  | IOCTL Count | Chipset Tier | Comment                                                               |
+| --------------- | -------------------------------------------- | ----------- | ------------ | --------------------------------------------------------------------- |
+| Request Manager | cam_private_ioctl                            | 21          | Premium      | **DOABLE**                                                            |
+| Sync Driver     | cam_sync_dev_ioctl                           | 8           | Premium      |                                                                       |
+| CPAS            | cam_cpas_subdev_ioctl                        | 5           | Premium      |                                                                       |
+| CSIPHY          | cam_csiphy_core_cfg                          | 7           | Premium      |                                                                       |
+| EEPROM          | cam_eeprom_driver_cmd                        | 4           | Premium      |                                                                       |
+| OIS             | cam_ois_driver_cmd                           | 7           | Premium      |                                                                       |
+| TPG             | cam_tpg_subdev_ioctl                         | 6           | Premium      |                                                                       |
+| FLASH           | cam_flash_i2c_pkt_parser                     | 6           | Premium      |                                                                       |
+| ACTUATOR        | cam_actuator_driver_cmd                      | 6           | Premium      |                                                                       |
+| SENSOR          | cam_sensor_driver_cmd                        | 7           | Premium      |                                                                       |
+| JPEG            | cam_jpeg_add_command_buffers                 | 6           | Premium      |                                                                       |
+| LRME            | cam_lrme_mgr_hw_config                       | 6           | Premium      |                                                                       |
+| ICP             | cam_node_handle_ioctl                        | 15          | Premium      | #node-mngr Unable to directly open the device, first open req manager |
+| IFE             | cam_node_handle_ioctl                        | 13          | Premium      | #node-mngr before pakala part of TFE_MC/TFE/ISP                       |
+| TFE_MC          | cam_node_handle_ioctl, cam_tfe_mgr_config_hw | 13          | Premium      | **DOABLE**                                                            |
+| TFE             |                                              |             | Premium      | part of medium chip                                                   |
+| OPE             | cam_node_handle_ioctl                        | 10          | Mid          | #node-mngr                                                            |
+| CRE             | cam_node_handle_ioctl                        | 8           | Premium      | #node-mngr                                                            |
+| CCI             |                                              |             | Premium      | Unable to directly open the device                                    |
+
+
+> node-mngr : this functionality is exposed using function pointer in node manager 
 
 ### Product Docs
+
 1. [Beginner course](https://degreed.com/pathway/79xxn4yj9k/pathway)
 	1. [User to Kernel Interaction ](https://confluence.qualcomm.com/confluence/pages/viewpage.action?pageId=173071273)
 	2. [CSL Packet description](https://confluence.qualcomm.com/confluence/display/CamNext/HW+Update+Packet+Interface)

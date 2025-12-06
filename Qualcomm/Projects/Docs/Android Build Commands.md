@@ -57,6 +57,9 @@ adb shell 'cd /vendor/bin/hw && mv $(ls vendor.qti.camera.provider*) vendor.qti.
 adb shell 'mv /vendor/bin/hw/qvrservice /vendor/bin/hw/qvrservice.orig' || true  
 adb shell "cd /system/bin && mv cameraserver cameraserver.orig" || true
 
+# check if request manager sub-system is aquired by other 
+lsof /dev/video0
+
 # print device logs on UART
 pyterm.py ftdi:///?
 

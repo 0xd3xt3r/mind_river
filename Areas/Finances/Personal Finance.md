@@ -2,10 +2,8 @@
 up: "[[Finance MoC]]"
 tags:
   - "#type/finance"
-status: todo
 created-date: 2024-12-23
-related: 
-summary:
+summary: Recording financial transactions
 ---
 # Personal
 
