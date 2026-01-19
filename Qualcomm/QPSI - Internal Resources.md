@@ -58,7 +58,7 @@ summary: Internal Resources
 
 1. [[Secure Code - Example]]
 2. [[Secure Code  - Linux Kernel]]
-3. [[QTEE]]
+3. [[QTEE - Qualcomm Trustzone]]
 4. [[Secure Code - WLAN]]
 5. [[Misc Internal Course Notes]]
 

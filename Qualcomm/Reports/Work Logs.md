@@ -5,6 +5,7 @@ tags:
   - "#qpsi/report"
 year: "2024"
 summary: Previous experiment on logging work information
+status: archived
 ---
 
 > [!NOTE] 

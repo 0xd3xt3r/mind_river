@@ -19,6 +19,8 @@ summary:
 	1. PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal Corporation/MAA14116/110924/311228
 4. Tameer Seventh Heaven
 	1. PR/GJ/AHMEDABAD/AHMEDABAD CITY/AUDA/MAA01488/030218
+5. Aruba
+	1. PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal Corporation/MAA15944/011025/310329
 
 ## History property rates in the Area
 

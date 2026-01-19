@@ -2,10 +2,9 @@
 up: "[[Qualcomm MoC]]"
 tags:
   - "#type/qcom"
-related: 
-status: todo
+status: in-progress
 created-date: 2025-03-11
-summary:
+summary: Build system automation
 ---
 
 1. go/qsbt

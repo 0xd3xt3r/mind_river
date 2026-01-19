@@ -13,7 +13,7 @@ summary: Create training for Camera Kernel team and integerate it in Workday. Th
 ## Notes
 > What did you learn?
 
-- Discussion with the Nicolas on how to implement the training.
+- [ ] Discussion with the [[Nicolas]] on how to implement the training.
 	1. the learning team, create slide with specific teams, n2k support to team specific team and channels team
 	2. LMS team - learning team
 	3. Channel - create channel for the training, do it with channel team.

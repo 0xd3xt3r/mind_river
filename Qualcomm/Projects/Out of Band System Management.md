@@ -1,5 +1,9 @@
 ---
 up: "[[Qualcomm Project MoC]]"
+tags:
+  - "#type/project"
+  - "#qpsi/project"
+  - status/active
 related:
   - "[[Rootkits and Bootkits]]"
   - "[[OOB 3rd party analysis]]"
@@ -7,11 +11,6 @@ aliases:
   - OOB Security
 created-date: 2024-12-18
 status: in-progress
-tags:
-  - "#type/project"
-  - "#qpsi/project"
-  - type/pinned-docs
-  - status/active
 summary: OOB Sub-System helps IT Admins to remotely manage and repair office machines. Security of This component is critical since someone can access the machine remotely.
 link: https://confluence.qualcomm.com/confluence/display/QPSIFT/Out-of-Band+%28OOBMS%29+fuzzing
 ---

@@ -2,8 +2,7 @@
 up: "[[WoS Kernel Driver Fuzzing]]"
 tags:
   - "#type/qcom"
-  - "#type/pinned-docs"
-related: 
+related:
 status: todo
 created-date: 2025-04-07
 summary: Setup Glymur Device

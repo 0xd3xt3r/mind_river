@@ -18,7 +18,7 @@ The Secure Code: QTEE online tutorial is designed to raise awareness of security
 ![[Pasted image 20210709191803.png]]
 
 1. **Qualcomm Secure Execution Environment (QSEE)** is the old name for **Qualcomm Trusted Execution Environment (QTEE)**
-2. [[QTEE]] is Qualcomm's [[TrustZone]] Implementation.
+2. [[QTEE - Qualcomm Trustzone]] is Qualcomm's [[TrustZone]] Implementation.
 3. The communication between secure work and non-secure world is done via secure monitor system calls. SMC calls are done at high privilege level.
 
 ## Basic Terminology

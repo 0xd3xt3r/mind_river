@@ -14,27 +14,68 @@ summary: Everything Related to Qualcomm will be placed here
 
 ## Pinned Docs
 
-```dataview
-TABLE WITHOUT ID
-	file.link as "Project",
-	summary,
-	tags,
-	created-date
-FROM #type/qcom AND !"Templates"
-SORT file.name
+```base
+filters:
+  and:
+    - file.hasTag("type/qcom")
+    - not:
+        - file.inFolder("Templates")
+properties:
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Knowledge Docs
+    order:
+      - file.name
+      - summary
+      - created-date
+    sort:
+      - property: created-date
+        direction: DESC
+    limit: 8
+    columnSize:
+      file.name: 268
+      note.summary: 675
 ```
-
 ## Internal Reports
 
-```dataview
-TABLE WITHOUT ID
-	file.link as "Project",
-	summary,
-	status,
-	tags,
-	created-date
-FROM #qpsi/report AND !"Templates"
-SORT file.name
+```base
+filters:
+  and:
+    - file.hasTag("qpsi/report")
+    - not:
+        - file.inFolder("Templates")
+properties:
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Active Reports
+    filters:
+      and:
+        - status != "archived"
+    order:
+      - file.name
+      - summary
+      - created-date
+    sort:
+      - property: created-date
+        direction: DESC
+    limit: 8
+    columnSize:
+      file.name: 256
+      note.summary: 675
+  - type: table
+    name: Archived Reports
+    filters:
+      and:
+        - status == "archived"
+    order:
+      - file.name
+      - summary
+      - created-date
+
 ```
 
 ## QIPL QPSI Report Docs

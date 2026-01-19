@@ -3,7 +3,7 @@ up: "[[Qualcomm MoC]]"
 tags:
   - "#qpsi/ar25"
   - "#qpsi/report"
-status: in-progress
+status: archived
 created-date: 13-12-2024
 summary: Goal planning for 2025
 ---

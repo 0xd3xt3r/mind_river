@@ -2,7 +2,6 @@
 up: "[[Android Kernel Driver Fuzzing]]"
 tags:
   - "#type/qcom"
-  - "#type/pinned-docs"
 related:
   - "[[Qualcomm/Projects/Camera Driver Fuzzing]]"
 status: done

@@ -2,7 +2,7 @@
 up: "[[Qualcomm MoC]]"
 tags:
   - "#qpsi/report"
-status: done
+status: archived
 created-date: 2021-12-13
 summary: Goal planning for 2021
 ---

@@ -5,7 +5,6 @@ created-date: 2025-04-02
 status: in-progress
 tags:
   - "#type/project"
-  - "#qpsi/project"
   - type/pinned-docs
 team-members:
   - "[[Satish Kurada]]"
@@ -16,16 +15,43 @@ summary: This document contains team updates and task
 
 ## Meetings or Reports
 
-```dataview
-TABLE WITHOUT ID
-	file.link as "Session",summary,
-	created-date, participants , tags, up
-FROM !"Templates"
-WHERE icontains(related, this.file.link)
-AND icontains(tags, "type/meeting")
-SORT filename DESC
-```
+```base
+views:
+  - type: table
+    name: Projects
+    filters:
+      and:
+        - or:
+            - file.hasLink("Qualcomm/Projects/The Fuzzing Team")
+        - not:
+            - file.inFolder("Templates")
+    order:
+      - file.name
+      - summary
+      - created-date
+    sort:
+      - property: file.name
+        direction: DESC
+      - property: file.mtime
+        direction: DESC
+    limit: 10
+    columnSize:
+      file.name: 313
+      note.summary: 823
+  - type: table
+    name: Recent Files
+    order:
+      - file.name
+      - summary
+      - file.tags
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 5
+    columnSize:
+      note.summary: 553
 
+```
 ## Important Document
 
 - Bernard
@@ -39,33 +65,23 @@ SORT filename DESC
 	- [KGSL Conf Link](https://confluence.qualcomm.com/confluence/display/QPSIFT/Android+GPU+Fuzzing%3A+KGSL)
 - Myself
 	- [Camera Fuzzing Conf Link](https://confluence.qualcomm.com/confluence/display/QPSIFT/Android+Camera+Driver+Fuzzing)
-- Nirmal
-	- 
+
 
 ## Work
 
-- **Ashish** - Absent
-- **Bernard** - Callgraph integration for Android
-	- Fuzzing - nothing
+- **Ashish U**
+	- Windows
 - **Munawwar**
-	- Camera APT testing integration found 3 crashes
-	- Working on SIP Fuzzing
-- **Nirmal** 
-	- Stone static analysis build issue resolution
+	- [ ] [[AIRCA]]
+	- [ ] [[LLM Assisted Syzkaller Harness Generation]]
 - **Neeraj**
-	- KGSL - updating the build to latest version. 
-	- Callgraph - resolving the issue in CFG algorithm generation
-	- Infrastructure Setup - no update
+	- [ ] KGSL - updating the build to latest version. 
+	- [ ] Callgraph - resolving the issue in CFG algorithm generation
+	- [ ] Windows - Fuzzing MSM Kernel driver
+	- [ ] Fuzzing farm - no update
 - **Satish**
-	- BT Firmware 
-		- Many CR are false positive, working with the team to understand false positive.
-		- escalated the CR, its high priority work.
-	- WiFi Project
-		- 20 Function need to document. Document atleast 5 function.
-		- Negotiate bandwidth with the tech team.
-		- Mainlining the fuzzer
-		- Fixes for 2 CRs are not integrated in mainline.
-
+	- [ ] BT Firmware 
+	- [ ] WiFi Project
 
 ## Tasks and Questions
 
