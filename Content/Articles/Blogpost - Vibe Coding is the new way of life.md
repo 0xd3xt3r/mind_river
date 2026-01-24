@@ -1,19 +1,12 @@
 ---
-up: "[[Knowledge Base MoC]]"
+up: "[[Writing MoC]]"
 tags:
-  - "#type/knowledge"
-  - "#type/pinned-docs"
-status: in-progress
-created-date: 2026-01-11
-related:
-summary: how to use claude code in best possible way
-alias:
-  - claude-code
+  - "#type/writing/article"
+status: todo
+created-date: 2026-01-24
 ---
 
-## Notes
-
-1. Break down large body of complex task in to smaller, more approachable units of work. Now, these smaller task we can be either accomplish by script(which give more deterministic output) or LLM(which can be a probabilistic output).
+Break down large body of complex task in to smaller, more approachable units of work. Now, these smaller task we can be either accomplish by script(which give more deterministic output) or LLM(which can be a probabilistic output).
 2. We have to create a workflow in terms of "unit of work". A particular unit is doing very specific well define work, in which you give specific input and output defined. This "unit of work" can be converted into SKILL which the agent can deploy to execute.
 3. LLM Workflow - Explore, plan, code, validate.
 4. The new way of programming has shifted from learning a syntax of language to writing instruction in English. This is just like instructing a dump junior engineer.
@@ -48,78 +41,3 @@ alias:
 	2. LLM can help you drastically reduce the time you spend building on outer layer and instead spend more of you time in research and ideation of product and improving the core of your product. Because that's where the MOAT is!
 	3. Writing specifications, defining success criteria.
 	4. How can you create agents of create other task. digital interns-agents.
-
---- 
-# Components of the framework
-
-What are different components and how are they useful and what purpose do they server?
-
-## Context Engineering
-
-> Context engineering is the delicate art and science of filling the context window with just the right information for the next step.
-> Art because of the guiding intuition around LLM psychology of people spirits
-
-This helps the LLM to have relevant information before starting the task.
-- This is the most important component which will remarkably improve your performance of the tool.
-- There are different components which the framework provides to minimize the context relevant to the you task.
-
-## Skill
-
-> This help the claude to call upon a specific skill it need to complete a task, something like pdf parsing.
-
-A Skill is a set of instructions and/or code that Claude can run over and over again, on demand. They're kinda like custom slash commands, except more powerful.
-
-Let's say you want to update your team via Slack every time you push a new feature. You may have a Slack MCP or a custom script set up already but then you'd have to tell Claude to run this process every single time.
-
-Instead, now you can just package up the instructions into a Skill. From the Skill metadata, Claude knows to use that skill when you're pushing code, and will automatically do that.
-
-What makes it better than MCP is that it doesn’t eat up your context. MCP always loads up front when you start a session, so it uses up your context window unnecessarily.
-
-
-## Command
-
-1. Also called as slash command
-2. This is very similar to skill but the difference is you can use this to call multiple skill to accomplish a particular task.
-3. Skill is invoked by claude while the command is invoked by the user
-
-## Agent
-
-## MCP
-
-> Connecting AI assistants to external tools and data sources
-
-You can think of this as body organs coordinating with your brain, LLM's are the brain by to carry out the functionality you need to interact with the external world which is exactly what MCP does. It can execute thing in the you computer by the interface which you have exposed.
-
-## Skills vs Slash Commands 
-
-> (Claude Code Only)
-
-If you’re a Claude Code user, you may have come across custom slash commands that allow you to define a certain process and then call that whenever you need.
-
-This is actually the closest existing Claude feature to a Skill. The main difference is that you, the user, triggers the custom slash command when you want it, and Skills can be called by Claude when it determines it needs that.
-
-Skills also allow for more complexity whereas custom slash commands are for simpler tasks that you repeat often (like running a code review).
-
----
-
-# Internal Tools
-
-> Tool created in Qualcomm
-
-1. [AI Root Cause Analysis](https://github.qualcomm.com/QPFI/AI_Root_Cause_Analyzer/)
-2. [Stateful engine](https://github.qualcomm.com/QPFI/Stateful_Fuzzing_Engine/)
-3. [Using Qgeine with claude-code](https://github.qualcomm.com/ncouffin/qgenie_proxy)
-
-## Official Docs
-
-1. [Getting started](https://www.anthropic.com/engineering/claude-code-best-practices)
-2. How to write skill
-	1. [Claude Docs](https://code.claude.com/docs/en/skills)
-	2. [how to write better skills](https://sidbharath.com/blog/claude-skills/)
-
-## Reference
-
-1. [Claude code repo](https://github.com/anthropics/claude-code)
-2. [Vibe engineering](https://simonwillison.net/2025/Oct/7/vibe-engineering/)
-3. [Claude skill library](https://skillsmp.com/)
-4. [Agentic Coding](https://simonwillison.net/2025/Oct/5/parallel-coding-agents/)
