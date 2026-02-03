@@ -7,7 +7,7 @@
     "start-date": "date",
     "complete-date": "date",
     "created-date": "date",
-    "related": "text",
+    "related": "multitext",
     "participants": "multitext",
     "up": "text",
     "author": "multitext"

@@ -6,16 +6,19 @@ tags:
   - type/pinned-docs
 created-date: 2026-01-14
 status: in-progress
-summary: Using LLM to generate Syzkaller harness
+summary: Using LLM to generate Syzkaller harnesses
 participants:
   - "[[Nilo]]"
   - "[[Hashir]]"
+aliases:
+  - claude fuzzing
 ---
 
 ## Objective
 
 - We want to have find scalable method of manage security of kernel driver.
 - 75% internal bug detection.
+
 
 ## Current Problems / Challenges
 
@@ -41,8 +44,9 @@ participants:
 5. Device Farm management by Claude?
 	1. Give some device for experimental configuration.
 	2. Manager large farms of device to debug and report.
+---
 
-## Task
+## Architecture
 
 1. Entry-points identification
 	1. **Importance**: Have an automated method to enumerate entry-point can reduce human-error and also have a comprehensive list of attack surface.
@@ -74,8 +78,85 @@ participants:
 			3. ftrace
 			4. kprobe
 
+---
 
-## Claude code skills
+## Project proposal
 
-1. Identify entry points
-2. 
+[Android fuzzing Roadmap](https://qualcomm-my.sharepoint.com/:w:/r/personal/nredini_qti_qualcomm_com1/Documents/Documents/Android%20Kernel%20Security%20Projects%20and%20Roadmap.docx?d=wa7f3b6319b784154a2afcf5439628493&csf=1&web=1&e=gJXgiO)
+
+### P1 - Attack surface management
+
+- The goal of this project is to pin-point the changes that are coming the kernel driver and how does that affect the entry-point.
+- For this we need to clone the git repo and build the symbol index for all the branches and store the data in either json file or sqlite-db. The stored file should have branch name and the git commit at which the scan was done.
+- Input to the system will be git url
+- Spec
+	- All the code should be written in python
+	- the code we will be scanning will be strictly C code for Linux kernel.
+	- The index should store symbol and cross-reference information
+	- update to a symbol will notified to a users
+	- When there is a new commit try to map in which symbol the change has occured, like funcition 
+Break down the task and store the work plan in 'beads' in the form of epic and task
+
+#### Task
+
+- [ ] Change management
+	- [ ] Change wrt to Syzkaller metadata
+		- [ ] Structure change
+			- [ ] new field
+			- [ ] change data type
+	- [ ] Change wrt to commit-version
+		- [ ] store the snapshot of the current scan
+		- [ ] diff the change
+	- [ ] link the change to the entry point via call graph
+	- [ ] This type of structure
+		- [ ] kernel has standard way of defining IOCTL command patterns. parsing that will help use extracting low hanging fruits
+		  ```C
+		#define IOCTL_KGSL_SUBMIT_COMMANDS _IOWR(KGSL_IOC_TYPE, 0x3D, struct kgsl_submit_commands)
+		  ```
+- [ ] Entry point management
+	- [x] scan for all IOCTL methods
+
+### P2 - Device Fuzzing Farm
+
+#### Task
+
+- [ ] Task assigned to [[Hashir]]
+	- [ ] Create a dev environment
+	- [ ] Setup 8 devices
+	- [ ] Connect the all the device to a single syzkaller instance
+
+### P3 - Coverage gap analysis
+
+**Goal** - The goal of the project is to improve the current lag in the fuzzing coverage?
+**Approach:**
+1. Analyze the IRVR tickets
+2. Understand the current gap in the Syzkaller grammar.
+3. If the grammar is complete, investigate why is the Syzkaller not exploring the code path?
+
+### Task
+
+- [ ] Drivers for Ashish
+	- [ ] FastRPC
+- [ ] Drivers for Hashir
+	- [ ] Camera
+- [ ] Driver for Munawwar
+	- [ ] KGSL
+
+### P4 - Agentic code review
+
+1. Create workflow that help you review the command bug patterns.
+2. Review for function like `copy_to_user` and `copy_from_user`.
+3. Create pattern by analyzing IRVR incidents.
+4. Domain specific review
+	1. In-case of camera function like `cam_mem_get_cpu_buf` and `cam_mem_get_io_buf`
+
+---
+
+1. Syzkaller to SFE Bridge
+2. WoS Fuzzing Farm
+3. UEFI Fuzzing
+4. Nicolas
+	1. Automation
+	2. RCE for Android and Windows
+		1. Automated Patch and verification (Require PoV)
+	3. Infrastructure should be up and running

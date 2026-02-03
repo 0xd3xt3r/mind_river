@@ -19,6 +19,8 @@ adb reboot bootloader
 fastboot devices
 fastboot reboot
 
+cat /firmware/verinfo
+
 cd <meta_root_path>
 
 # Flash complete meta

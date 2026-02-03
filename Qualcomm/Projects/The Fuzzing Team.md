@@ -70,18 +70,32 @@ views:
 ## Work
 
 - **Ashish U**
-	- Windows
+	- [ ] Windows
+		- [ ] WLAN  
+		- [ ] BT - 2
+		- [ ] Camera
+		- [ ] Bcrypt
+		- [ ] MDM - KT
+	- [ ] Rackspace for devices.
 - **Munawwar**
 	- [ ] [[AIRCA]]
 	- [ ] [[LLM Assisted Syzkaller Harness Generation]]
 - **Neeraj**
 	- [ ] KGSL - updating the build to latest version. 
 	- [ ] Callgraph - resolving the issue in CFG algorithm generation
+		- [ ] KT to ashish
 	- [ ] Windows - Fuzzing MSM Kernel driver
+		- [ ] KT To ashish
 	- [ ] Fuzzing farm - no update
 - **Satish**
-	- [ ] BT Firmware 
+	- [ ] BT Firmware - Blocked
+		- [ ] Gangis build completely changed, Alex helping to build the gangis.
 	- [ ] WiFi Project
+		- [ ] Target to meet 50 % current coverage is 38%.
+		- [ ] Implemented 7 new filter
+		- [ ] 5 New issue
+- **Hashir**
+	- [ ] Syzkaller setup
 
 ## Tasks and Questions
 

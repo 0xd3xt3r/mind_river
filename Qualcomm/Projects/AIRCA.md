@@ -7,10 +7,12 @@ tags:
 created-date: 2026-01-13
 related: "[[Claude Code]]"
 status: in-progress
-summary: LLM assisted Root Cause analysis tooling
+summary: AI assisted Root Cause analysis tooling
 participants:
   - "[[Nilo]]"
   - "[[Nicolas]]"
+aliases:
+  - AI Root Cause analysis
 ---
 
 ## Objective

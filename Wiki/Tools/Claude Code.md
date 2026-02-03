@@ -5,9 +5,9 @@ tags:
   - "#type/pinned-docs"
 status: in-progress
 created-date: 2026-01-11
-related:
+related: "[[LLM Talks]]"
 summary: how to use claude code in best possible way
-alias:
+aliases:
   - claude-code
 ---
 
@@ -63,6 +63,20 @@ This helps the LLM to have relevant information before starting the task.
 - This is the most important component which will remarkably improve your performance of the tool.
 - There are different components which the framework provides to minimize the context relevant to the you task.
 
+- **Challenges**
+	- How to you compress context after a long conversation into only relevant information.
+	- This problem is called as context management
+	- How to you store and retrieve the conversation using external memory?
+		- There are some task management systems like [beads](https://github.com/steveyegge/beads/)
+		- Sequential thinking plugin part of MCP plugins
+	- Interesting thing would be to create a high level requirement but as more information is discovered, task are dynamically added to the task list and executed and the list can keep growing and shrinking as the work progress.
+	- I had a thought, that current models are limited by the number of tokens they can process, thats true. But ain't we also as human being working on limited set of context window! 
+		1. While doing programming task, its not like we are digest entire codebase before we start working on new feature which we intend to add to the codebase? 
+		2. No, we start by understand the area of code base where we want to make the changes. We try to understand it function what does different variable, function or class means, if the complexity of the code is high we make assumptions and try to complete our work.
+		3. then we make the change. 
+		4. We don't stop there, then we go ahead to test those changes, manually or automatically(unit-test, integration test) but we test and validate our understand and if the changes produce undesirable results, 
+		5. We go back to the step one or validating our understanding or the assumption we have made or by means of debugging, re-read the code or consulting a college.
+
 ## Skill
 
 > This help the claude to call upon a specific skill it need to complete a task, something like pdf parsing.
@@ -116,6 +130,16 @@ Skills also allow for more complexity whereas custom slash commands are for simp
 2. How to write skill
 	1. [Claude Docs](https://code.claude.com/docs/en/skills)
 	2. [how to write better skills](https://sidbharath.com/blog/claude-skills/)
+
+## External Tools
+
+1. Sequential Thinking - Solving complex problems with this workflow
+	1. [mcp](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)
+	2. [workflow](https://github.com/cline/prompts/blob/main/.clinerules/sequential-thinking.md)
+2. [Cline](https://github.com/cline/cline)
+	1. Advance agent for vscode
+3. [12 Factor Agent](https://github.com/humanlayer/12-factor-agents/)
+4. [Complex Task with Agents](https://github.com/humanlayer/humanlayer/)
 
 ## Reference
 
