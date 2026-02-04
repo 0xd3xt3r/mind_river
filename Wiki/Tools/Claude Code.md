@@ -70,7 +70,7 @@ This helps the LLM to have relevant information before starting the task.
 		- There are some task management systems like [beads](https://github.com/steveyegge/beads/)
 		- Sequential thinking plugin part of MCP plugins
 	- Interesting thing would be to create a high level requirement but as more information is discovered, task are dynamically added to the task list and executed and the list can keep growing and shrinking as the work progress.
-	- I had a thought, that current models are limited by the number of tokens they can process, thats true. But ain't we also as human being working on limited set of context window! 
+	- I had a thought, that current models are limited by the number of tokens they can process, that's true. But ain't we also as human being working on limited set of context window! 
 		1. While doing programming task, its not like we are digest entire codebase before we start working on new feature which we intend to add to the codebase? 
 		2. No, we start by understand the area of code base where we want to make the changes. We try to understand it function what does different variable, function or class means, if the complexity of the code is high we make assumptions and try to complete our work.
 		3. then we make the change. 
