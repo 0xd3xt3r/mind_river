@@ -2,8 +2,7 @@
 up: "[[MoC Planet]]"
 tags:
   - "#type/MoC"
-created-date:
-  "{ DATE }": 
+created-date: {{DATE}} 
 summary:
 ---
 

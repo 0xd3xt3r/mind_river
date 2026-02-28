@@ -1,9 +1,12 @@
 ---
 up: "[[Qualcomm MoC]]"
-related: "[[Android Kernel Driver Fuzzing]]"
+related:
+  - "[[Android Kernel Driver Fuzzing]]"
+  - "[[Vibe Project MoC]]"
 tags:
   - "#qpsi/project"
   - type/pinned-docs
+  - type/vibe-specs
 created-date: 2026-01-14
 status: in-progress
 summary: Using LLM to generate Syzkaller harnesses
@@ -46,7 +49,57 @@ aliases:
 	2. Manager large farms of device to debug and report.
 ---
 
-## Architecture
+## Project Architecture
+### Agent Architecture
+
+1. **Device Farm** - This component will manage the cluster of device we deploying our fuzzer.
+	1. Automation for sync, build and flash
+2. **Gap Analysis** - this agent will be responsible for documenting the gap in the current fuzzing project. It will analyze the grammar and the source code to understand what all is possible to cover but we are not able to cover.
+	1. Download the function/basic-block coverage report and statistics.
+	2. Find the gap in the grammar/input-specs.
+		1. Trivial heuristic can be employed to figure-out what is the difference between syzkaller grammar and code.
+		2. Complex nested structures with pointer type-casting - for such case we can use AI analysis to find these relations.
+3. **Code Analysis** - This agent will create the call graph and the data-structure graph understand of the code. This will be updated and improved as new code keeps coming. These understand will be late updated during corpus enrichment phase.
+	1. **Initial scan** - figure-out the source graph, this will be later updated with more complex analysis.
+		1. Source of truth
+	2. **Entry Point analysis** - this is scanning for entry point for target driver
+		1. **Heuristic base approach** - we know there is a standard contract between user and kernel
+			1. Function calling `copy_from_user`/`copy_to_user` function
+			2. `_IOR`, `_IOWR` and `_IO` def in headers. This will give IOCTL command and their corresponding structure which the IOCTL interface processes.
+			3. UAPI file is usually share with user-space library.
+			4. Standard `ioctl` structures, `procfs`, `sysfs` which are used to register interface for user-space.
+			5. Other custom function like `cam_mem_get_buf`.
+		2. **AI Base approach** - let the LLM figure-out everything other that what heuristic approach is doing.
+			1. weird interface people develop like shared memory page between user-kernel. 
+	3. **Pointer Analysis** - drivers have pointers which are hard to trace, this leads to incomplete accurate call graphs.
+		1. Figure the all the pointers from the entry-point call-graph which are incomplete.
+		2. Use the drivers life-cycle methods to figure-out pointer value.
+	4. **Taint tracking** - given the attack source data can how can we create graph relation which connects call relation and the data structure relations.
+		1. The call relation can be  function A -> calling function B. But the relation will be create based on the fact that function A has attack controlled data and the data is passed to function B.
+	5. **Source Monitor** - periodic monitor of target branch.
+	6. **Syscall dependencies** - How are ioctl/syscall related to each other by means of handler/file descriptor.
+4. **Data storage** - this will store all the data generate during this analysis.
+	1. **Source Graph** - this is the source graph establish during our analysis.
+		1. Store will have metadata like the struct/function connection discovered by AI Agents.
+	2. **Code history** - metadata about branch and commits of the fuzzing instance.
+	3. **Agent Audit trails** - different types of successful and failed attempts made by AI Agents.
+5. **Corpus Enrichment** - Based on grammar and the agent will write a syz-prog to test if the new grammar has added a value by writing a syz-prog which is targeting a particular function. For tracing we will use Linux kernel's ftrace infra to get the feedback.
+	1. **sequence compression** - take long sequence of call and covert them in to pseudo call to not fuzz selected syscalls. This is usually done to put that driver in particular state and then fuzz the target code.
+	2. directed fuzzing - Weight more function which are deeper.
+6. **Agent Feedback** - how do we tell the agent if it did a good job?
+	1. **Code Coverage** - Accurate coverage collection with a custom driver.
+7. **Operational Environment** - 
+	1. Coverage monitored - basic block feedback.
+		1. Instrumentation overhead.
+	2. Raw mode - no instrumentation, preferably perf build to all the fuzzer to execute on production environment.
+8. **Root Cause Analysis** - pick-up the crash produced by syzkaller and try to reproduce the crash and create a Proof-of-Vulnerability(PoV) with syz-prog.
+
+### System Goals
+
+1. SFE uses return value to measure the progress, where as Syzkaller uses coverage metric which is a very accurate metric and comes are a instrumentation overhead.
+2. Windows fuzzing is been build from scratch they are starting from zero. AI will generate a very good grammar for scratch but doing incremental improvement is a very different challenge.
+
+### Project Brainstorm - part 1
 
 1. Entry-points identification
 	1. **Importance**: Have an automated method to enumerate entry-point can reduce human-error and also have a comprehensive list of attack surface.
@@ -80,7 +133,7 @@ aliases:
 
 ---
 
-## Project proposal
+### Project proposal
 
 [Android fuzzing Roadmap](https://qualcomm-my.sharepoint.com/:w:/r/personal/nredini_qti_qualcomm_com1/Documents/Documents/Android%20Kernel%20Security%20Projects%20and%20Roadmap.docx?d=wa7f3b6319b784154a2afcf5439628493&csf=1&web=1&e=gJXgiO)
 
@@ -96,6 +149,11 @@ aliases:
 	- update to a symbol will notified to a users
 	- When there is a new commit try to map in which symbol the change has occured, like funcition 
 Break down the task and store the work plan in 'beads' in the form of epic and task
+
+- **Symbol Tracking**
+	- I want to re-design template feature, and rename it to 'Symbol Tracking'.
+	- the input will be all the type which are currently available tracking in the symbol database.
+	- In the new design I want the input from to be a new page instead of a model. Input file will be the type of symbol & the name. For example type can be function and the value will be name of the function. There will be multiple of such tacking, so when the add button is list it will be added to the list of variable which will be track.
 
 #### Task
 
@@ -115,15 +173,23 @@ Break down the task and store the work plan in 'beads' in the form of epic and t
 		  ```
 - [ ] Entry point management
 	- [x] scan for all IOCTL methods
+- [ ] Mapping the Product with branch
 
 ### P2 - Device Fuzzing Farm
 
+**Owner**:[[Hashir]]
+
 #### Task
 
-- [ ] Task assigned to [[Hashir]]
+- [ ] Baseline setup 
 	- [ ] Create a dev environment
 	- [ ] Setup 8 devices
 	- [ ] Connect the all the device to a single syzkaller instance
+- [ ] We should refresh the build every two week and 
+	- [ ] Capture the commit of all the drivers we are fuzzing.
+	- [ ] Once we have refreshed the build we need the check the new commits and see what has changed
+	- [ ] Change will be analyzed to see if we are fuzzing the new change.
+
 
 ### P3 - Coverage gap analysis
 

@@ -24,6 +24,7 @@ summary: DR Reviewer Training
 [Master sheet](https://qualcomm-my.sharepoint.com/:x:/p/apayapur_qti/ES7fxBe4DvlGn0nosvCTwTABVZ1BpYUJGyg_oiR9AjPRvw?email=mshelia%40qti.qualcomm.com&e=W1iUE8&CID=47DCF15A-DE7B-457F-87CC-0FFC8FAB794E&wdLOR=cF8E3C967-ED74-4F6D-A158-F2786632AC14)
 
 ## Notes
+
 - in case someone says its NON-QC code do git blame and check
 - [SA Reviewer List Link](https://lists.qualcomm.com/ListManager?action=view&query=SA_Reviewers&field=default&match=eq)
 

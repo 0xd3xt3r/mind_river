@@ -33,7 +33,13 @@
         "focus": true
       },
       "openFile": false,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "57d4c31a-84ca-4e40-b8dc-262412c31b39",
@@ -63,7 +69,13 @@
       "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "7039b821-c7ed-4be1-ac81-19d4d520d6d5",
@@ -93,7 +105,13 @@
       "openFile": false,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "9826482c-79b7-42c8-bf76-6647a481a01e",
@@ -123,7 +141,13 @@
       "openFile": false,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "5f1454cb-e6fb-43e6-be0a-8642f1e01d29",
@@ -153,7 +177,13 @@
       "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "a7246a6d-77df-4e18-9d91-2b47fbc8cf88",
@@ -183,7 +213,13 @@
       "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "3f730382-1bd0-48b0-92fe-c5007576c6a7",
@@ -213,7 +249,13 @@
       "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "303a306d-4850-4520-840b-375eed609acf",
@@ -243,7 +285,13 @@
       "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "65d9695c-89dd-4e46-9843-8f999cffd52b",
@@ -278,7 +326,13 @@
         "focus": true
       },
       "openFile": false,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "6dced1e6-c14b-4d23-8569-8d73c094ae65",
@@ -313,37 +367,136 @@
         "focus": true
       },
       "openFile": false,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "2c2d026a-e3a9-4c18-9731-af5ef1ae0e6b",
       "name": "Weekly Notes",
       "type": "Macro",
       "command": false,
-      "macroId": "779b77d7-3467-4353-931a-364e56d56139"
-    }
-  ],
-  "macros": [
-    {
-      "name": "Add Task",
-      "id": "779b77d7-3467-4353-931a-364e56d56139",
-      "commands": [],
+      "macro": {
+        "id": "779b77d7-3467-4353-931a-364e56d56139",
+        "name": "Add Task",
+        "commands": []
+      },
       "runOnStartup": false
     },
     {
+      "id": "e8bd1777-b902-4482-bdeb-f20c570c4edc",
+      "name": "Vibe Idea",
+      "type": "Template",
+      "command": true,
+      "templatePath": "Templates/vibe-specs.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "Vibe - {{value}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Areas/Vibe Projects"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "split",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "e56835bb-c5a4-4793-acd9-472bd9ea2c66",
+      "name": "Prompt Idea",
+      "type": "Template",
+      "command": true,
+      "templatePath": "Templates/Prompt Idea.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "Prompt - {{value}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Areas/Vibe Projects"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": true,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false,
+      "fileOpening": {
+        "location": "split",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
+    },
+    {
+      "id": "617b3205-5be2-4b2f-9809-333452e1f198",
       "name": "WorkWeek",
-      "id": "1cbb35bf-348e-432d-bc63-e22bb66268fc",
-      "commands": [],
-      "runOnStartup": false
+      "type": "Macro",
+      "command": false,
+      "runOnStartup": false,
+      "macro": {
+        "id": "1cbb35bf-348e-432d-bc63-e22bb66268fc",
+        "name": "WorkWeek",
+        "commands": []
+      }
     }
   ],
   "inputPrompt": "single-line",
+  "persistInputPromptDrafts": true,
+  "useSelectionAsCaptureValue": true,
   "devMode": false,
   "templateFolderPath": "Templates",
-  "announceUpdates": true,
-  "version": "1.11.5",
+  "announceUpdates": "all",
+  "version": "2.11.0",
+  "globalVariables": {},
+  "onePageInputEnabled": false,
   "disableOnlineFeatures": true,
   "enableRibbonIcon": true,
+  "showCaptureNotification": true,
+  "showInputCancellationNotification": false,
+  "enableTemplatePropertyTypes": false,
+  "dateAliases": {
+    "t": "today",
+    "tm": "tomorrow",
+    "yd": "yesterday",
+    "nw": "next week",
+    "nm": "next month",
+    "ny": "next year",
+    "lw": "last week",
+    "lm": "last month",
+    "ly": "last year"
+  },
   "ai": {
     "defaultModel": "Ask me",
     "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
@@ -395,7 +548,8 @@
             "name": "gpt-4o-mini",
             "maxTokens": 128000
           }
-        ]
+        ],
+        "modelSource": "auto"
       }
     ]
   },
@@ -405,6 +559,25 @@
     "incrementFileNameSettingMoveToDefaultBehavior": true,
     "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
     "setVersionAfterUpdateModalRelease": true,
-    "addDefaultAIProviders": true
-  }
+    "addDefaultAIProviders": true,
+    "removeMacroIndirection": true,
+    "migrateFileOpeningSettings": true,
+    "backfillFileOpeningDefaults": true,
+    "setProviderModelDiscoveryMode": true,
+    "migrateProviderApiKeysToSecretStorage": true
+  },
+  "macros": [
+    {
+      "name": "Add Task",
+      "id": "779b77d7-3467-4353-931a-364e56d56139",
+      "commands": [],
+      "runOnStartup": false
+    },
+    {
+      "name": "WorkWeek",
+      "id": "1cbb35bf-348e-432d-bc63-e22bb66268fc",
+      "commands": [],
+      "runOnStartup": false
+    }
+  ]
 }

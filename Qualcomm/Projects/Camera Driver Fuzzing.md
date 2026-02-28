@@ -77,7 +77,7 @@ SORT filename DESC
 
 ## Task
 
-- [ ] #task #qpsi Deploy Camera Driver with Nilo's setup ➕ 2025-10-17
+- [x] #task #qpsi Deploy Camera Driver with Nilo's setup ➕ 2025-10-17 ✅ 2026-02-27
 - [ ] #task #qpsi Create AI assisted Code review for Camera Driver ➕ 2025-10-17
 
 ## Notes
@@ -422,7 +422,7 @@ lsusb
 | Joey Jiao | China syzkaller team |
 | Biswajit Roy | Alpaca |
 | Anmol Jaiswal | Alpaca |
-| Daksha Gouri Patolia | Camera Senior Staff Manager |
+| Daksha Gouri Patolia | APT Testing Team Camera Senior Staff Manager |
 
 ---
 ## Event Logs

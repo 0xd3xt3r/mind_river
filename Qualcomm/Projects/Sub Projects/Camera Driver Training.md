@@ -32,7 +32,7 @@ summary: Create training for Camera Kernel team and integerate it in Workday. Th
 > What needs to be done!
 
 - [ ] #task #qpsi Create the v1 of the training and present it to the tech team and verify the content. ➕ 2025-10-16
-- [ ] #task #qpsi Get confirmation from tech team to conduct the Camera Driver Training ➕ 2025-10-17
+- [x] #task #qpsi Get confirmation from tech team to conduct the Camera Driver Training ➕ 2025-10-17 ✅ 2026-02-27
 
 ## Project Management
 

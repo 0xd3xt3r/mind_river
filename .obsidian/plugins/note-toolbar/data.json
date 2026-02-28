@@ -1,4 +1,9 @@
 {
+  "debugEnabled": false,
+  "defaultToolbar": null,
+  "editorMenuAsToolbar": false,
+  "editorMenuToolbar": null,
+  "emptyViewToolbar": null,
   "export": {
     "includeIcons": true,
     "replaceVars": true,
@@ -12,9 +17,34 @@
     }
   ],
   "icon": "circle-ellipsis",
+  "keepPropsState": false,
+  "lockCallouts": false,
+  "obsidianUiVisibility": {},
+  "onboarding": {
+    "new-toolbar-mapping": true,
+    "startup-help-view": true,
+    "startup-help-welcome": true
+  },
   "ribbonAction": "toolbar",
+  "ribbonToolbar": null,
+  "rules": [],
   "scriptingEnabled": false,
   "showEditInFabMenu": false,
+  "showLaunchpad": false,
+  "showToolbarIn": {
+    "audio": false,
+    "bases": false,
+    "canvas": false,
+    "image": false,
+    "kanban": false,
+    "pdf": false,
+    "video": false
+  },
+  "showToolbarInFileMenu": false,
+  "showToolbarInOther": "",
+  "showWhatsNew": true,
+  "textToolbar": null,
+  "textToolbarOnKeyboard": true,
   "toolbarProp": "",
   "toolbars": [
     {
@@ -38,30 +68,25 @@
           "tooltip": "",
           "visibility": {
             "desktop": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             },
             "mobile": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             },
             "tablet": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             }
-          }
+          },
+          "inGallery": false
         },
         {
           "uuid": "9539b164-73d0-418d-b826-8ed3f2065eab",
@@ -76,30 +101,25 @@
           "tooltip": "",
           "visibility": {
             "desktop": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             },
             "mobile": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             },
             "tablet": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             }
-          }
+          },
+          "inGallery": false
         },
         {
           "uuid": "ca719474-57bd-4bad-8e1b-2e76ccc67883",
@@ -114,30 +134,25 @@
           "tooltip": "",
           "visibility": {
             "desktop": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             },
             "mobile": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             },
             "tablet": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             }
-          }
+          },
+          "inGallery": false
         },
         {
           "uuid": "506563be-b198-4526-b858-335a9af91f7f",
@@ -152,30 +167,25 @@
           "tooltip": "",
           "visibility": {
             "desktop": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             },
             "mobile": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             },
             "tablet": {
-              "allViews": {
-                "components": [
-                  "icon",
-                  "label"
-                ]
-              }
+              "components": [
+                "icon",
+                "label"
+              ]
             }
-          }
+          },
+          "inGallery": false
         }
       ],
       "mobileStyles": [],
@@ -200,6 +210,7 @@
       "updated": "2025-01-09T06:13:28.267Z"
     }
   ],
-  "version": 20240727.1,
+  "version": 20260122.1,
+  "webviewerToolbar": null,
   "whatsnew_version": 1.15
 }

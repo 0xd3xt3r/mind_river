@@ -33,6 +33,10 @@
     {
       "folder": "Qualcomm/Projects",
       "template": "Templates/Sub Project Lite Template.md"
+    },
+    {
+      "folder": "Areas/Vibe Projects",
+      "template": "Templates/vibe-specs.md"
     }
   ],
   "enable_file_templates": false,
