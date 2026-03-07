@@ -4,6 +4,8 @@ tags:
   - "#type/writing/article"
 status: in-progress
 created-date: 2025-09-13
+aliases:
+  - 'Product Security'
 ---
 
 Software bugs are living creatures, they are born they have a life in the software they reside and with enough efforts they can be killed but they cannot be completely eradicated. But what I was curious was to understand the life cycle of the bug and what sort of mitigation can be put in place to address they at different stage.
@@ -55,6 +57,7 @@ Well there are different techniques which are used to find the bugs like fuzzing
 
 1. [link](https://github.blog/security/vulnerability-research/multi-repository-variant-analysis-a-powerful-new-way-to-perform-security-research-across-github/)
 2. Variant analysis is an important technique for identifying new types of security vulnerabilities. The static analysis engines that powers code scanning, is a great tool for variant analysis because it allows you to model vulnerabilities as highly precise custom queries.
+3. You can use the bug pattern found from code review and fuzzing to create static analysis rules this will ensure that the same bug doesn't get introduced again in the code base, tech teams have the tendencies to do such things.
 
 ### Mitigation Features
 

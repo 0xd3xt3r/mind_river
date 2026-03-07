@@ -78,7 +78,7 @@ SORT filename DESC
 ## Task
 
 - [x] #task #qpsi Deploy Camera Driver with Nilo's setup ➕ 2025-10-17 ✅ 2026-02-27
-- [ ] #task #qpsi Create AI assisted Code review for Camera Driver ➕ 2025-10-17
+- [x] #task #qpsi Create AI assisted Code review for Camera Driver ➕ 2025-10-17 ✅ 2026-03-02
 
 ## Notes
 
@@ -136,7 +136,8 @@ Below patches enable KASAN on Android kernel build
 
 ### Recipe
 
-- [Latest Build](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0-64602-pakala.1.CONSOLIDATED-3)
+- [Hawi Builds](http://go/hwvb)
+- [Pakala Latest Build](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0-64602-pakala.1.CONSOLIDATED-3)
 	- Meta :  /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-07/LA.QSSI.15.0-53902-qssi.1-2/LINUX/android
 - [New Recipe](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0-54002-pakala.1.CONSOLIDATED-2)
 	- Meta : /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-07/Pakala.LA.1.0-01106-PERF.INT-1

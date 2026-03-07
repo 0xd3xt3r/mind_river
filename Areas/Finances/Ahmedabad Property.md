@@ -10,6 +10,8 @@ summary:
 
 ## Neighborhood Project
 
+website - https://gujrera.gujarat.gov.in
+
 1. Paradise Glory
 	1. RERA - PR/GJ/AHMEDABAD/AHMEDABAD CITY/Ahmedabad Municipal Corporation/RAA13677/130624/311228
 2. Classic Highland

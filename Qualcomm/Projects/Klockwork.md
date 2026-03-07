@@ -26,7 +26,7 @@ summary: DR Reviewer Training
 ## Notes
 
 - in case someone says its NON-QC code do git blame and check
-- [SA Reviewer List Link](https://lists.qualcomm.com/ListManager?action=view&query=SA_Reviewers&field=default&match=eq)
+- [SA Reviewer List](https://lists.qualcomm.com/ListManager?action=view&query=SA_Reviewers&field=default&match=eq)
 
 ## Documentation
 
