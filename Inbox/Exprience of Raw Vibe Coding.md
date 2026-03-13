@@ -84,3 +84,5 @@ Master the fundamentals. Let the tools amplify excellence, not mistakes.
 	2. code rewriting
 2. Who wants all the code?
 
+## Delegate intelligence
+
