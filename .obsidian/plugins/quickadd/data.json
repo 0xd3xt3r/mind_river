@@ -154,7 +154,7 @@
       "name": "Video Stream Annotation",
       "type": "Template",
       "command": true,
-      "templatePath": "Templates/streams annotations.md",
+      "templatePath": "Templates/Streams annotations template.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "Stream - {{VALUE}}"

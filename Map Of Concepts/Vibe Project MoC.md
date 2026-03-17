@@ -2,6 +2,7 @@
 up: "[[MoC Planet]]"
 related:
   - "[[Reading MoC]]"
+  - "[[Jeffery Emanuel]]"
 tags:
   - "#type/MoC"
 created-date: 2024-12-15

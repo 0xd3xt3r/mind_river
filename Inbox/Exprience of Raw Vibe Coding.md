@@ -8,6 +8,7 @@ created-date: 2026-02-08
 related:
   - "[[Claude Code]]"
   - "[[LLM Talks]]"
+  - "[[gastown]]"
 summary: The stream of thougts I had when learning Vibe coding
 aliases:
   - Vibe Coding
