@@ -1,10 +1,10 @@
 ---
-up: "[[Vibe Project MoC]]"
+up: "[[Project Shaman]]"
 tags:
-  - "#type/vibe-specs"
+  - "#type/product-feature"
 created-date: 2026-03-16
 related:
-summary:
+summary: Monitor for executable on the device if they meet SMOB Specs
 ---
 
 ### The Deterministic SBOM Drift Architecture

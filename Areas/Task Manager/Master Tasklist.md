@@ -10,8 +10,8 @@ summary: All the Task I have ever recorded
 ## General Task List
 
 - [ ] #task upstream the zephyr fuzzing stack ➕ 2026-03-02 🛫 2026-03-30 ⏳ 2026-04-03 📅 2026-04-30
-
-## Archived Task
+- [ ] #task Attack Surface Mapping ➕ 2026-03-18
+- [ ] #task OpenWRT qemu base target to test agent in different architecture ➕ 2026-03-18## Archived Task
 
 - [x] #task File internet bills #qpsi #chore ⏫ ➕ 2024-12-08 📅 2024-12-10 ✅ 2024-12-11 🔒 [[2024-12-11]] 🕸️ General Task List
 - [x] File Internet Reimbursement bills #office #task ⏬ 🔁 every January, April, July and October on the 1st ➕ 2024-12-18 🛫 2025-03-20 📅 2026-04-01 ✅ 2024-12-18 🔒 [[2025-01-10]] 🕸️ General Task List

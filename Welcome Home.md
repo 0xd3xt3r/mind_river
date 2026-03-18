@@ -12,7 +12,7 @@ up: "[[Knowledge Base MoC]]"
 | ------------------------ | ---------------------- | ------------------------ |
 | [[Qualcomm Project MoC]] | [[Writing MoC]]        | [[Knowledge Base MoC]]   |
 | [[Qualcomm MoC]]         | [[Reading MoC]]        | [[Inbox MoC]]            |
-| [[Task MoC]]             | [[Learning MoC]]       | [[Finance MoC]]          | 
+| [[Task MoC]]             | [[Learning MoC]]       | [[Vibe Project MoC]]          | 
 | [[People MoC]]           | [[SeedBox MoC]]        | [[Personal Project MoC]] |
 | [[Meeting MoC]]          | [[Research Paper MoC]] | [[MoC Planet]]           |
 

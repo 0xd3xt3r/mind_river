@@ -1,14 +1,13 @@
 ---
 up: "[[Project Shaman]]"
 tags:
-  - "#type/sub-project"
-  - "#status/active"
-  - type/project/personal
+  - type/product-feature
 aliases:
   - shaman
 status: todo
 related:
 created-date: 2024-12-21
+summary: instrumentation
 ---
 
 > **Summary**:: Project Roadmap and Research Docs

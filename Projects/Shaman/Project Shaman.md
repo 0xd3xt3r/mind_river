@@ -10,60 +10,51 @@ tags:
 
 > **Summary**:: Shaman is a Dynamic Binary Analysis framework
 
-## Sub Projects
+## Feature Roadmap
 
-```dataview
-TABLE WITHOUT ID
-	file.link as "Sub Projects", summary,
-	 tags, up, created-date
-FROM !"Templates"
-WHERE icontains(up, this.file.link)
-AND icontains(tags, "type/sub-project")
-SORT filename DESC
-```
+```base
+filters:
+  and:
+    - file.hasTag("type/product-feature")
+    - file.hasLink(this.file)
+properties:
+  file.name:
+    displayName: File name
+views:
+  - type: table
+    name: Map of Knowledge
+    order:
+      - file.name
+      - Summary
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 319
+      note.summary: 834
+      file.mtime: 333
 
-## Meetings
-
-```dataview
-TABLE WITHOUT ID
-	file.link as "Session",
-	up, created-date, participants, summary, tags
-FROM !"Templates"
-WHERE icontains(up, this.file.link)
-AND icontains(tags, "type/meeting")
-SORT filename DESC
 ```
 
 ## Tasks and Questions
 
 ### ToDo
 
-```dataview
-TASK
-WHERE icontains(text, this.file.name)
-AND (icontains(tags, "#task") OR icontains(text, "#questions"))
-AND !completed
-GROUP BY file.name as filename
-SORT filename DESC
-```
+- [ ] #task File system monitoring ➕ 2026-03-18
+	- [ ] monitor change in file content with inotify kernel API
+		- [ ] this is usually done to monitor data/config files
+		- [ ] These file change as an when you interact with the device.
+	- [ ] monitor the binary for any change in hash - 
+		- [ ] this will usually be done to monitor executable file which don't change dynamically
+		- [ ] these file usually changes across version
+		- [ ] we will usually monitor for hashes
+- [ ] #task Attack Surface Mapping ➕ 2026-03-18
+- [ ] #task [[Feature - Dynamic SBOM monitor]] ➕ 2026-03-18
+- [ ] #task OpenWRT Test Targets ➕ 2026-03-18
+	- [ ] Test router target for various architectures like MIPS, ARM, etc.
+	- [ ] https://openwrt.org/docs/guide-user/virtualization/qemu
+
 
 ### Completed Task
 
-```dataview
-TASK
-WHERE icontains(text, this.file.name)
-AND (icontains(tags, "#task") OR icontains(text, "#questions"))
-AND completed
-GROUP BY file.name as filename
-SORT filename DESC
-```
-
-## Sprints
-
-```dataview
-TASK
-WHERE icontains(text, this.file.name)
-AND icontains(text, "#log/sprint")
-GROUP BY file.name as filename
-SORT filename DESC
-```

@@ -6,7 +6,6 @@
 	1. Typical emulation take too much time to do the product research.
 	2. Have a hardware is very accurate. So, if a bugs or crash is triggered you are pretty sure its not false-positive because you made some wrong assumption in your emulation design.
 	3. 
-
 3. Output
 	1. Attack surface
 		1. Port and associated process
