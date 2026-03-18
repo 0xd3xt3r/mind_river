@@ -34,9 +34,12 @@ If you've already started development and have a fleshed out project already, re
 
 ### Getting Thinks Done
 
-Please do ALL of that now. Keep a super detailed, granular, and complete TODO list of all items so you don't lose track of anything and remember to complete all the tasks and sub-tasks you identified or which you think of during the course of your work on these items!
+Please do ALL of that now. Keep a super detailed, granular, and complete TODO list of all items so you don't lose track of anything and remember to complete all the tasks and sub-tasks you identified or which you think of during the course of your work on these items! use 'beads' to record the action items.
 
 ### Fix your beads/task
 
 Check over each bead super carefully - are  you sure it makes sense? Is it optimal? Could we change anything to make the system work better for users? If so, revise the beads. Its a lot easier and faster to operate in "plan space" before we start implementing these things! DO NOT OVERSIMPLIFY THINGS! DO NOT LOSE ANY FEATURES OR FUNCTIONALITY! Also make sure that as part of the beads we include comprehensive unit test and E2E test scripts with great, detailed logging so we can be sure that everything is working perfectly after implementation.
 
+## Testing
+
+We really need to have totally complete, totally comprehensive, granular, perfect end to end testing coverage without ANY mocks or fake data, fake api calls, etc., that prove that our entire pipeline from start to finish works perfectly in a provable, ultra rigorous way. That means the raw data coming in from the various API services for EVERYTHING (not just one or two fields) for a bunch of test cases. Basically, the WHOLE thing, from "soup to nuts".
