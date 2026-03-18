@@ -54,7 +54,6 @@ This is the core of the product. It doesn't need to be "smart"; it just needs to
 - **Deterministic:** A hash either matches or it doesn't. There are no false positives caused by AI hallucinations.
 - **Standard Tech Stack:** You can build this using well-known, boring technology (Postgres, Go/Python, MQTT) which speeds up development and makes debugging vastly easier.
 - **Clear Boundaries:** The Edge team and the Backend team can work completely independently once the JSON payload structure is agreed upon.
-    
 
 Would you like to drill down into how the Edge sensor should be implemented (e.g., user-space polling vs. kernel-level eBPF), or would you prefer to sketch out the database schema for handling the SBOMs?
 
@@ -95,11 +94,8 @@ JSON
 Because the SBOM standardizes this data, your prototype's **Verification Service** logic becomes incredibly straightforward:
 
 1. **The Edge Agent** sees `libssl.so.1.1` load into the device's memory.
-    
 2. It calculates the SHA-256 hash locally on the device: `e4b6eb...`
-    
 3. It sends `{"name": "libssl.so.1.1", "hash": "e4b6eb..."}` to your backend.
-    
 4. **The Backend** looks up the "Golden SBOM" for that specific device and does a simple key-value check. If the hash matches the `content` field in the JSON, the device is clean. If it doesn't, you have a drift event.
     
 
@@ -129,25 +125,23 @@ When the device attempts to load a new shared library or execute a binary, your 
 **The workflow becomes:**
 
 1. Process attempts to execute `lib_malicious.so`.
-    
 2. eBPF intercepts the call in kernel space and hashes the file.
-    
 3. It checks the local "Golden SBOM" hash table on the device.
-    
 4. If the hash is missing, **eBPF violently blocks the execution** before it even reaches user space.
-    
 5. The agent sends a tiny, asynchronous alert to the cloud: _"Blocked unauthorized execution of X."_
-    
 
 ### Why this is a Massive Strategic Advantage
 
 1. **It Solves the "Scale" Problem Instantly:** When you are a small, early-stage team focusing on a prototype, building a cloud backend that can ingest, process, and diff thousands of telemetry hashes per second from a fleet of devices is an expensive infrastructure nightmare. By pushing the diffing logic to the device, your cloud backend only needs to handle rare, low-volume "Alerts" rather than a constant firehose of "Telemetry."
-    
 2. **True Zero-Trust IoT:** You are no longer just selling an "auditing" tool for compliance; you are selling an active, zero-trust shield. If a hacker exploits a vulnerability to drop a remote access trojan (RAT), the OS simply refuses to run it because the RAT's hash isn't in the factory-approved SBOM.
-    
 3. **Air-Gapped Survival:** If an IoT device loses internet connection, a cloud-based detection system is blind. With local enforcement, the device remains 100% protected against physical tampering (like someone plugging in a USB drive) even when completely offline.
-    
 4. **Massive ROI for the Buyer:** Compliance officers will buy your tool for the SBOM auditing, but CISOs will renew the contract because it acts as an un-bypassable application allow-list that physically stops attacks.
-    
 
 By flipping the architecture so the edge does the heavy lifting, you build a much stronger security product while actually reducing the amount of cloud infrastructure your team needs to manage right now.
+
+## Req 
+
+1. SBOM should be from build information.
+2. some case dev team that is done manually.
+3. SBOM from third-party and stich it with us.
+	1. Take SBOM from third-party
