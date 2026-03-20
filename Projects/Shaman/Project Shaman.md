@@ -60,6 +60,7 @@ views:
 ### ToDo
 
 - [ ] #task Data-pipeline verification
+	- [ ] Trace ingestion data format.
 	- [ ] consuming trace data produced by client tracing
 	- [ ] how to show progress for long running binary processing task. Take inspiration from Ghidra indexing UI.
 	- [ ] Resume the data-pipeline from the point of failure.
