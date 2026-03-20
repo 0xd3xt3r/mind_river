@@ -1,11 +1,12 @@
 ---
-up: "[[Vibe Project MoC]]"
+up: "[[Project Shaman]]"
 tags:
   - type/vibe-specs
+  - type/product-feature
 created-date: 2026-03-15
 related:
-  - "[[Project Shaman|Shaman DBI]]"
-summary:
+  - "[[Vibe Project MoC]]"
+summary: Binary analysis and tracing
 ---
 
 ## Problem Statement
