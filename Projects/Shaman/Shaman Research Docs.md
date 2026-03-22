@@ -93,6 +93,7 @@ The framework aims to simplify writing plugins and make it fast and easy to supp
 	1. http://www.dyninst.org/
 	2. https://github.com/dyninst/dyninst
 6. Anywhere, Any-Time Binary Instrumentation
+7. [SKORPIO: Advanced Binary Instrumentation Framework](https://groundx.io/docs/Opcde2018-skorpio.pdf)
 
 
 ## Ref

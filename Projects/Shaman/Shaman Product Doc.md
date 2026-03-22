@@ -2,10 +2,21 @@
 1. Who are your customer?
 	1. Pentester - we will improve their productivity and their efficiency
 		1. Typically they have about a 3 - 4 weeks in which they have to wrap-up their projects which is not enough time to do into the depth of the project.
+	2. Enterprise companies with lots of iot devices - they usually have access to shell and that all we need.
+	3. The assumption about the application is that it is done for black-box system with only shell access.
 2. What do we provide?
-	1. Typical emulation take too much time to do the product research.
-	2. Have a hardware is very accurate. So, if a bugs or crash is triggered you are pretty sure its not false-positive because you made some wrong assumption in your emulation design.
-	3. 
+	1. Typically, emulation is very time-consuming activity as take too much time to create a execution environment by subbing out external dependency.
+	2. Have a hardware(On-Target) is very accurate. Because we the behavior of the device is the actual, in emulation if you assumption about the stub is wrong the bug could be a false positive. So, if a bugs or crash is triggered on-target you are pretty sure its not false-positive because you made some wrong assumption in your emulation design.
+	3. Automation - when you have well defined workflow the platform provides python scripting automation which you can run targeting the device periodically to ensure higher reliability.
+		1. something like scan for attack surface and raise alert when new attack surface emerges which ain't already approved previously by engineering teams.
+		2. Run test cases routeing and generate reports.
+	4. Pin-point the functionality/feature in the binary or a system. When you are doing research on device this system can help you narrow down you focus specific area you want to test.
+		1. The process usually in involve zooming out to full system the zooming in to specific process to specific portion of binary.
+		2. you want to understand what process is processing the remote data. system observation tool can pin-point who is doing it.
+		3. also in the process what portion of the code is processing what data.
+		4. for example if and android application is interacting with the iot device via remote server. something like [Android App] -> [Remote Server] -> [IoT Device] you should like to know when is use a specific feature of the app what activity happen on the device at the process level and at binary level in the process.
+		5. This can save massive amount of time for the security analyst and what to focus 
+	5. With AI generated code software verification becomes a very important part of SDLC especially automated testing which can scale. 
 3. Output
 	1. Attack surface
 		1. Port and associated process
@@ -35,7 +46,7 @@
 	3. Why is it hard?
 	4. How often do you have to do "IoT Assessment"?
 	5. Why is it important for your company to do "x"?
-	6. Why do you do to solve this problem for youself?
+	6. Why do you do to solve this problem for yourself?
 		1. Do you have a process/tool?
 			1. what is the good thing about that tool?
 			2. what could be better?
