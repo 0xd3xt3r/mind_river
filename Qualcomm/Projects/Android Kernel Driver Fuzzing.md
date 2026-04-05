@@ -11,8 +11,6 @@ tags:
 summary: Fuzzing Qualcomm android drivers
 ---
 
-> **Summary**:: 
-
 ## Sub Projects
 
 ```dataview

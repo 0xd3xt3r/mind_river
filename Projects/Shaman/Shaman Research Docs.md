@@ -112,3 +112,4 @@ List of reference Material which will be helpful to buld the this tool
 9. [RR Debugger Project](https://rr-project.org/)
 10. [Gamazolabs - Linux Debugger part 2](https://www.youtube.com/watch?v=6topgTC3-5k&ab_channel=gamozolabs)
 11. https://suchakra.wordpress.com/tag/dynamic-instrumentation/
+12. [Unveiling Dynamic Binary Instrumentation Techniques](https://arxiv.org/abs/2508.00682)

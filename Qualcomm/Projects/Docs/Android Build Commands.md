@@ -181,6 +181,13 @@ SYZ_CLANG=1 ./bin/syz-extract -config /local/mnt/workspace/qcom-dev/pakala_vendo
 	2. CAM_FLASH_PACKET_OPCODE_NON_REALTIME_SET_OPS = ??? 
 	3. it means there headers are missing for these variables either include these headers or define these variable if no such headers
 
+### Misc
+
+```bash
+# Injection coverage weight in the 
+jq --argjson new_data "$(<output/camera-kernel/camera-kernel.linear.json)" '.experimental = $new_data' kana.json > kana_final.json
+```
+
 ## GCOV Coverage report generation
 
 [[Linux kernel coverage reporting using GCOV]]

@@ -1,1 +1,14 @@
-[]
+[
+  "table-editor-obsidian",
+  "obsidian-task-archiver",
+  "buttons",
+  "dataview",
+  "homepage",
+  "periodic-notes",
+  "note-toolbar",
+  "quickadd",
+  "tag-wrangler",
+  "obsidian-tasks-plugin",
+  "templater-obsidian",
+  "media-notes"
+]

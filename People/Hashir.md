@@ -14,6 +14,7 @@ FROM #type/meeting
 WHERE icontains(participants, this.file.link)
 LIMIT 20
 ```
+
 ## Tasks and Questions
 
 ### Pending

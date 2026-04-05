@@ -131,8 +131,8 @@ views:
     limit: 10
     columnSize:
       file.name: 386
-      note.summary: 647
-      note.status: 174
+      note.summary: 783
+      note.status: 247
   - type: table
     name: On-Hold
     filters:

@@ -33,7 +33,6 @@ views:
     columnSize:
       file.name: 392
       note.summary: 700
-
 ```
 
 ## Prompt Ideas

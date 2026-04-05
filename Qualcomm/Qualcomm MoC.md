@@ -64,7 +64,7 @@ views:
         direction: DESC
     limit: 8
     columnSize:
-      file.name: 256
+      file.name: 270
       note.summary: 675
   - type: table
     name: Archived Reports
