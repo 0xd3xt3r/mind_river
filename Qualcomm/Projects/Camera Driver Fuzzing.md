@@ -137,6 +137,7 @@ Below patches enable KASAN on Android kernel build
 ### Recipe
 
 - [Hawi Builds](http://go/hwvb)
+	- [Latest build - AU235](https://qwiki.qualcomm.com/quic/Android/hawibuilds/LA.VENDOR.17.6.0_Builds/LA.VENDOR.17.6.0-23502-hawi.1.CONSOLIDATED-2)
 - [Pakala Latest Build](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0-64602-pakala.1.CONSOLIDATED-3)
 	- Meta :  /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-07/LA.QSSI.15.0-53902-qssi.1-2/LINUX/android
 - [New Recipe](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0-54002-pakala.1.CONSOLIDATED-2)
