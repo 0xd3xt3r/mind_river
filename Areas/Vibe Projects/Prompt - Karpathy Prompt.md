@@ -9,6 +9,8 @@ summary: Andrej Karpath Prompts
 
 ## The Karpathy Decomposition Prompt - make Claude think before answering
 
+### Feature Idea
+
 Use when you're facing a complex idea, product, or technical problem.
 
 Prompt:

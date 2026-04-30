@@ -136,26 +136,15 @@ Below patches enable KASAN on Android kernel build
 
 ### Recipe
 
-- [Hawi Builds](http://go/hwvb)
-	- [Latest build - AU235](https://qwiki.qualcomm.com/quic/Android/hawibuilds/LA.VENDOR.17.6.0_Builds/LA.VENDOR.17.6.0-23502-hawi.1.CONSOLIDATED-2)
-- [Pakala Latest Build](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0-64602-pakala.1.CONSOLIDATED-3)
-	- Meta :  /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-07/LA.QSSI.15.0-53902-qssi.1-2/LINUX/android
-- [New Recipe](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0-54002-pakala.1.CONSOLIDATED-2)
-	- Meta : /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-07/Pakala.LA.1.0-01106-PERF.INT-1
-- [AU 485](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0_Builds/LA.VENDOR.15.4.0-48502-pakala.1.CONSOLIDATED-14)
-	- this is working for v1 device post this build not build will be working for v1 only for v2.
-	- Host : hyd-lablnxqpsi04
-	- Meta : /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-05/Pakala.LA.1.0-01056-STD.INT-1
-- [LA.VENDOR.15.4.0-38202](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0_Builds/LA.VENDOR.15.4.0-38202-pakala.1.CONSOLIDATED-4)
-	- latest
-	- Host : hyd-lablnx642
-	- currently flashed on device
-	- Meta & KASAN both working fine
-	- Meta : /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-05/Pakala.LA.1.0-00803-STD.INT-1
+| Targets   | All Build               | Last Know AU Tag |
+| --------- | ----------------------- | ---------------- |
+| Hawi      | [link](http://go/hwvb)  | AU235            |
+| Kaanapali | [link](http://go/knpvb) |                  |
+| Pakala    | [link](http://go/pvb)   |                  |
+
 - Camera SDK Setup Guild [link](https://confluence.qualcomm.com/confluence/display/CamNext/Pakala%20Mainline%20Build%20Recipe)
 - Camera NDK Build instruction [link](https://confluence.qualcomm.com/confluence/display/CamNext/CamX+Pakala+Bring-up#CamXPakalaBringup-NDKBuildsetup)
-- [All Pakala builds](https://qwiki.qualcomm.com/quic/Android/pakalabuilds/LA.VENDOR.15.4.0_Builds)
-- [All Kaanapali Builds](https://qwiki.qualcomm.com/quic/Android/kaanapalibuilds/LA.VENDOR.16.2.0_Builds)
+
 
 ### Notes
 

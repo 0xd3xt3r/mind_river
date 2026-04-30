@@ -94,7 +94,7 @@ views:
 	- [x] Test router target for various architectures like MIPS, ARM, etc.
 	- [x] https://openwrt.org/docs/guide-user/virtualization/qemu
 	- [ ] Lunch 10 machines and put target client on them and execute pipeline
-
+- 
 
 ### Completed Task
 

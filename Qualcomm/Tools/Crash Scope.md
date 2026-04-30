@@ -8,10 +8,13 @@ related:
 summary: Crash data collection tool
 ---
 
+
+
 ## Notes
 
 There are two software which will help you with this 
 1. pcat - this tool will help you to collect 
+2. firmware version - vendor/firmware_mnt/verinfo/ver_info.txt
 
 ## Pcat
 

@@ -102,12 +102,17 @@ Security bugs intel flows in our system is by means of external security reports
 I often contemplate on the question, if we have a world where there were not software vulnerability, what would that be? What sort of tool and technique would that parallel universe would have which has complete taken over those vulnerability?
 
 The answer would have been there must be a program that could autonomy run for the target and figure out the issues and fix it for itself. But still what would be a defining characteristics of those program? It would have following features
-1. Spidey-sense like intelligence to find all the incoming point of attacks. (Threat Model)
+1. Spidey-sense like intelligence to find all the incoming point of attacks. (Threat Model) Entry point of the software module. From where does the attacker send the data?
+	1. A bug is only a bug if it can be reproduced
+	2. A bug can only be a security bug if it can be triggered by the attacker.
+	3. A security bug is only exploitable only if attacker has huge influence on data and control path of the software module.
 2. A very powerful taint analysis engine - this thing can help you to trace the data incoming from attack point to potential weak spots on the systems.
+	1. 
 3. The ability to create operational environment for the target which replicates the production environment. This simulated environment help you to validate the vulnerability and increase the confidence of the exploitability. Reproduceable bugs can be validated.
 4. The ability to create semantic understanding of the input to the attack surface and create a specification of the input which it will which can be given to the mutation engine to bombard attack surface. The more precise the specification is the better the mutation. 
 	1. The semantics of the system will also create specification which pin-points corner-cases of the system.
 	2. Understand the state-machine of the system.
+	3. this could be a sub-problem of taint analysis engine or SAT problem.
 5. Observability of the systems - The ability to observe the system's behavior while it is processing the data or running. This ability will not only be used a feedback for specification but also the observer invalid behaviour and pin-point to that behaviour. This input can also help to improve the taint-analysis system.
 6. Expected and un-expected behavior of the system - the specification of the system behaviour can be help use to determine the unexpected behaviour or invalid behaviour. In the context of security, buffer overflow is unexpected behaviour.
 	1. Unit-test is one form of specification of the system.

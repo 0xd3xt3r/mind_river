@@ -31,6 +31,23 @@ python <meta_root>/common/build/fastboot_complete.py
 # go to project Meta root directory
 python common/build/fastboot_complete.py --apps_vendor=<your_vendor_path>
 
+# Option B - go to /out/target/product/canoe 
+# 
+fastboot -s 2440378b flash abl_a abl.elf;
+fastboot -s 2440378b flash boot_a boot.img;
+fastboot -s 2440378b flash dtbo_a dtbo.img;
+fastboot -s 2440378b flash persist persist.img
+fastboot -s 2440378b flash super super.img;
+fastboot -s 2440378b flash userdata userdata.img
+fastboot -s 2440378b flash vbmeta_a vbmeta.img
+fastboot -s 2440378b flash vbmeta_system_a vbmeta_system.img
+fastboot -s 2440378b flash vendor_boot_a vendor_boot.img
+fastboot -s 2440378b flash init_boot_a init_boot.img
+# if this fails its fine
+fastboot -s 2440378b flash metadata_a metadata.img 
+fastboot -s 2440378b flash pvmfw_a pvmfw.img
+fastboot -s 2440378b flash recovery_a recovery.img
+
 # mount debugfs for kcov
 adb shell mount -t debugfs debugfs /sys/kernel/debug
 
@@ -41,6 +58,56 @@ sanitizer-status
 ls /sys/kernel/debug/kcov
 ```
 
+### USB Driver Setup
+
+- [Setting up Axiom on Linux Host](https://axiomuserguide.qualcomm.com/launcher/testing-on-linux-host/remote-linux-host)
+
+> Check if both ADB and Fastboot is running.
+
+```bash
+qpm-cli --login mshelia
+
+#Install Qualcomm USB Drivers (detailed steps here)
+qpm-cli --license-activate QUD.internal
+qpm-cli --install QUD.internal
+
+# Install QUTS (detailed steps here)
+qpm-cli --license-activate quts.internal
+qpm-cli --install quts.internal
+
+# Alpaca Lite
+# put this in 
+sudo nano /etc/udev/rules.d/AlpacaLite.rules
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011", MODE="0666"
+
+# ADB - Android
+# As sudo, create a new file in the udev rules directory (e.g. /etc/udev/rules.d/51-android.rules). the file should cotain the below lines:
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"
+
+# **You MUST log out and log back in** (or reboot) After This
+sudo usermod -aG plugdev $USER
+
+# Reload udev rules with the following commands:
+sudo udevadm control --reload
+sudo udevadm trigger
+
+# Diagnostics
+
+ls -l /dev/bus/usb/*/*
+# If you see this - mean success
+# crw-rw-rw- root plugdev
+
+# If not fastboot doesn't work then this will work
+sudo fastboot devices
+# It mean you still have permission issues.
+
+uv run python flash_builds.py --devices all --base_build_path /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-05/Hawi.LA.1.0-00626-STD.INT-1
+
+uv run ftdi_device.py --power-cycle -t hawi
+```
 
 ## Camera Device Setup Commands
 
