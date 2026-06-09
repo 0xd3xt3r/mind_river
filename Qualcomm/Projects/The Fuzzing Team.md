@@ -54,15 +54,10 @@ views:
 ```
 ## Important Document
 
-- Bernard
-	- [Camera call-graph Generation Conf](https://confluence.qualcomm.com/confluence/display/QPSIFT/Callgraph+and+Function+coverage+for+Linux+Android+Kernel+Drivers)
-	- [Modem Off target Fuzzing](https://confluence.qualcomm.com/confluence/display/QPSIFT/Modem+Off-target+Fuzzing+Support)
 - Satish
 	- [WiFi Fuzzing Project Update](https://confluence.qualcomm.com/confluence/display/QPSIFT/WLAN+FW+Fuzzing)
 - Ashish
 	- [Automotive Fuzzing](https://confluence.qualcomm.com/confluence/pages/viewpage.action?pageId=1660140318)
-- Neeraj
-	- [KGSL Conf Link](https://confluence.qualcomm.com/confluence/display/QPSIFT/Android+GPU+Fuzzing%3A+KGSL)
 - Myself
 	- [Camera Fuzzing Conf Link](https://confluence.qualcomm.com/confluence/display/QPSIFT/Android+Camera+Driver+Fuzzing)
 
@@ -71,22 +66,15 @@ views:
 
 - **Ashish U**
 	- [ ] Windows
-		- [ ] WLAN  
-		- [ ] BT - 2
-		- [ ] Camera
-		- [ ] Bcrypt
-		- [ ] MDM - KT
+		- [ ] Phulka
+		- [ ] Harness creation was paused because of illness
+		- [ ] currently working on RCA
+			- [ ] 
+		- [ ] RCA on CR's
 	- [ ] Rackspace for devices.
 - **Munawwar**
 	- [ ] [[AIRCA]]
 	- [ ] [[LLM Assisted Syzkaller Harness Generation]]
-- **Neeraj**
-	- [ ] KGSL - updating the build to latest version. 
-	- [ ] Callgraph - resolving the issue in CFG algorithm generation
-		- [ ] KT to ashish
-	- [ ] Windows - Fuzzing MSM Kernel driver
-		- [ ] KT To ashish
-	- [ ] Fuzzing farm - no update
 - **Satish**
 	- [ ] BT Firmware - Blocked
 		- [ ] Gangis build completely changed, Alex helping to build the gangis.
@@ -94,8 +82,7 @@ views:
 		- [ ] Target to meet 50 % current coverage is 38%.
 		- [ ] Implemented 7 new filter
 		- [ ] 5 New issue
-- **Hashir**
-	- [ ] Syzkaller setup
+
 
 ## Tasks and Questions
 

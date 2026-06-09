@@ -4,7 +4,8 @@ tags:
   - "#type/vibe-specs"
 created-date: 2026-03-16
 related:
-summary:
+  - "[[Project Shaman]]"
+summary: Shaman feature for attack surface monitoring
 ---
 
 # Exploit Surface Cartography

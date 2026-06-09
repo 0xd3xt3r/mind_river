@@ -1,12 +1,12 @@
 ---
-up: "[[Knowledge Base MoC]]"
+up: "[[Linux Kernel]]"
 tags:
   - "#type/knowledge"
   - type/os/android
 status: todo
 created-date: 2025-10-20
 related:
-summary:
+summary: Binder is Android IPC for their service oriented architecture
 ---
 
 

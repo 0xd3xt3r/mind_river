@@ -31,8 +31,9 @@ views:
       - property: file.mtime
         direction: DESC
     columnSize:
-      file.name: 392
+      file.name: 399
       note.summary: 700
+
 ```
 
 ## Prompt Ideas

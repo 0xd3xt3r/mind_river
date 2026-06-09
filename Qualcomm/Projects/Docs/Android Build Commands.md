@@ -1,10 +1,10 @@
 ---
 up: "[[Android Kernel Driver Fuzzing]]"
+related:
+  - "[[Camera Driver Fuzzing]]"
+  - "[[Linux kernel coverage reporting using GCOV]]"
 tags:
   - "#type/qcom"
-related:
-  - "[[Qualcomm/Projects/Camera Driver Fuzzing]]"
-status: done
 created-date: 2024-12-18
 summary: Build commands for Androids systems
 ---
@@ -14,18 +14,21 @@ summary: Build commands for Androids systems
 ### Build Flashing
 
 ```bash
+
 # device reboot
 adb reboot bootloader
+
 fastboot devices
 fastboot reboot
 
-cat /firmware/verinfo
-
-cd <meta_root_path>
+# inside device
+cat /vendor/firmware_mnt/verinfo/ver_info.txt
 
 # Flash complete meta
 # go to project Meta root directory
-python <meta_root>/common/build/fastboot_complete.py
+python common/build/fastboot_complete.py
+# Go to meta root
+python command/build/fh_loadall.py
 
 # Flash Vendor APPs
 # go to project Meta root directory
@@ -48,6 +51,20 @@ fastboot -s 2440378b flash metadata_a metadata.img
 fastboot -s 2440378b flash pvmfw_a pvmfw.img
 fastboot -s 2440378b flash recovery_a recovery.img
 
+fastboot flash abl_a abl.elf;
+fastboot flash boot_a boot.img;
+fastboot flash dtbo_a dtbo.img;
+fastboot flash persist persist.img
+fastboot flash super super.img;
+fastboot flash userdata userdata.img
+fastboot flash vbmeta_a vbmeta.img
+fastboot flash vbmeta_system_a vbmeta_system.img
+fastboot flash vendor_boot_a vendor_boot.img
+fastboot flash init_boot_a init_boot.img
+fastboot flash metadata_a metadata.img 
+fastboot flash pvmfw_a pvmfw.img
+fastboot flash recovery_a recovery.img
+
 # mount debugfs for kcov
 adb shell mount -t debugfs debugfs /sys/kernel/debug
 
@@ -57,7 +74,22 @@ sanitizer-status
 # check if kcov is enabled
 ls /sys/kernel/debug/kcov
 ```
+## KCOV & Kernel Params
+```bash
 
+# To enable only kcov
+export EXTRA_KBUILD_ARGS="--kcov"
+
+# To enable both kasan and kcov
+export EXTRA_KBUILD_ARGS="--kasan_generic"
+export EXTRA_KBUILD_ARGS="--gcov"
+source build/envsetup.sh
+# lunch ...
+
+# Clear bazel cache
+rm -rf bazel-cache/ out/ kernel_platform/out/ kernel_platform/bazel-* device/qcom/sun-kernel/ device/qcom/canoe-kernel/ 
+
+```
 ### USB Driver Setup
 
 - [Setting up Axiom on Linux Host](https://axiomuserguide.qualcomm.com/launcher/testing-on-linux-host/remote-linux-host)
@@ -82,8 +114,9 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6011", MODE="0666
 
 # ADB - Android
 # As sudo, create a new file in the udev rules directory (e.g. /etc/udev/rules.d/51-android.rules). the file should cotain the below lines:
-SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", MODE="0666"
+sudo nano /etc/udev/rules.d/51-android.rules
 SUBSYSTEM=="usb", ATTR{idVendor}=="05c6", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", MODE="0666"
 SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", MODE="0666", GROUP="plugdev"
 SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"
 
@@ -117,7 +150,9 @@ echo 0x1000012 > /sys/module/camera/parameters/debug_mdl
 
 # Generate debug value  from URL : http://camxsensor/logmask/kmd
 adb shell "echo <debug value> > /sys/module/camera/parameters/debug_mdl"
+
 # disable camera service
+# Reboot after this command
 adb remount
 adb shell "mount -o remount,rw /vendor"
 adb shell "mount -o remount,rw /system"
@@ -159,7 +194,6 @@ sudo sshfs -o allow_other,reconnect,cache=no,noauto_cache,ServerAliveInterval=15
 ### go-lang debugging
 
 ```bash
-
 # compile a test-case with debug symbols and output is mytest.test
 # this will output as a binary
 go test -gcflags='all=-N -l' -c -v ./prog -o mytest.test
@@ -171,7 +205,6 @@ dlv exec ./mytest.test -- -test.run ^TestResourceCtors$ > data.txt
 ### Compiling Syzkaller
 
 ```bash
-
 # Running the camera unit test cases
 python3 internal_tools/scripts/dv_test/devtest.py -t cslunittest.CSLDeviceTestProbePacket
 
@@ -257,7 +290,7 @@ jq --argjson new_data "$(<output/camera-kernel/camera-kernel.linear.json)" '.exp
 
 ## GCOV Coverage report generation
 
-[[Linux kernel coverage reporting using GCOV]]
+
 
 ```bash
 # Script to generate coverage

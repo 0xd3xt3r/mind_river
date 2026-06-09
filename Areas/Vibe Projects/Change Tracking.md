@@ -1,7 +1,7 @@
 ---
 tags:
   - type/vibe-specs
-summary: Track changes in important branches
+summary: Track changes in important git branches
 ---
 
 - This command which get you branches which are very active

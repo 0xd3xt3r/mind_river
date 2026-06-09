@@ -3,9 +3,10 @@ up: "[[Qualcomm MoC]]"
 tags: "#qpsi/project"
 created-date: 2026-04-24
 status: todo
-related: 
-summary: 
-participants: 
+related:
+  - "[[Klockwork]]"
+summary: Secure Code Training FAQ
+participants:
 ---
 
 # Secure Coding FAQ
@@ -21,7 +22,7 @@ participants:
 | People complete both training but still not have access | may be the infra is down check the history of securecodetraining, email to listbuilder@qualcomm.com                    |
 | People who have completed 2 year secure code training.  | People are blacklisted from Perforce and added to SCRPastDue automatically.  <br>They have to complete the training    |
 | To push code to for linux kernel driver                 | They must complete 3 training 1. Secure Code 1 & 2 and Linux Kernel  2. Exception List - securecodelinux_tempexemption |
-| People asking excemption for service account            | Add the account to SecureTrainingService list                                                                          |
+| People asking exemption for service account            | Add the account to SecureTrainingService list                                                                          |
 
 ## Group Info
 

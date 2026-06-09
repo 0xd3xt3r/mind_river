@@ -99,14 +99,29 @@ There are many moving part in this project like Fuzzing Tool(Syzkaller), Kernel 
 
 Email Group : linux.pakala.image.team@quicinc.com, pakala.target.team@qti.qualcomm.com
 
+### Machine Info
+
+| Host              | Comment                        |
+| ----------------- | ------------------------------ |
+| hyd-qpsifuzzlab01 | Primary                        |
+| hyd-lablnxqpsi05  | secondary                      |
+| qpsi-lablnx01     |                                |
+| hyd-lablnx159     | Machine Dev machine for Neeraj |
+
 ### Device Info
 
-| Host             | Comment                        |
-| ---------------- | ------------------------------ |
-| hyd-lablnxqpsi04 | Primary                        |
-| hyd-lablnxqpsi05 | secondary                      |
-| qpsi-lablnx01    |                                |
-| hyd-lablnx159    | Machine Dev machine for Neeraj | 
+Lab Location : HYDRB.E-1280-R021
+
+| ETAG      | Version | Machine | MCN           |
+| --------- | ------- | ------- | ------------- |
+| EX1112695 | V1      | 01      | 10-93453-1170 |
+| EX105787  | V1      | 02      |               |
+| EX1115301 | V1      | 04      | 10-93453-1173 |
+| EX1174535 | V2      | 03      | 10-93453-2405 |
+| EX1116512 | V2      | 06      | 10-93453-2100 |
+| EX1174536 | V2      | 05      | 10-93453-2405 |
+| EX1174444 | V2      |         | 10-93453-2405 |
+| EX1174468 | V2      |         | 10-93453-2405 |
 
 ## Patches
 
@@ -138,7 +153,7 @@ Below patches enable KASAN on Android kernel build
 
 | Targets   | All Build               | Last Know AU Tag |
 | --------- | ----------------------- | ---------------- |
-| Hawi      | [link](http://go/hwvb)  | AU235            |
+| Hawi      | [link](http://go/hwvb)  | AU235, AU279     | 
 | Kaanapali | [link](http://go/knpvb) |                  |
 | Pakala    | [link](http://go/pvb)   |                  |
 

@@ -1,3 +1,13 @@
+---
+up: "[[Knowledge Base MoC]]"
+tags:
+  - "#type/knowledge"
+alias:
+  - cook
+created-date: 2026-05-26
+related:
+summary: How to cook
+---
 
 ## Masala Aloo Rice(Chikhu Bhat)
 
@@ -16,3 +26,9 @@
 6. take two cup of rice and soak it in water for 30 min for meal of two.
 7. Put the rice in the cooker and hit it on high heat till it whistles twice with one glass of water.
 8. Remove the lid and then burn rest of the water out and cover the top with the a normal lid.
+
+
+## Daal
+
+1. Take 75% of pink cup and soak it in water for 30 min
+2. put the daal and in cooker with salt, haldi

@@ -6,6 +6,7 @@ created-date: 2024-12-16
 status: in-progress
 tags:
   - "#type/project/personal"
+related:
 ---
 
 > **Summary**:: Shaman is a Dynamic Binary Analysis framework
@@ -15,7 +16,7 @@ tags:
 ```base
 filters:
   and:
-- file.hasTag("type/product-feature")
+	- file.hasTag("type/product-feature")
 	- file.hasLink(this.file)
 properties:
   file.name:

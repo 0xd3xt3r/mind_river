@@ -1,3 +1,12 @@
+---
+up: "[[Knowledge Base MoC]]"
+tags:
+  - "#type/knowledge"
+status: todo
+created-date: 2026-05-27
+related: 
+summary:
+---
 
 ## [Tracepoints](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Tracepoints.html)
 

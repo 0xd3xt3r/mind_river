@@ -1,5 +1,5 @@
 ---
-up: "[[Writing MoC]]"
+up: "[[Linux Kernel]]"
 tags:
   - "#type/os/linux"
 status: todo

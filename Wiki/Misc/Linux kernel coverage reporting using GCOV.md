@@ -1,13 +1,13 @@
 ---
-up: "[[Knowledge Base MoC]]"
+up: "[[Linux Kernel]]"
 related:
   - "[[Android Kernel Driver Fuzzing]]"
+  - "[[Android Build Commands]]"
 tags:
   - "#type/os/linux"
 aliases:
   - kernel coverage using gcov
   - kcov vs gcov
-status: todo
 created-date: 2024-12-15
 summary: Generating kernel coverage report using GCOV
 ---

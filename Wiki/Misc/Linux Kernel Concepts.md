@@ -1,11 +1,11 @@
 ---
-up: "[[Knowledge Base MoC]]"
+up: "[[Linux Kernel]]"
 tags:
   - "#type/os/linux"
 status:
   - todo
 created-date: 2024-12-15
-related: 
+related:
 summary: Linux Kernel Development related stuff
 ---
 

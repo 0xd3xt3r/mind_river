@@ -2,16 +2,14 @@
 up: "[[MoC Planet]]"
 tags:
   - "#type/MoC"
-created-date: 2024-12-26
-summary: All the people I know
+created-date: 2026-05-29
+summary: All the articles related to Linux Kernel
+related:
+  - "[[Knowledge Base MoC]]"
 ---
 
+
 ```base
-filters:
-  and:
-    - file.hasTag("type/person")
-    - not:
-        - file.inFolder("Templates")
 properties:
   note.summary:
     displayName: Summary
@@ -19,17 +17,20 @@ properties:
     displayName: File name
 views:
   - type: table
-    name: General
+    name: Sub-Projects
+    filters:
+      and:
+        - file.hasLink(this.file)
     order:
       - file.name
       - summary
+      - file.mtime
     sort:
-      - property: file.name
-        direction: ASC
       - property: file.mtime
         direction: DESC
+    limit: 10
     columnSize:
-      file.name: 392
-      note.summary: 700
+      file.name: 386
+      note.summary: 866
 
-```
+  ```

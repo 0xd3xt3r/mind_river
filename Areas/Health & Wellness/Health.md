@@ -2,9 +2,10 @@
 up: "[[Knowledge Base MoC]]"
 tags:
   - "#type/knowledge"
-status: todo
 created-date: 2024-12-23
 summary: Experiments I did to improve my health
+aliases:
+  - body measurements
 ---
 
 # Fitness & Health
@@ -15,10 +16,11 @@ summary: Experiments I did to improve my health
 
 ## Body Measurement
 
-| Date | Chest | Biceps | Forearms | Thigh | Calf | Waist | Neck | Weight |
-|---|---|---|---|---|---|---|---|---|
-| 18-02-2022| 34 | 11 | - | 19.5 | - | 29 | - | 64.6|
-| 09-03-2022| 35 | 12 | 10 | 21 | 14| 32 |14.5 |67.9|
+| Date       | Chest | Biceps | Forearms | Thigh | Calf | Waist | Neck | Weight |
+| ---------- | ----- | ------ | -------- | ----- | ---- | ----- | ---- | ------ |
+| 18-02-2022 | 34    | 11     | -        | 19.5  | -    | 29    | -    | 64.6   |
+| 09-03-2022 | 35    | 12     | 10       | 21    | 14   | 32    | 14.5 | 67.9   |
+| 2026-05-30 | 36    | 12     | 10       | 21    | 14   | 32    | 14.5 | 70     |
 
 ## [[Running]]
 
