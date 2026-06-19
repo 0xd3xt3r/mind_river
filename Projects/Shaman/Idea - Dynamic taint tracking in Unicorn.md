@@ -1,4 +1,12 @@
-
+---
+up: "[[Project Shaman]]"
+tags:
+  - "#type/product-feature"
+  - type/idea
+created-date: 2026-03-16
+related:
+summary: Monitor for executable on the device if they meet SMOB Specs
+---
 ## Problem Statement
 
 Give a memory buffer can you give all the instruction which are doing read/write operation on that buffer.

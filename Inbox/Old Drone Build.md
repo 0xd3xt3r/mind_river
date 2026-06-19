@@ -4,9 +4,17 @@ tags:
   - "#type/knowledge"
 status: todo
 created-date: 2018-02-20
-related: 
+related:
+  - "[[Building a Drone]]"
 summary: Drone which I build in 2018
 ---
+
+## Notes
+
+1. The signal is soldered to PPM from the centre pad, it also could be done to SBUS which is much efficient options.
+2. If you put sticks in bottom left and power-on the flight controller you can enable engineering mode in fight controller.
+
+## Hardware
 
 1. **Battery** - 
 	1. 4S 14.8V 1500mAh 70C Graphene LiPo Battery XT60 Support 15C Boosting Charge For Racer Drone For Infinity
@@ -18,3 +26,12 @@ summary: Drone which I build in 2018
 4. **Motors** - Racerstar 2205 BR2205 2600KV 2-4S Motor + RS30A V2 30A Blheli_S ESC Dshot600 + 5042 3 Blade Prop For DIY Multi-copter
 5. **Flight Frame** - Alien FPV quadcopter frame 225 225mm carbon fiber DIY cross racing drone w/ PDB Camera holder Motor Protector
 6. **Flight Controller** - Flysky FS-i6 with FS-iA6B Receiver 2.4G 6ch Transmitter Controller For RC Helicopter Airplane Quadcopter Glider
+
+
+### New Hardware
+1. Pocket Radio R2 - https://radiomasterrc.com/products/pocket-radio-controller-m2
+	1. offer more range upto 40 km.
+
+## Software
+
+1. [Betaflight](betaflight.com/) - calibrate the drone controller.

@@ -12,7 +12,6 @@ related:
 > **Summary**:: Shaman is a Dynamic Binary Analysis framework
 
 ## Feature Roadmap
-
 ```base
 filters:
   and:
@@ -22,19 +21,17 @@ properties:
   file.name:
     displayName: File name
 views:
-- type: table
-  name: Map of Knowledge
-  order:
-	- file.name
-		- Summary
-			- file.mtime
-			rt:
-				- property: file.mtime
-				  direction: DESC
-			lumnSize:
-			file.name: 319
-			note.summary: 834
-			file.mtime: 333
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - summary
+      - file.ctime
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.summary: 487
 
 ```
 
@@ -89,7 +86,7 @@ views:
 		- [ ] we will usually monitor for hashes
 - [ ] #task [[Feature - Attack Surface discovery and monitoring]] ➕ 2026-03-18
 - [ ] #task [[Feature - Dynamic SBOM monitor]] ➕ 2026-03-18
-- [ ] #task [[Feature Trace Data]] - What are some interesting way to shape trace data received from test target ?
+- [ ] #task [[Feature - Trace Data]] - What are some interesting way to shape trace data received from test target ?
 	- [ ] Popular option - 
 - [ ] #task OpenWRT Test Targets ➕ 2026-03-18
 	- [x] Test router target for various architectures like MIPS, ARM, etc.

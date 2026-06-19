@@ -31,8 +31,8 @@ views:
         direction: DESC
     limit: 10
     columnSize:
-      file.name: 386
-      note.summary: 838
+      file.name: 351
+      note.summary: 763
 
 ```
 
@@ -130,7 +130,7 @@ views:
         direction: ASC
     limit: 10
     columnSize:
-      file.name: 386
+      file.name: 364
       note.summary: 783
       note.status: 247
   - type: table

@@ -1,3 +1,11 @@
+---
+up: "[[Project Shaman]]"
+tags:
+  - "#type/product-feature"
+created-date: 2026-03-18
+related:
+summary:
+---
 
 1. Who are your customer?
 	1. Pentester - we will improve their productivity and their efficiency

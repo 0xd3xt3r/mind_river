@@ -1,3 +1,12 @@
+---
+up: "[[Project Shaman]]"
+tags:
+  - "#type/product-feature"
+created-date: 2026-03-16
+related:
+summary: Monitor for executable on the device if they meet SMOB Specs
+---
+
 [Skorpio Advanced Binary Instrumentation Framework](https://github.com/msuiche/OPCDE/blob/master/2018/Emirates/Skorpio%20Advanced%20Binary%20Instrumentation%20Framework%20-%20Nguyen%20Anh%20Quynh/Opcde2018-skorpio.pdf)
 
 ## Redirection techniques

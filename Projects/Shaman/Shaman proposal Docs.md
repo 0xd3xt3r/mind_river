@@ -1,3 +1,12 @@
+---
+up: "[[Project Shaman]]"
+tags:
+  - "#type/product-feature"
+created-date: 2026-03-16
+related:
+summary: Monitor for executable on the device if they meet SMOB Specs
+---
+
 # What is Shaman?
 
 Shaman is a platform-independent Dynamic Binary Analysis Framework designed to instrument programs without needing to recompile them or access their source code. It currently supports Linux (x86_64, ARM, ARM64) and Android (ARM64).

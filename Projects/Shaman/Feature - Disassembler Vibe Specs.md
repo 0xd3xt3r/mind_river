@@ -1,7 +1,8 @@
 ---
-up: "[[Vibe Project MoC]]"
+up: "[[Project Shaman]]"
 tags:
   - "#type/prompt-idea"
+  - type/product-feature
 created-date: 2026-04-20
 related:
 summary: Dynamic Disassembly
