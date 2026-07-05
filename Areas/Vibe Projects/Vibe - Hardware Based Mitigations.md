@@ -25,14 +25,14 @@ Explain this from first principles.
 
 Idea:
 
-- Intel CET Shadow Stack and IBT are two control flow based mitigation which are used to ensure forward-edge and backward-edge mitigations.
+- [x] Intel CET Shadow Stack and IBT are two control flow based mitigation which are used to ensure forward-edge and backward-edge mitigations.
 	- I want you to explain what extract problem are they addressing.
-- I want to you list all the instruction which are used in this feature along with an example on how to use these instructions.
+- [x] I want to you list all the instruction which are used in this feature along with an example on how to use these instructions.
 	- list of instruction which are used in user-space
 	- list of instruction which are only available in kernel space
 	- which instructions are used to check if CET is enabled.
 	- create a sample program and show the disassembly of what the instruction looks like.
-- What is the programming model for user-space shadow stack and IBT , cover the following topics ?
+- [x] What is the programming model for user-space shadow stack and IBT , cover the following topics ?
 	- How the shadow stack is pop is verified and how does a failure occur. 
 	- Context Switching & Thread Switching
 	- Dynamic Stack Unwinding / C++ Exceptions
@@ -40,15 +40,19 @@ Idea:
 	- how is shadow stack allocated when new process is lunched and how different threads maintain and switch their shadow stack.
 	- How to Forward edge is configured and how hash value is placed and verified. What does endbr64/endbr32 instruction does ?
 		- Describe the caller-callee handshake where the caller preloads a Set ID (SID) hash into a register
-- In this section we will explore supervisor shadow stack for kernel which following scenarios:
+- [ ] In this section we will explore supervisor shadow stack for kernel which following scenarios:
 	- how the shadow stack page is allocate and setup is done during the boot stage for kernel
 	- What are different configuration can be setup and explain various configuration for different level of security policy.
 	- How does the kernel execution setups its shadow stack space and switch between kernel threads, and exceptions and syscalls.
-- I want you to also cover various threat models considered for attacking the shadow stack?
+	- Instruction related to kernel specific.
+		- Feature Detection
+		- Global Control Register Activation
+		- Configuring Kernel Policy (Model-Specific Registers)
+		- Structuring the Primary Supervisor Shadow Stack
+- [ ] I want you to also cover various threat models considered for attacking the shadow stack?
 	- If shadow stack offers read and write via only controlled instructions and disables only certain instruction it just about reducing attack surface? am i right about this? what am I missing?
 	- What is token in the shadow stack, how does it ensure the safety? Why can't the attacker groom a heap memory to replicate ,the setup?
 	- why can kernel exploit creates its own shadow stack and create a fake shadow stack?
-- What is the programming model for the shadow stack/IBT for kernel and user-space?
 - What are some of the successful attacks on this mitigation?
 - Based on the our research so far I want create a 5 part series of blogpost which covers everything we have discussed so far in the discussion. Help me list what all aspect should be covered in each part. The first part should be an instruction of the CET and should be self contained reference. But the sub-sequent part will cover other aspect in great details
 
@@ -65,7 +69,8 @@ Part 1: The Foundation—Intel Control-flow Enforcement Technology (CET)
 - **Deterministic vs. Probabilistic Defense:** Explain why CET is an architectural law (deterministic) compared to defences like **ASLR** or **Stack Canaries**, which are probabilistic and bypassable through information leaks.
 - I want to you list all the instruction which are used in this feature along with an example on how to use these instructions.
 	- list of instruction which are used in user-space
-	- list of instruction which are only available in kernel space
+		- RSTORSSP, SAVEPREVSSP, INCSSP, RDSSP, WRSS, WRUSSD
+	- no need to cover kernel related stuff in this section we will look into it in another blogpost.
 	- which instructions are used to check if CET is enabled.
 	- create a sample program and show the disassembly of what the instruction looks like.
 - What is the programming model for user-space shadow stack and IBT , cover the following topics ?
@@ -75,12 +80,12 @@ Part 1: The Foundation—Intel Control-flow Enforcement Technology (CET)
 	- Custom threading/co-routine
 	- how is shadow stack allocated when new process is lunched and how different threads maintain and switch their shadow stack.
 	- How to Forward edge is configured and how hash value is placed and verified. What does endbr64/endbr32 instruction does?
+	- What is the base address for SS and how does stack behaves on push and pop operations? like increase or decrement from base address of the stack. Explain this with an example.
 - Write a sample program then show how to compile the program and disassemble it and explain the interpretation. 
 
 Part 2: Precision CFI—FineIBT and System-Wide Hardening
 
 **Goal:** Detail how the system moves from "coarse-grained" hardware constraints to "fine-grained" software-assisted integrity.
-
 - **The Limitation of Coarse IBT:** Explain that standard IBT allows jumping to _any_ function starting with `ENDBR`, even if the signature is wrong.
 - **FineIBT Mechanics:** Describe the **caller-callee handshake** where the caller preloads a **Set ID (SID)** hash into a register, and the callee verifies it immediately after the `ENDBR` instruction using a `sub-je` sequence.
 - **Hardening the Pipeline (NOPout):** Discuss how **NOPout** elides unnecessary `ENDBR` instructions at load-time to further shrink the attack surface.
