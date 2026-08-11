@@ -55,13 +55,18 @@ Idea:
 	- why can kernel exploit creates its own shadow stack and create a fake shadow stack?
 - What are some of the successful attacks on this mitigation?
 - Based on the our research so far I want create a 5 part series of blogpost which covers everything we have discussed so far in the discussion. Help me list what all aspect should be covered in each part. The first part should be an instruction of the CET and should be self contained reference. But the sub-sequent part will cover other aspect in great details
-
+- [ ] Writing style
+- [ ] I've gathered enough from Project Zero and want to pull one more reference from a Google engineering blog to round out my understanding. The pattern I'm seeing is pretty clear: expert 
+     but conversational tone, short functional headings, concepts before code with annotated examples, real numbers to ground the abstractions, mixing first and third person naturally, 
+     candid and direct without being overwrought, punchy short sentences where they land. Looking at what I've written, I'm spotting a lot of LLM tells—heavy em-dash triads, "Let us make 
+     this concrete," perfectly parallel rhythms, words like "precisely" and "critically," bolded lead-ins everywhere, tidy summary tables, "Working from first principles." I need to rewrite
+     this to sound like an actual security engineer at Google, not an AI trying to sound authoritative. I'll keep the technical accuracy and the real disassembly intact, but strip out the 
+     mechanical scaffolding. The "Layer 0, Layer 1" naming feels too rigid anyway—I can build upward without labeling everything so literally.
 ### Polished Prompt
 
 Part 1: The Foundation—Intel Control-flow Enforcement Technology (CET)
 
 **Goal:** Provide a self-contained reference on how modern hardware architecturally prevents control-flow hijacking.
-
 - Explain the concept of forward edge and backward edge. How it have been manipulated by attacker?
 - **The Threat Model:** Define **Return-Oriented Programming (ROP)** and **Jump/Call-Oriented Programming (JOP/COP)**, where attackers chain "gadgets" to execute arbitrary logic.
 - **Shadow Stack (Backward-Edge):** Explain the second, hidden stack dedicated to return addresses. Detail the comparison mechanism: `CALL` pushes to both stacks, and `RET` compares them, triggering a **#CP Control Protection fault** if they differ.

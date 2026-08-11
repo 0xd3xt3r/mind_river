@@ -9,14 +9,15 @@ aliases:
   - Qualcomm Contacts
 ---
 
-| Person             | Expertise             | Team          |
-| ------------------ | --------------------- | ------------- |
-| Shadul Shaikh      | Camera Team Dev       | Camera Driver |
-| Raju Kaligotla     | Channel list team     |               |
-| Salendarsingh Gaud | Build system expert   | build system  |
-| Shyju Thekkumbadan | GSoC Lead             |               |
-| Alok Chauhan       | Camera Driver Lead    | Camera Driver |
-| Shilpa De          | Building and flashing | Target Team   |
+| Person                | Expertise                | Team                 |
+| --------------------- | ------------------------ | -------------------- |
+| Shadul Shaikh         | Camera Team Dev          | Camera Driver        |
+| Raju Kaligotla        | Channel list team        |                      |
+| Salendarsingh Gaud    | Build system expert      | build system         |
+| Shyju Thekkumbadan    | GSoC Lead                |                      |
+| Alok Chauhan          | Camera Driver Lead       | Camera Driver        |
+| Shilpa De             | Building and flashing    | Target Team          |
+| Manikantesh Pemmaraju | [[Secure Code Training]] | Secure Code Training |
 
 
 ## Email

@@ -12,7 +12,7 @@ up: "[[Knowledge Base MoC]]"
 | ------------------------ | ---------------------- | ------------------------ |
 | [[Qualcomm Project MoC]] | [[Writing MoC]]        | [[Knowledge Base MoC]]   |
 | [[Qualcomm MoC]]         | [[Reading MoC]]        | [[Inbox MoC]]            |
-| [[Task MoC]]             | [[Learning MoC]]       | [[Vibe Project MoC]]          | 
+| [[Task MoC]]             | [[Learning MoC]]       | [[Vibe Project MoC]]     |
 | [[People MoC]]           | [[SeedBox MoC]]        | [[Personal Project MoC]] |
 | [[Meeting MoC]]          | [[Research Paper MoC]] | [[MoC Planet]]           |
 
@@ -43,7 +43,7 @@ views:
     limit: 10
     columnSize:
       file.name: 329
-      note.summary: 838
+      note.summary: 866
   - type: table
     name: Recent Files
     order:

@@ -96,6 +96,7 @@ Security bugs intel flows in our system is by means of external security reports
 	1. Validating Patch Effectiveness: When a patch is applied, it's meant to fix known issues. But how do you know it hasn’t introduced new ones?
 2. Patch propagation - once we know the bug, we have to fix the on all the product on which the software is running.
 3. Gap-analysis - once the vulnerability is know, there time it take to be shipped to the customer.
+4. version history of the product - any security activity is a snapshot in time. The unit of time for source code is code commit and once you have done a comprehensive assessment of component record the commit and the next assessment should be an incremental efforts based on previous commits. If you have some automated solution that scans or fuzzes the module, you can direct the effort to the new commits and not restart the efforts.
 
 ## The Ideal world
 

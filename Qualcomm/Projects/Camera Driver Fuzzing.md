@@ -9,8 +9,8 @@ tags:
   - "#qpsi/project"
   - "#type/meeting"
   - "#qpsi/meeting"
-  - status/active
-status: in-progress
+  - "#status/active"
+status: done
 created-date: 2025-02-12T11:13
 summary: Fuzzing Qualcomm Android Kernel Driver with Syzkaller
 participants:

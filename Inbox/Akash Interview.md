@@ -1,0 +1,17 @@
+## 2026-07-10
+
+**Candidate** : 
+**Verdict** :
+
+### Topics
+
+- [ ] Exploitation
+- [ ] Code Review
+- [ ] Fuzzing
+- [ ] Reversing
+
+### Notes
+
+- Worked on lots compiler related stuff.
+
+---

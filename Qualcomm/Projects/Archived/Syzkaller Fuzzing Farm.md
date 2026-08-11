@@ -8,16 +8,29 @@ tags:
   - "#fuzzing"
   - "#type/sub-project"
   - type/pinned-docs
-status: in-progress
+status: done
 related:
+  - "[[Android Build Commands]]"
+  - "[[Mothership - Device Farm]]"
 created-date: 2024-09-25
 summary: Setup a continues fuzzing farm with all variety of devices
 participants:
 link: https://qualcomm-confluence.atlassian.net/wiki/spaces/QPSIFT/pages/3201042122/Continuous+Fuzzing+of+Android+Targets
 ---
 
+## Build Info
+
+| Build | AU  | Path | 
+| ----- | --- | ---- |
+|       |     |      |
+
+- /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-05/Hawi.LA.1.0-00771-STD.INT-1
+- AU333 - /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-05/Hawi.LA.1.0-00860-STD.INT-1
+
 ## Requirements
 
+- [ ] **Latest build** - 860 : /prj/qct/asw/crmbuilds/crmhyd/nsid-hyd-05/Hawi.LA.1.0-00860-STD.INT-1
+- [ ] [Nikko build](https://qwiki.qualcomm.com/quic/Android/hawibuilds/LA.VENDOR.17.6.0_Builds/LA.VENDOR.17.6.0-30302-hawi.1.CONSOLIDATED-3)
 - [ ] Cluster setup to scale fuzzing across different machine and have central reporting dashboard
 - [ ] Focused testing for specific drivers, for e.g. dedicating 2 device for fuzzing KGSL, or camera driver for 2 weeks.
 	- [ ] this will help use to enrich corpus.
@@ -39,10 +52,34 @@ link: https://qualcomm-confluence.atlassian.net/wiki/spaces/QPSIFT/pages/3201042
 	- [ ] For Windows Kernel Fuzzing base system can be Windows since our fuzzer is in windows so that won't be much of problem.
 	- [ ] Also most of the open-source fuzzer are meant to run on Linux so have a base system as Linux is very important.
 
-## Machine Requirement
+## Features
 
-1. docker - to on-board with QSBT
-2. claude
+1. **Device Identification** - uniquely identify the device such that we can remotely recover and control them.
+	1. unique identify is the combination of ftdi serial id and adb id. Together they  will be use to gain access and reboot the device.
+2. **Build Flashing** - 
+	1. Process of flashing 
+		1. first flash the meta on the device and reboot the device to see if the meta is stable and in working condition.
+		2. Then flash the kasan build from the qwiki page.
+3. **Build management** - Devices has to be flash with meta which we have build with source synced locally.
+	1. We need to track following information
+		1. meta build id
+		2. machine on which the source was build
+		3. devices on which this build is flash successfully.
+		4. date on which all this activity was carried out
+	2. Process
+		1. check if the meta path is accessible. 
+		2. start with sanity check if the number of ftdi and adb devices are matching
+		3. run a simple 'id' command on all the devices and check if they all work fine.
+		4. which device could and couldn't be rebooted to fastboot mode.
+		5. track the progress of each stage and failure of each stage like, putting the device to fastboot mode, then flashing command of each file. which failed and which file passed.
+4. **Fuzzing Metadata**
+	1. What fuzzer is run of the device? SFE or Syzkaller
+	2. How much time the device spending fuzzing?
+		1. how much time the device is online?
+		2. how much time is it offline?
+5. Error Handling
+	1. ERR1 - Flashing might fail with error "Volume Full", this is because partition size of various files have changes to fix this you need to flash the device via firehose and Sahara process which is only possible via Windows OS (XPcatApp).
+		1. Nicos has figure a way todo this via [Linux](https://github.qualcomm.com/QPFI/Mobile_Builder)
 
 ## Objective
 

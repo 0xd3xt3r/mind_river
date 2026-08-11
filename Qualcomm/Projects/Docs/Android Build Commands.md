@@ -27,7 +27,8 @@ cat /vendor/firmware_mnt/verinfo/ver_info.txt
 # Flash complete meta
 # go to project Meta root directory
 python common/build/fastboot_complete.py
-# Go to meta root
+
+# Go to meta root - flash META in EDL mode
 python command/build/fh_loadall.py
 
 # Flash Vendor APPs
@@ -85,6 +86,14 @@ export EXTRA_KBUILD_ARGS="--kasan_generic"
 export EXTRA_KBUILD_ARGS="--gcov"
 source build/envsetup.sh
 # lunch ...
+
+
+export GO111MODULE=off
+export TEST_TMPDIR=$PWD/out/kernel_platform/bazel-cache
+export PATH="$PWD/go/linux-x86/bin:$PATH"
+export NINJA_ARGS="-d keeprsp"
+export ALLOW_NINJA_ENV="true"
+export PYTHONPATH=/pkg/qct/lint/pymod
 
 # Clear bazel cache
 rm -rf bazel-cache/ out/ kernel_platform/out/ kernel_platform/bazel-* device/qcom/sun-kernel/ device/qcom/canoe-kernel/ 

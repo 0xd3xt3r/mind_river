@@ -52,7 +52,9 @@ THEN: please take ALL of that and elaborate on it and use it to create a compreh
 
 ### Fix your beads/task
 
-Check over each bead super carefully - are  you sure it makes sense? Is it optimal? Could we change anything to make the system work better for users? If so, revise the beads. Its a lot easier and faster to operate in "plan space" before we start implementing these things! DO NOT OVERSIMPLIFY THINGS! DO NOT LOSE ANY FEATURES OR FUNCTIONALITY! Also make sure that as part of the beads we include comprehensive unit test and E2E test scripts with great, detailed logging so we can be sure that everything is working perfectly after implementation.
+Check over each bead super carefully - are  you sure it makes sense? Is it optimal? Could we change anything to make the system work better for users? If so, revise the beads. Its a lot easier and faster to operate in "plan space" before we start implementing these things! DO NOT OVERSIMPLIFY THINGS! DO NOT LOSE ANY FEATURES OR FUNCTIONALITY!
+
+Also make sure that as part of the beads we include comprehensive unit test and E2E test scripts with great, detailed logging so we can be sure that everything is working perfectly after implementation.
 
 ## Testing
 
