@@ -61,9 +61,9 @@ Well there are different techniques which are used to find the bugs like fuzzing
 
 ### Mitigation Features
 
-Another technique is enabling mitigation like ASLR, CFI, DEP, etc. This techniques help you have security even in case the bug is triggered.
-
-The best way to address the problem is detect the bug during the development phase, right when the code is written or modified. The ideal scenarios would be that any of the mentioned technique raises an alert in the developers code-editor and gives suggestions to the developer on what needs to be done to fix the issue. That's an Ideal scenario.
+- Another technique is enabling mitigation like ASLR, CFI, DEP, etc. This techniques help you have security even in case the bug is exist. This will make the bug less impactful and reduce its effect.
+- **Killing primitives** - Exploit use specific code-paths to groom heap or the memory of the target systems or influence the code path such that a code path leads to proper execution. Killing/altering these code paths or adding additional security checks on these code paths increase the difficulty of exploiting a bug, such changes can have small incremental benefits but not hugs effect like mitigation but a easy. So times this might require re-architecting the system. A good example of this will be glibc malloc allocators heap meta data sanity checks. These check lead to new exploitation techniques. but killed old ones.
+- The best way to address the problem is detect the bug during the development phase, right when the code is written or modified. The ideal scenarios would be that any of the mentioned technique raises an alert in the developers code-editor and gives suggestions to the developer on what needs to be done to fix the issue. That's an Ideal scenario.
 
 
 ## How do bugs get propagated?
