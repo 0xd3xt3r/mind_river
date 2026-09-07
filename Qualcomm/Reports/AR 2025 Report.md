@@ -1,4 +1,11 @@
-
+---
+up: "[[Qualcomm MoC]]"
+tags:
+  - "#qpsi/report"
+status: in-progress
+created-date: 2024-12-13
+summary: Annual Review Writeup
+---
 ## Analytical Skills
 
 > Analyzes, interprets, integrates, and verifies **somewhat complex data and** information from multiple sources to identify root causes and address **somewhat complex** issues.

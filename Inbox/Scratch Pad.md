@@ -83,3 +83,8 @@ I want you to write a proc file system parser process for linux in cpp which has
 4. use c++11 standards and please don't create nested classes.
 5. The class should have away to only parse for one process which you will take as a command-line argument
 6. this doesn't have detail socket parsing, can you include parsing of detail information from /proc/net
+
+
+## Review
+
+Arka has recently join the team and he has done ramp up very quickly with device management and he was also make contribution to device farm management using AI tooling.
